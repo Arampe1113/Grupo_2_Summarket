@@ -25,3 +25,9 @@ Nacemos como una opción para que los empleados de Summa puedan dar a conocer su
 ## Público objetivo
 Empleados de la empresa Summa entre edades de 20 y 50 años tanto hombres como mujeres. 
 
+## Referentes del mercado
+Seleccionamos sitios como:
+
+Linio
+https://www.linio.com.co/
+Porque posee información facil de ubicar y la barra del header se queda estática a comparación de otras tiendas.
