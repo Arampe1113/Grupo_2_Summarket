@@ -3,7 +3,7 @@
 
 ### Geovani Erney Rivera Mesa 
 
-Hola! soy Geovani, quiero conocer sobre desarrollo web y programación, recién empiezo el camino, he laborado en temas financieros y contables. Me gusta viajar y leer.
+Hola! soy Geovani, quiero conocer sobre desarrollo web y programación, recién empiezo el camino. Me gusta viajar y leer.
 
 “Si buscas resultados distintos, no hagas siempre lo mismo”. Albert Einstein
 
