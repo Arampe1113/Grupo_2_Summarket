@@ -31,3 +31,7 @@ Seleccionamos sitios como:
 Linio
 https://www.linio.com.co/
 Porque posee información facil de ubicar y la barra del header se queda estática a comparación de otras tiendas.
+
+Amazon
+https://www.amazon.com/-/es/ref=nav_logo
+Porque es una tienda de reconocimiento global, no se observa tan saturada y tiene elementos amigables en el body como carrusel para observar productos
