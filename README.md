@@ -31,20 +31,30 @@ Seleccionamos sitios como:
 
 Linio
 https://www.linio.com.co/
+
 Porque posee información facil de ubicar y la barra del header se queda estática a comparación de otras tiendas.
 
 Amazon
 https://www.amazon.com/-/es/ref=nav_logo
+
 Porque es una tienda de reconocimiento global, no se observa tan saturada y tiene elementos amigables en el body como carrusel para observar productos
 
 The frenche Co
 https://www.thefrenchie.co/?lang=es
-Tienda con estulo elegante y minimalista adecuada a lo que queremos plantear
+
+Tienda con estilo elegante y minimalista adecuada a lo que queremos plantear. Asimismo, nos basamos en su carrito de compras para estructurar el nuestro
 
 Livelarq
 https://www.livelarq.com/
-diseño de estilo minimalista sindo un ecommer
+
+Diseño de estilo minimalista siendo un ecommerce
 
 Burrow
 https://burrow.com/
-Diseño integrativo minimalista de un ecommerce de moviliario contemporaneo. 
+
+Diseño integrativo minimalista de un ecommerce de moviliario contemporáneo. 
+
+Bliss
+https://www.blissworld.com/
+
+Página web que posee una paleta de colores que le da un estilo estéticamente bonito que se acomoda a los productos que disponen a la venta
