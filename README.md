@@ -1,4 +1,5 @@
 # Grupo_2_Summarket
+https://github.com/dattino/repoClase7.git
 ## Integrantes:
 
 ### Geovani Erney Rivera Mesa 
@@ -35,3 +36,15 @@ Porque posee información facil de ubicar y la barra del header se queda estáti
 Amazon
 https://www.amazon.com/-/es/ref=nav_logo
 Porque es una tienda de reconocimiento global, no se observa tan saturada y tiene elementos amigables en el body como carrusel para observar productos
+
+The frenche Co
+https://www.thefrenchie.co/?lang=es
+Tienda con estulo elegante y minimalista adecuada a lo que queremos plantear
+
+Livelarq
+https://www.livelarq.com/
+diseño de estilo minimalista sindo un ecommer
+
+Burrow
+https://burrow.com/
+Diseño integrativo minimalista de un ecommerce de moviliario contemporaneo. 
