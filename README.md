@@ -1,5 +1,5 @@
 # Grupo_2_Summarket
-https://github.com/dattino/repoClase7.git
+[https://github.com/dattino/repoClase7.git](https://github.com/Arampe1113/Grupo_2_Summarket)
 ## Integrantes:
 
 ### Geovani Erney Rivera Mesa 
