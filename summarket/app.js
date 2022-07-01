@@ -18,3 +18,7 @@ app.get("/register", (request, response) => {
 app.get("/login", (request, response) => {
     response.sendFile(path.join (__dirname, "/vistas/login.html"));
 })
+
+app.get("/detalleProducto", (request, response) => {
+    response.sendFile(path.join (__dirname, "/vistas/detalleProducto.html"));
+})
