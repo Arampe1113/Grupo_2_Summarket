@@ -9,12 +9,19 @@ app.use(express.static("public"));
 app.listen (3030,()=> {
     console.log ("puerto vivo 3030")
 })
+
+app.get('/',(request,response)=>{
+    response.sendFile(path.resolve(__dirname,'./vistas/home.html'));
+})
+
 app.get("/home", (request, response) => {
     response.sendFile(path.join (__dirname, "/vistas/home.html"));
 })
+
 app.get("/register", (request, response) => {
     response.sendFile(path.join (__dirname, "/vistas/register.html"));
 })
+
 app.get("/login", (request, response) => {
     response.sendFile(path.join (__dirname, "/vistas/login.html"));
 })
