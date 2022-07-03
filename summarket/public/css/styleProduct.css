@@ -2,6 +2,13 @@
     font-family: 'Franklin', sans-serif;
 }
 
+section .logoSumma{
+    position: absolute;
+    width: 10%;
+    right: 50px;
+
+}
+
 body{
     background-color: rgb(217,217,217);
 }
