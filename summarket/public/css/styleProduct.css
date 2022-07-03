@@ -1,0 +1,20 @@
+*    {
+    font-family: 'Franklin', sans-serif;
+}
+
+body{
+    background-color: rgb(217,217,217);
+}
+
+main{
+    background-color: rgb(163,184,157);
+}
+
+.product_img{
+    width: 20%;
+    padding: 10px;
+}
+
+.fa-truck{
+    color: rgb(83,107,77);
+}
