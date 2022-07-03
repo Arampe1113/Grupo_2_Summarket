@@ -1,4 +1,33 @@
 
+*    {
+    font-family: 'Franklin', sans-serif;
+}
+
+/* header*/
+header{
+    background-color: #a3b89d;
+}
+.fa-id-card{
+    color: #647262;
+    position:absolute;
+    right:50px
+}
+.fa-basket-shopping-simple{
+    color: #647262;
+    position:absolute;
+    right:50px
+}
+.fa-sign-in-alt{
+    color: #647262;
+    position:absolute;
+    right:50px
+}
+section img{
+    position: absolute;
+    width:80px;
+    right: 50px;
+
+}
 
 /*   paleta de colores corporativos summa
 
