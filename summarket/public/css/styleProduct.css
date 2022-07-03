@@ -10,11 +10,18 @@ main{
     background-color: rgb(163,184,157);
 }
 
+div .info-product{
+    color: rgb(0,85,115);
+}
+
+
 .product_img{
     width: 20%;
     padding: 10px;
 }
 
-.fa-truck{
-    color: rgb(83,107,77);
+.botonCarrito{
+    font-weight: bold;
+    color: rgb(0,85,115);
 }
+
