@@ -1,0 +1,39 @@
+*    {
+    font-family: 'Franklin', sans-serif;
+}
+
+section .logoSumma{
+    position: absolute;
+    width: 10%;
+    right: 50px;
+
+}
+
+body{
+    background-color: rgb(217,217,217);
+}
+
+p{
+    color: rgb(0,85,115);
+}
+
+
+main{
+    background-color: rgb(163,184,157);
+}
+
+div .info-product{
+    color: rgb(0,85,115);
+}
+
+
+.product_img{
+    width: 20%;
+    padding: 10px;
+}
+
+.botonCarrito{
+    font-weight: bold;
+    color: rgb(0,85,115);
+}
+
