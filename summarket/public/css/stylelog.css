@@ -1,0 +1,18 @@
+*    {
+    font-family: 'Franklin', sans-serif;
+}
+main{
+    background-color: rgb(163,184,157);}
+
+Body{
+    Display: flex;
+    align-content: center;
+
+}
+/* version celular */
+@media screen and (min-width: 361px) {
+}
+
+/* version de dispositivo table*/
+@media screen and (min-width: 769px) {
+}
