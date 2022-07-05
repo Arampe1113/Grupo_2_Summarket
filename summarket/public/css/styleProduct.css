@@ -26,6 +26,11 @@ main {
   background-color: rgb(163, 184, 157);
 }
 
+.botonHome{
+  text-align: center;
+  font-weight: bold;
+}
+
 div .info-product {
   color: rgb(0, 85, 115);
 }
