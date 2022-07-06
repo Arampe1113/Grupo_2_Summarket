@@ -3,15 +3,31 @@
   box-sizing: border-box;
 }
 
-header {
-  background-color: #a3b89d;
-  height: 100px;
+
+/* header*/
+
+.fa-id-card{
+  color: #647262;
+  position:absolute;
+  right:50px
+}
+.fa-basket-shopping-simple{
+  color: #647262;
+  position:absolute;
+  right:50px
+}
+.fa-sign-in-alt{
+  color: #647262;
+  position:absolute;
+  right:50px
+}
+section img{
+  width:100%;
+
 }
 
-header img {
-  position: absolute;
-  width: 100px;
-  right: 70px;
+header {
+  background-color: #a3b89d;
 }
 
 body {
