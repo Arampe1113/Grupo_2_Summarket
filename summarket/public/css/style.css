@@ -4,10 +4,7 @@
 }
 
 /* header*/
-header{
-    background-color: #a3b89d;
-    height: 100px;
-}
+
 .fa-id-card{
     color: #647262;
     position:absolute;
@@ -24,9 +21,7 @@ header{
     right:50px
 }
 section img{
-    position: absolute;
-    width:80px;
-    right: 50px;
+    width:100%;
 
 }
 
