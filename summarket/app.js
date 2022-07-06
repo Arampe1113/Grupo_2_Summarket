@@ -11,7 +11,7 @@ app.listen(3030, () => {
 });
 
 app.get('/', (request, response) => {
-  response.sendFile(path.resolve(__dirname, '/vistas/home.html'));
+ response.sendFile(path.resolve(__dirname, './vistas/home.html'));
 });
 
 app.get('/carritoDeCompras', (request, response) => {

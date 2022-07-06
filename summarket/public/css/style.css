@@ -25,8 +25,9 @@ header{
 }
 section img{
     position: absolute;
-    width:80px;
-    right: 50px;
+    width:100px;
+    right: 80px;
+    align-items: center;
 
 }
 
