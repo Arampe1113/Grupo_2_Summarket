@@ -3,25 +3,88 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-size: 12px;
-  line-height: 150%;
-}
+/*Carrito*/
 
-header {
-  background-color: #a3b89d;
-  height: 100px;
-}
+/* header*/
 
-section img {
+.fa-id-card {
+  color: #647262;
   position: absolute;
-  width: 80px;
   right: 50px;
 }
+.fa-basket-shopping-simple {
+  color: #647262;
+  position: absolute;
+  right: 50px;
+}
+.fa-sign-in-alt {
+  color: #647262;
+  position: absolute;
+  right: 50px;
+}
+section img {
+  width: 100%;
+}
 
-section h1 {
-  color: white;
+#navegador ul {
+  list-style-type: none;
+  text-align: center;
+}
+#navegador li {
+  display: inline;
+  text-align: center;
+  margin: 0 10px 0 0;
+}
+#navegador li a {
+  padding: 2px 7px 2px 7px;
+  color: #666;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+#navegador li a:hover {
+  background-color: whitesmoke;
+  color: #ffffff;
+}
+.memubar {
+  border: 1px solid #a3b89d;
+  background-color: #557460;
+}
+
+#nav ul {
+  list-style-type: none;
+  text-align: left;
+}
+#nav li {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 2px 0 0;
+  width: 30%;
+}
+#nav li a {
+  padding: 2px 7px 2px 7px;
+  color: #666;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+#nav li a:hover {
+  background-color: whitesmoke;
+  color: #ffffff;
+}
+
+.banner {
+  position: absolute;
+  right: 10px;
+  width: 50%;
+  top: 280px;
+}
+.banner i {
+  display: flex;
+  flex-direction: right;
+  align-items: right;
+  width: 30%;
 }
 
 .burguer-menu {
@@ -38,57 +101,6 @@ section h1 {
 .main-navbar {
   display: none;
 }
-
-.pr {
-  position: relative;
-  overflow: hidden;
-}
-
-.cart_container {
-  text-align: left;
-  width: 100%;
-  float: left;
-  margin-right: 2%;
-}
-
-.cart-responsive {
-  font-size: 18px;
-  max-width: 750px;
-  margin: auto;
-}
-
-.responsive-head {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.responsive-head :first-child {
-  width: 55%;
-}
-
-.responsive-head div {
-  width: 80px;
-  float: left;
-  line-height: 20px;
-  font-weight: bold;
-}
-
-.responsive-head :nth-child(3) {
-  text-align: right;
-}
-
-.responsive-head :nth-child(4) {
-  text-align: right;
-  float: right;
-}
-
-.cart_container h2 {
-  margin: 10px 0;
-  font-size: 25px;
-}
-
 /* ESTILOS PARA EL FOOTER */
 .footer-web {
   display: none;
@@ -117,7 +129,7 @@ footer i {
 
 /* MEDIA QUERYS */
 /* Footer */
-@media(min-width: 769px) {
+@media (min-width: 769px) {
   .footer-web {
     display: initial;
   }
