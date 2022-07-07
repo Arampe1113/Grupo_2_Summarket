@@ -88,3 +88,40 @@ section h1 {
   margin: 10px 0;
   font-size: 25px;
 }
+
+/* ESTILOS PARA EL FOOTER */
+.footer-web {
+  display: none;
+}
+
+.footer-mobile {
+  display: initial;
+}
+
+.footer-web article {
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+footer i {
+  color: #496954;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.footer-mobile article {
+  text-align: center;
+  background-color: #496954;
+  color: whitesmoke;
+}
+
+/* MEDIA QUERYS */
+/* Footer */
+@media(min-width: 769px) {
+  .footer-web {
+    display: initial;
+  }
+  .footer-mobile {
+    display: none;
+  }
+}

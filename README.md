@@ -20,6 +20,9 @@ Buenas buenas, soy Julián David Pérez. Me encantan los videojuegos, salir con 
 
 “La mente es como un paracaídas, sólo funciona si se abre” Albert Einstein
 
+### Carlos Camargo Brid
+Refuerzo al proyecto
+
 ## Temática del sitio
 Nacemos como una opción para que los empleados de Summa puedan dar a conocer sus emprendimientos publicando y vendiendo sus productos al interior de la empresa. Nosotros seremos el puente que conecte los pequeños emprendimientos con los empleados de Summa para así darse a conocer y potenciar sus ventas. 
 
