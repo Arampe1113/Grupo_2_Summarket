@@ -61,11 +61,31 @@ div .info-product {
 div .product_img {
   display: flex;
   flex-direction:column;
-  width: 20%;
+  width: auto;
   padding: 0.5%;
 }
 
-.botonCarrito {
-  font-weight: bold;
+.boton {
+  width: 50%;
+  justify-content: center;
   color: rgb(0, 85, 115);
+}
+
+.botonCarrito {
+  color: yellow;
+  width: 100%;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  align-items: center;
+  cursor: pointer;
+  padding: 2.5%;
+}
+
+/*.botonCarritoFont {
+  font-size: 16px;
+  font-weight: 700;
+  align-items: center;
+  cursor: pointer;
+  padding: 2.5%;
 }
