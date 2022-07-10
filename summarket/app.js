@@ -26,6 +26,6 @@ app.get('/login', (request, response) => {
   response.sendFile(path.resolve(__dirname, './vistas/login.html'));
 });
 
-app.get('/detalleProducto', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './vistas/detalleProducto.html'));
+app.get('/productDetail', (request, response) => {
+  response.sendFile(path.resolve(__dirname, './vistas/productDetail.html'));
 });
