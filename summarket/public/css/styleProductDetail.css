@@ -6,29 +6,104 @@
 
 /* header*/
 
-.fa-id-card{
+.fa-id-card {
   color: #647262;
-  position:absolute;
-  right:50px
+  position: absolute;
+  right: 50px;
 }
-.fa-basket-shopping-simple{
+.fa-basket-shopping-simple {
   color: #647262;
-  position:absolute;
-  right:50px
+  position: absolute;
+  right: 50px;
 }
-.fa-sign-in-alt{
+.fa-sign-in-alt {
   color: #647262;
-  position:absolute;
-  right:50px
+  position: absolute;
+  right: 50px;
 }
-section img{
-  width:100%;
+section img {
+  width: 100%;
+}
 
+#navegador ul {
+  list-style-type: none;
+  text-align: center;
+}
+#navegador li {
+  display: inline;
+  text-align: center;
+  margin: 0 10px 0 0;
+}
+#navegador li a {
+  padding: 2px 7px 2px 7px;
+  color: #666;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+#navegador li a:hover {
+  background-color: whitesmoke;
+  color: #ffffff;
+}
+.memubar {
+  border: 1px solid #a3b89d;
+  background-color: #557460;
 }
 
-header {
-  background-color: #a3b89d;
+#nav ul {
+  list-style-type: none;
+  text-align: left;
+  display: none;
 }
+
+#nav li {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 6px 0 0;
+  width: 30%;
+}
+#nav li a {
+  padding: 2px 7px 2px 7px;
+  color: #666;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+#nav li a:hover {
+  background-color: whitesmoke;
+  color: #ffffff;
+}
+
+.banner {
+  position: absolute;
+  right: 10px;
+  width: 50%;
+  top: 280px;
+}
+.banner i {
+  display: flex;
+  flex-direction: right;
+  align-items: right;
+  width: 30%;
+}
+
+.burguer-menu {
+  background-color: #647262;
+  color: white;
+  display: block;
+  max-width: 50px;
+  padding: 15px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  margin: auto;
+}
+.main-navbar {
+  display: none;
+}
+
+/* Estilos detalle producto*/
 
 body {
   background-color: rgb(217, 217, 217);
@@ -89,4 +164,70 @@ div .product_img {
   align-items: center;
   cursor: pointer;
   padding: 2.5%;
+}
+
+/* ESTILOS PARA EL FOOTER */
+.footer-web {
+  display: none;
+}
+
+.footer-mobile {
+  display: initial;
+}
+
+.footer-web article {
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+footer i {
+  color: #496954;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.footer-mobile article {
+  text-align: center;
+  background-color: #496954;
+  color: whitesmoke;
+}
+
+
+/* Media querys */
+
+/* version tablet */
+
+@media (min-width: 391px) {
+  form{
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      text-align: left;
+  }
+
+  #nav ul {
+    display:contents;
+  }
+  
+}
+
+/* version desktop*/
+@media (min-width: 769px) {
+  form{
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      text-align: left;
+  }
+}
+
+
+/* Footer */
+@media (min-width: 769px) {
+  .footer-web {
+    display: initial;
+  }
+  .footer-mobile {
+    display: none;
+  }
 }
