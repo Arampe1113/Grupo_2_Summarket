@@ -127,16 +127,18 @@ main {
   font-weight: bold;
 }
 
-div .info-product {
+div .infoProduct {
   display: flex;
   flex-direction: column;
   color: rgb(0, 85, 115);
+  width: 80%;
+  padding: 0.5%;
 }
 
-div .product_img {
+div .productImage {
   display: flex;
   flex-direction:column;
-  width: auto;
+  width: 20%;
   padding: 0.5%;
 }
 
