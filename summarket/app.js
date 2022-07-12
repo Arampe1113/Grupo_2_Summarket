@@ -1,8 +1,8 @@
 // const { application, response } = require("express");
 const path = require('path');
-
-const express = require("express");
+const express = require('express');
 const app = express();
+const cpRoutes = require('./routers/carritoCompras');
 
 app.use(express.static('public'));
 
@@ -14,9 +14,7 @@ app.get('/', (request, response) => {
   response.sendFile(path.resolve(__dirname, './vistas/home.html'));
 });
 
-app.get('/carritoDeCompras', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './vistas/carritodecompras.html'));
-});
+app.get('/carritoDeCompras', cpRoutes);
 
 app.get('/register', (request, response) => {
   response.sendFile(path.resolve(__dirname, './vistas/register.html'));
