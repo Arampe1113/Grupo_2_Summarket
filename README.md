@@ -69,3 +69,8 @@ Bliss
 https://www.blissworld.com/
 
 Página web que posee una paleta de colores que le da un estilo estéticamente bonito que se acomoda a los productos que disponen a la venta
+
+## Tablero
+
+link del tablero en Trello:
+https://trello.com/b/v46rRHtC/summarket
