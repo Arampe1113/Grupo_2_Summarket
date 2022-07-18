@@ -2,7 +2,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const cpRoutes = require('./routers/carritoCompras');
+const cpRoutes = require('./routers/productCartRouter');
 
 app.use(express.static('public'));
 
@@ -13,19 +13,19 @@ app.listen(3030, () => {
 });
 
 app.get('/', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './vistas/home.html'));
+  response.sendFile(path.resolve(__dirname, './views/index.html'));
 });
 
-app.get('/carritoDeCompras', cpRoutes);
+app.get('/productCart', cpRoutes);
 
 app.get('/register', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './vistas/register.html'));
+  response.sendFile(path.resolve(__dirname, './views/register.html'));
 });
 
 app.get('/login', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './vistas/login.html'));
+  response.sendFile(path.resolve(__dirname, './views/login.html'));
 });
 
 app.get('/productDetail', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './vistas/productDetail.html'));
+  response.sendFile(path.resolve(__dirname, './views/productDetail.html'));
 });
