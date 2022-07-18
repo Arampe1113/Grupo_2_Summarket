@@ -6,6 +6,8 @@ const cpRoutes = require('./routers/carritoCompras');
 
 app.use(express.static('public'));
 
+app.set('view engine', 'ejs');
+
 app.listen(3030, () => {
   console.log('puerto vivo 3030');
 });

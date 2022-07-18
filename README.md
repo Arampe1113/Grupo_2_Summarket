@@ -1,8 +1,10 @@
 # Grupo_2_Summarket
+
 [Link](https://github.com/Arampe1113/Grupo_2_Summarket)
+
 ## Integrantes:
 
-### Geovani Erney Rivera Mesa 
+### Geovani Erney Rivera Mesa
 
 Hola! soy Geovani, quiero conocer sobre desarrollo web y programación, recién empiezo el camino. Me gusta viajar y leer.
 
@@ -12,24 +14,30 @@ Hola! soy Geovani, quiero conocer sobre desarrollo web y programación, recién 
 
 Soy Andrea Aramburo, psicóloga, y busco poder aprender de programación, diversificar mis posiibilidades laborales en correspondencia con el mundo actual, y poder complementar mi carrera profesional para general un valor agregado.
 
-Deus Ex Machina 
+Deus Ex Machina
 
-### Julián David Pérez Navarro 
+### Julián David Pérez Navarro
 
 Buenas buenas, soy Julián David Pérez. Me encantan los videojuegos, salir con amigos a tomar cerveza y comer, jugar fútbol y ver anime. Me apasiona mucho el tema de la programación y la tecnología, y aprender cosas nuevas de este campo siendo mi mayor interés la inteligencia artificial y la ciencia de datos.
 
 “La mente es como un paracaídas, sólo funciona si se abre” Albert Einstein
 
 ### Carlos Camargo Brid
-Refuerzo al proyecto
+
+Hola! Soy Carlos Camargo. Me gustan los videojuegos, mas que todo shooter. Me gusta la comida rapida. Soy Ingeniero Industrial y me llama mucho la atención esto de progrmación, y he visto cursitos cortos sobre ciertos temas.
+
+"La paciencia y el tiempo hacen más que la fuerza y la pasión" - Jean de la Fontaine
 
 ## Temática del sitio
-Nacemos como una opción para que los empleados de Summa puedan dar a conocer sus emprendimientos publicando y vendiendo sus productos al interior de la empresa. Nosotros seremos el puente que conecte los pequeños emprendimientos con los empleados de Summa para así darse a conocer y potenciar sus ventas. 
+
+Nacemos como una opción para que los empleados de Summa puedan dar a conocer sus emprendimientos publicando y vendiendo sus productos al interior de la empresa. Nosotros seremos el puente que conecte los pequeños emprendimientos con los empleados de Summa para así darse a conocer y potenciar sus ventas.
 
 ## Público objetivo
-Empleados de la empresa Summa entre edades de 20 y 50 años tanto hombres como mujeres. 
+
+Empleados de la empresa Summa entre edades de 20 y 50 años tanto hombres como mujeres.
 
 ## Referentes del mercado
+
 Seleccionamos sitios como:
 
 Linio
@@ -55,7 +63,7 @@ Diseño de estilo minimalista siendo un ecommerce
 Burrow
 https://burrow.com/
 
-Diseño integrativo minimalista de un ecommerce de moviliario contemporáneo. 
+Diseño integrativo minimalista de un ecommerce de moviliario contemporáneo.
 
 Bliss
 https://www.blissworld.com/

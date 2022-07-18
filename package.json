@@ -2,7 +2,7 @@
   "name": "grupo_2_summarket",
   "version": "1.0.0",
   "description": "[Link](https://github.com/Arampe1113/Grupo_2_Summarket)\r ## Integrantes:",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Arampe1113/Grupo_2_Summarket#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
   }
 }
