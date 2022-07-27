@@ -1,11 +1,7 @@
 ## Retrospectiva del trabajo realizado
 
-## Integrantes
-
-Andrea Aramburo Pelaez
-Carlos Camargo Brid
-Geovani Rivera Mesa
-Julián David Pérez Navarro
+## Integrantes 
+Andrea Aramburo Pelaez, Carlos Camargo Brid, Geovani Rivera Mesa, Julián David Pérez Navarro
 
 Conclusiones:
 
