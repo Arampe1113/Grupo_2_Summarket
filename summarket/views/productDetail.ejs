@@ -23,34 +23,7 @@
   </head>
 
   <body>
-    <header>
-      <section>
-        <img src="images/summa2.png" alt="Banner de ofertas" />
-      </section>
-      <section>
-        <div class="memubar"> 
-        
-                <div id="navegador">
-                    <ul>
-                        <li><a href="/register">Crea tu cuenta </li></a>
-                        <li><a href="/login">Ingresa </li></a>
-                        <li><a href="/carritodecompras"> Carrito de compras</a></li>
-                        <li><a href="/productDetail"> Detalle de productos</a></li>
-                    </ul>
-                </div>
-        </div>
-            </section>
-            <section> 
-              <div id="nav">
-                  <ul>
-                      <li><a href="#">Ofertas</a></li>
-                      <li><a href="#">Tiendas Oficiales</a></li>
-                      <li><a href="#">Vender</a></li>
-                      <li><a href="#">Ayuda</a></li>
-                      </ul>
-                  </div>
-              </section>
-    </header>
+    <%- include('./partials/header.ejs') %>
 
     <main>
     <div class=botonHome><a href="/"> <i class="fa-solid fa-house"></i> </a>Detalle de Producto </div>
@@ -105,19 +78,5 @@
         <p></p>
       </section>
     </main>
-
-    <footer>
-      <div>
-        <h3>¡Realiza tu compra!</h3>
-        <div>
-          Contacta con tu vendedor Summarket para consultar medios de pago.
-          Consulta con la Compañía la opción de libranza
-        </div>
-        <div>
-          ¡En Summarket apoyamos tus emprendimientos sin cobros o comisiones de
-          intermediación!
-        </div>
-      </div>
-    </footer>
-  </body>
+    <%- include('./partials/footer.ejs') %>
 </html>

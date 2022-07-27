@@ -21,146 +21,80 @@
   </head>
 
   <body>
-    <header>
-      <section>
-        <img src="images/summa2.png" alt="Banner de ofertas" />
-      </section>
-      <section>
-        <div class="memubar"> 
-        
-                <div id="navegador">
-                    <ul>
-                        <li><a href="/register">Crea tu cuenta </li></a>
-                        <li><a href="/login">Ingresa </li></a>
-                        <li><a href="/carritodecompras"> Carrito de compras</a></li>
-                        <li><a href="/productDetail"> Detalle de productos</a></li>
-                    </ul>
-                </div>
-        </div>
-            </section>
-            <section> 
-              <div id="nav">
-                  <ul>
-                      <li><a href="#">Ofertas</a></li>
-                      <li><a href="#">Tiendas Oficiales</a></li>
-                      <li><a href="#">Vender</a></li>
-                      <li><a href="#">Ayuda</a></li>
-                      </ul>
-                  </div>
-              </section>
-    </header>
+    <%- include('./partials/header.ejs') %>
     <h1>Carrito de compras</h1>
 
-<div class="shopping-cart">
+    <div class="shopping-cart">
+      <div class="column-labels">
+        <label class="product-image">Imagen</label>
+        <label class="product-details">Producto</label>
+        <label class="product-price">Precio</label>
+        <label class="product-quantity">Cantidad</label>
+        <label class="product-removal">Remover</label>
+        <label class="product-line-price">Total</label>
+      </div>
 
-  <div class="column-labels">
-    <label class="product-image">Imagen</label>
-    <label class="product-details">Producto</label>
-    <label class="product-price">Precio</label>
-    <label class="product-quantity">Cantidad</label>
-    <label class="product-removal">Remover</label>
-    <label class="product-line-price">Total</label>
-  </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="/images/01_Prod_motoNegra.jpg" />
+        </div>
+        <div class="product-details">
+          <div class="product-title">Motocicleta Modelo 2022</div>
+          <p class="product-description">
+            Se vende hermosa moto modelo 2022. Ultimo Modelo. Papeles al dia
+          </p>
+        </div>
+        <div class="product-price">$12.000.000</div>
+        <div class="product-quantity">
+          <input type="number" value="0" min="1" />
+        </div>
+        <div class="product-removal">
+          <button class="remove-product">Remover</button>
+        </div>
+        <div class="product-line-price">$12.000.000</div>
+      </div>
 
-  <div class="product">
-    <div class="product-image">
-      <img src="/images/01_Prod_motoNegra.jpg">
-    </div>
-    <div class="product-details">
-      <div class="product-title">Motocicleta Modelo 2022</div>
-      <p class="product-description">Se vende hermosa moto modelo 2022. Ultimo Modelo. Papeles al dia</p>
-    </div>
-    <div class="product-price">$12.000.000</div>
-    <div class="product-quantity">
-      <input type="number" value="0" min="1">
-    </div>
-    <div class="product-removal">
-      <button class="remove-product">
-        Remover
-      </button>
-    </div>
-    <div class="product-line-price">$12.000.000</div>
-  </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="/images/02_Prod_motoBlanca.jpg" />
+        </div>
+        <div class="product-details">
+          <div class="product-title">Nmotocicleta Modelo 2022</div>
+          <p class="product-description">
+            Solo 8.000 kms, papeles al dia. Lista para traspasos! Unico Dueño
+          </p>
+        </div>
+        <div class="product-price">$14.000.000</div>
+        <div class="product-quantity">
+          <input type="number" value="0" min="1" />
+        </div>
+        <div class="product-removal">
+          <button class="remove-product">Remover</button>
+        </div>
+        <div class="product-line-price">$14.000.000</div>
+      </div>
 
-  <div class="product">
-    <div class="product-image">
-      <img src="/images/02_Prod_motoBlanca.jpg">
-    </div>
-    <div class="product-details">
-      <div class="product-title">Nmotocicleta Modelo 2022</div>
-      <p class="product-description">Solo 8.000 kms, papeles al dia. Lista para traspasos! Unico Dueño</p>
-    </div>
-    <div class="product-price">$14.000.000</div>
-    <div class="product-quantity">
-      <input type="number" value="0" min="1">
-    </div>
-    <div class="product-removal">
-      <button class="remove-product">
-        Remover
-      </button>
-    </div>
-    <div class="product-line-price">$14.000.000</div>
-  </div>
+      <div class="totals">
+        <div class="totals-item">
+          <label>Subtotal</label>
+          <div class="totals-value" id="cart-subtotal">0</div>
+        </div>
+        <div class="totals-item">
+          <label>Impuestos(Aproximado)</label>
+          <div class="totals-value" id="cart-tax">0</div>
+        </div>
+        <div class="totals-item">
+          <label>Envio(Si aplica)</label>
+          <div class="totals-value" id="cart-shipping">0</div>
+        </div>
+        <div class="totals-item totals-item-total">
+          <label>Total</label>
+          <div class="totals-value" id="cart-total">0</div>
+        </div>
+      </div>
 
-  <div class="totals">
-    <div class="totals-item">
-      <label>Subtotal</label>
-      <div class="totals-value" id="cart-subtotal">0</div>
-    </div>
-    <div class="totals-item">
-      <label>Impuestos(Aproximado)</label>
-      <div class="totals-value" id="cart-tax">0</div>
-    </div>
-    <div class="totals-item">
-      <label>Envio(Si aplica)</label>
-      <div class="totals-value" id="cart-shipping">0</div>
-    </div>
-    <div class="totals-item totals-item-total">
-      <label>Total</label>
-      <div class="totals-value" id="cart-total">0</div>
-    </div>
-  </div>
-      
       <button class="checkout">Ir a pagar/Contactar al vendedor</button>
-
-</div>
-    
-    <footer>
-      <section class="footer-web">
-        <article>
-          <i class="fa-solid fa-credit-card"></i>
-          <h4>Realiza tu compra con pagos flexibles</h4>
-          <p>
-            Contacta con tu vendedor Summarket para consultar medios de pago.
-            Consulta con la compañía la opción de libranza
-          </p>
-        </article>
-
-        <article>
-          <i class="fa-solid fa-thumbs-up"></i>
-          <h4>Apoyo a los emprendimientos</h4>
-          <p>
-            ¡En Summarket apoyamos tus emprendimientos sin cobros o comisiones
-            de intermediación!
-          </p>
-        </article>
-
-        <article>
-          <i class="fa-solid fa-user-group"></i>
-          <h4>De Summa para Summa</h4>
-          <p>
-            Queremos que puedas exponer ese emprendimiento que pensaste no sería
-            exitoso al público para que más personas conozcan tus productos
-          </p>
-        </article>
-        <h4>Copyright © 2022 Summarket</h4>
-      </section>
-
-      <section class="footer-mobile">
-        <article>
-          <h3>Pagar</h3>
-        </article>
-      </section>
-    </footer>
+    </div>
+    <%- include('./partials/footer.ejs') %>
   </body>
 </html>

@@ -1,9 +1,10 @@
-const express = require('express');
-const path = require('path');
-
 const controller = {
   productCart: (req, res) => {
     res.render('productCart');
+  },
+
+  productDetail: (req, res) => {
+    res.render('productDetail');
   },
 };
 

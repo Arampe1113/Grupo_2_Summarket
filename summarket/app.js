@@ -2,7 +2,9 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const cpRoutes = require('./routers/productCartRouter');
+const cpRoutes = require('./routers/productRouter');
+const mRoutes = require('./routers/mainRouter');
+const uRoutes = require('./routers/userRouter');
 
 app.use(express.static('public'));
 
@@ -12,20 +14,12 @@ app.listen(3030, () => {
   console.log('puerto vivo 3030');
 });
 
-app.get('/', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './views/index.html'));
-});
+app.get('/', mRoutes);
 
 app.get('/productCart', cpRoutes);
 
-app.get('/register', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './views/register.html'));
-});
+app.get('/register', uRoutes);
 
-app.get('/login', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './views/login.html'));
-});
+app.get('/login', uRoutes);
 
-app.get('/productDetail', (request, response) => {
-  response.sendFile(path.resolve(__dirname, './views/productDetail.html'));
-});
+app.get('/productDetail', cpRoutes);
