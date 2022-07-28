@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
@@ -12,89 +13,35 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="/css/styleCarritoCompra.css" type="text/css" />
+    <link rel="stylesheet" href="/css/cartStyle.css" />
+
     <script
       src="https://kit.fontawesome.com/7057735af3.js"
       crossorigin="anonymous"
     ></script>
+
     <title>Carrito de Compras</title>
   </head>
 
   <body>
     <%- include('./partials/header.ejs') %>
     <h1>Carrito de compras</h1>
-
-    <div class="shopping-cart">
-      <div class="column-labels">
-        <label class="product-image">Imagen</label>
-        <label class="product-details">Producto</label>
-        <label class="product-price">Precio</label>
-        <label class="product-quantity">Cantidad</label>
-        <label class="product-removal">Remover</label>
-        <label class="product-line-price">Total</label>
-      </div>
-
-      <div class="product">
-        <div class="product-image">
-          <img src="/images/01_Prod_motoNegra.jpg" />
-        </div>
-        <div class="product-details">
-          <div class="product-title">Motocicleta Modelo 2022</div>
-          <p class="product-description">
-            Se vende hermosa moto modelo 2022. Ultimo Modelo. Papeles al dia
-          </p>
-        </div>
-        <div class="product-price">$12.000.000</div>
-        <div class="product-quantity">
-          <input type="number" value="0" min="1" />
-        </div>
-        <div class="product-removal">
-          <button class="remove-product">Remover</button>
-        </div>
-        <div class="product-line-price">$12.000.000</div>
-      </div>
-
-      <div class="product">
-        <div class="product-image">
-          <img src="/images/02_Prod_motoBlanca.jpg" />
-        </div>
-        <div class="product-details">
-          <div class="product-title">Nmotocicleta Modelo 2022</div>
-          <p class="product-description">
-            Solo 8.000 kms, papeles al dia. Lista para traspasos! Unico Dueño
-          </p>
-        </div>
-        <div class="product-price">$14.000.000</div>
-        <div class="product-quantity">
-          <input type="number" value="0" min="1" />
-        </div>
-        <div class="product-removal">
-          <button class="remove-product">Remover</button>
-        </div>
-        <div class="product-line-price">$14.000.000</div>
-      </div>
-
-      <div class="totals">
-        <div class="totals-item">
-          <label>Subtotal</label>
-          <div class="totals-value" id="cart-subtotal">0</div>
-        </div>
-        <div class="totals-item">
-          <label>Impuestos(Aproximado)</label>
-          <div class="totals-value" id="cart-tax">0</div>
-        </div>
-        <div class="totals-item">
-          <label>Envio(Si aplica)</label>
-          <div class="totals-value" id="cart-shipping">0</div>
-        </div>
-        <div class="totals-item totals-item-total">
-          <label>Total</label>
-          <div class="totals-value" id="cart-total">0</div>
-        </div>
-      </div>
-
-      <button class="checkout">Ir a pagar/Contactar al vendedor</button>
-    </div>
+    <table style="width: 100%">
+      <tr>
+        <th>Item</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Imagen</th>
+        <th>Opciones</th>
+      </tr>
+      <tr>
+        <td>Macbook Pro 2022</td>
+        <td>$6.000.000</td>
+        <td>1</td>
+        <td><img src="/images/img-macbook-pro-2020.jpg" width="50%" /></td>
+        <td><button>Quitar</button></td>
+      </tr>
+    </table>
     <%- include('./partials/footer.ejs') %>
   </body>
 </html>

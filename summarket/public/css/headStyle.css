@@ -1,12 +1,3 @@
-* {
-  font-family: 'Franklin', sans-serif;
-  box-sizing: border-box;
-}
-
-/*Carrito*/
-
-/* header*/
-
 .fa-id-card {
   color: #647262;
   position: absolute;
@@ -85,55 +76,4 @@ section img {
   flex-direction: right;
   align-items: right;
   width: 30%;
-}
-
-.burguer-menu {
-  background-color: #647262;
-  color: white;
-  display: block;
-  max-width: 50px;
-  padding: 15px 0;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 16px;
-  margin: auto;
-}
-.main-navbar {
-  display: none;
-}
-/* ESTILOS PARA EL FOOTER */
-.footer-web {
-  display: none;
-}
-
-.footer-mobile {
-  display: initial;
-}
-
-.footer-web article {
-  text-align: center;
-  background-color: whitesmoke;
-}
-
-footer i {
-  color: #496954;
-  font-size: 2em;
-  margin-top: 10px;
-}
-
-.footer-mobile article {
-  text-align: center;
-  background-color: #496954;
-  color: whitesmoke;
-}
-
-/* MEDIA QUERYS */
-/* Footer */
-@media (min-width: 769px) {
-  .footer-web {
-    display: initial;
-  }
-  .footer-mobile {
-    display: none;
-  }
 }

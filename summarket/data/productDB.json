@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Macbook Pro 2020",
+    "price": 6000000,
+    "discount": 3,
+    "category": "in-sale",
+    "description": "Apple MacBook Pro (13 pulgadas, 2020, Chip M1, 256 GB de SSD, 8 GB de RAM) - Gris espacial",
+    "image": "img-macbook-pro-2020.jpg"
+  },
+  {
+    "id": 2,
+    "name": "FZ-S 149cc",
+    "price": 8430000,
+    "discount": 3,
+    "category": "in-sale",
+    "description": "Motocicleta marca Yamaha: FZN con gran potencia de frenado debido al disco de freno delantero sobremedida y gruesas barras de suspensión, motor BLUE CORE con Inyección electrónica, nuevo tablero de instrumentos con mucha más información, Asiento conductor y pasajero separados.",
+    "image": "img-FZ-s--2022.jpg"
+  }
+]

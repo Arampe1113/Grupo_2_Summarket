@@ -1,0 +1,17 @@
+* {
+  font-family: 'Franklin', sans-serif;
+  box-sizing: border-box;
+}
+
+/*Carrito*/
+table,
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+/* MEDIA QUERYS */
+/* Footer */
+@media (min-width: 769px) {
+}
