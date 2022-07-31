@@ -24,3 +24,5 @@ Conclusiones:
 ## Sprint 3:
 
     Mediante tablero Trello y grupos en teams y whatsapp generamos comunicaciòn para dar seguimiento al detalle de los entregables.
+
+## Sprint 4:
