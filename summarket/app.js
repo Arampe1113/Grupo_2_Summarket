@@ -8,6 +8,8 @@ const uRoutes = require('./routers/userRouter');
 
 app.use(express.static('public'));
 
+app.set('views', path.join(__dirname, '/src/views/'));
+
 app.set('view engine', 'ejs');
 
 app.listen(3030, () => {
