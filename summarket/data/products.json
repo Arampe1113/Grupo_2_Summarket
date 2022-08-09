@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Macbook Pro 2020",
+    "description": "Apple MacBook Pro (13 pulgadas, 2020, Chip M1, 256 GB de SSD, 8 GB de RAM) - Gris espacial",
+    "image": "01_ProdMacbook-pro-2020.jpg",
+    "category": "computer",
+    "price": 6000000,
+    "discount": 3,
+    "colors": "White"
+  },
+  {
+    "id": 2,
+    "name": "FZ-S 149cc",
+    "description": "Motocicleta marca Yamaha: FZN con gran potencia de frenado debido al disco de freno delantero sobremedida y gruesas barras de suspensión, motor BLUE CORE con Inyección electrónica, nuevo tablero de instrumentos con mucha más información, Asiento conductor y pasajero separados.",
+    "image": "02_Prod_FZ-S-2022.jpg",
+    "category": "in-sale",
+    "price": 8430000,
+    "discount": 3,
+    "colors": "Black"
+  },
+  {
+    "id": 3,
+    "name": "XYZ Blanca 400cc",
+    "description": "Moto XYZ, color blanco, cilindrada 400 CC, documentación al día, modelo 2019, 4.200 KM, sin infracciones ni reclamaciones en aseguradora por colisiones.",
+    "image": "03_Prod_motoBlanca.jpg",
+    "category": "in-sale",
+    "price": 14700000,
+    "discount": 3,
+    "colors": "White"
+  },
+  {
+    "id": 4,
+    "name": "id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat",
+    "description": "diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat",
+    "image": "http://dummyimage.com/450x450.jpg/ff4444/ffffff",
+    "category": "insumos",
+    "price": 2426.13,
+    "discount": 44,
+    "colors": "Goldenrod"
+  },
+  {
+    "id": 5,
+    "name": "tortor sollicitudin mi sit amet lobortis sapien sapien non mi",
+    "description": "mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris",
+    "image": "http://dummyimage.com/450x450.png/dddddd/000000",
+    "category": "insumos",
+    "price": 3483.32,
+    "discount": 45,
+    "colors": "Maroon"
+  },
+  {
+    "id": 6,
+    "name": "amet lobortis sapien sapien non mi integer ac neque duis",
+    "description": "nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum",
+    "image": "http://dummyimage.com/450x450.bmp/cc0000/ffffff",
+    "category": "insumos",
+    "price": 3618.73,
+    "discount": 40,
+    "colors": "Purple"
+  },
+  {
+    "id": 7,
+    "name": "suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at",
+    "description": "non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed",
+    "image": "http://dummyimage.com/450x450.png/5fa2dd/ffffff",
+    "category": "café",
+    "price": 2904.73,
+    "discount": 29,
+    "colors": "Mauv"
+  },
+  {
+    "id": 8,
+    "name": "vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla",
+    "description": "lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes",
+    "image": "http://dummyimage.com/450x450.png/cc0000/ffffff",
+    "category": "café",
+    "price": 2815.61,
+    "discount": 41,
+    "colors": "Turquoise"
+  },
+  {
+    "id": 9,
+    "name": "nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer",
+    "description": "platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi",
+    "image": "http://dummyimage.com/450x450.bmp/5fa2dd/ffffff",
+    "category": "insumos",
+    "price": 992.72,
+    "discount": 10,
+    "colors": "Green"
+  },
+  {
+    "id": 10,
+    "name": "eu nibh quisque id justo sit amet sapien dignissim vestibulum",
+    "description": "eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae",
+    "image": "http://dummyimage.com/450x450.jpg/5fa2dd/ffffff",
+    "category": "insumos",
+    "price": 3675.5,
+    "discount": 0,
+    "colors": "Aquamarine"
+  },
+  {
+    "id": 11,
+    "name": "cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim",
+    "description": "sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis",
+    "image": "http://dummyimage.com/450x450.jpg/dddddd/000000",
+    "category": "insumos",
+    "price": 3383.14,
+    "discount": 7,
+    "colors": "Fuscia"
+  },
+  {
+    "id": 12,
+    "name": "duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam",
+    "description": "convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet",
+    "image": "http://dummyimage.com/450x450.jpg/5fa2dd/ffffff",
+    "category": "café",
+    "price": 1204.03,
+    "discount": 11,
+    "colors": "Goldenrod"
+  },
+  {
+    "id": 13,
+    "name": "nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl",
+    "description": "sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id",
+    "image": "http://dummyimage.com/450x450.jpg/dddddd/000000",
+    "category": "café",
+    "price": 1894.9,
+    "discount": 12,
+    "colors": "Goldenrod"
+  },
+  {
+    "id": 14,
+    "name": "duis mattis egestas metus aenean fermentum donec ut mauris eget",
+    "description": "quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a",
+    "image": "http://dummyimage.com/450x450.bmp/5fa2dd/ffffff",
+    "category": "insumos",
+    "price": 1426.64,
+    "discount": 35,
+    "colors": "Goldenrod"
+  },
+  {
+    "id": 15,
+    "name": "nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis",
+    "description": "luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
+    "image": "http://dummyimage.com/450x450.png/dddddd/000000",
+    "category": "café",
+    "price": 3137.48,
+    "discount": 1,
+    "colors": "Blue"
+  },
+  {
+    "id": 16,
+    "name": "ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor",
+    "description": "integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat",
+    "image": "http://dummyimage.com/450x450.jpg/5fa2dd/ffffff",
+    "category": "café",
+    "price": 3393.44,
+    "discount": 24,
+    "colors": "Red"
+  },
+  {
+    "id": 17,
+    "name": "etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam",
+    "description": "ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
+    "image": "http://dummyimage.com/450x450.jpg/ff4444/ffffff",
+    "category": "te",
+    "price": 3394.45,
+    "discount": 43,
+    "colors": "Turquoise"
+  },
+  {
+    "id": 18,
+    "name": "duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel",
+    "description": "elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis",
+    "image": "http://dummyimage.com/450x450.jpg/ff4444/ffffff",
+    "category": "insumos",
+    "price": 2393.27,
+    "discount": 20,
+    "colors": "Maroon"
+  },
+  {
+    "id": 19,
+    "name": "eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat",
+    "description": "odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique",
+    "image": "http://dummyimage.com/450x450.bmp/ff4444/ffffff",
+    "category": "insumos",
+    "price": 4421.14,
+    "discount": 38,
+    "colors": "Red"
+  },
+  {
+    "id": 20,
+    "name": "aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in",
+    "description": "facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec",
+    "image": "http://dummyimage.com/450x450.png/cc0000/ffffff",
+    "category": "café",
+    "price": 2569.86,
+    "discount": 6,
+    "colors": "Maroon"
+  }
+]
