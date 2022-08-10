@@ -1,97 +1,197 @@
-/* header style */ 
 
-* {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-body{
-	background: #1E1F25;
-}
-ul{
-	display: flex;
-	width: 100%;
-	height: 80vh;
-	margin: auto;
-	max-width: 1000px;
-	justify-content: space-between;
-	text-align: center;
-}
-li {
-	padding: 1rem 2rem 1.15rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: #ebebeb;
-	min-width: 80px;
-	margin: auto;
+
+
+
+
+.header {
+height: 100vh; 
+background-size:     cover;
+  background-image: 
+  linear-gradient(to right bottom, 
+   rgba(175, 179, 180, 0.8),
+   rgba(99, 99, 100, 0.8)),
+   url('https://ae01.alicdn.com/kf/Hd8ccde589995480c8c17ee34f24d3e38s/Decoration-Maison-Nordic-Black-White-Stripes-Wall-Papers-Home-Decor-Minimalist-Ins-Geometric-Wallpaper-for-Living.jpg_Q90.jpg_.webp');
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  
 }
 
-li:hover {
-  background-color: #666;
-  background-size: 100% 100%;
-  color: #27262c;
-  animation: spring 300ms ease-out;
-  text-shadow: 0 -1px 0 #647262;
-	font-weight: bold;
-}
-li:active {
-  transform: translateY(4px);
-}
 
-@keyframes spring {
-  15% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.2, 1.1);
-  }
-  40% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(0.95, 0.95);
-  }
-  75% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.05, 1);
-  }
-  100% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1, 1);
-  }
-}
-
-.shameless-plug{
+.brand-box {
   position: absolute;
-  bottom: 10px;
-  right: 0;
-  padding: 8px 20px;
-  color: #ccc;
-  text-decoration: none;
+  top: 40px;
+  left: 40px;
+} 
+
+
+
+
+
+
+
+
+.brand { font-size: 20px; }
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+} 
+
+
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  
+  
+  
+  backface-visibility: hidden;
+  margin-bottom: 30px;
 }
 
 
-header {
-    background: #647262;
-    background: -webkit-linear-gradient(to right, #a3b89d, #666);
-    background: linear-gradient(to right, #a3b89d, #666);
-    min-height: 10%;
-    max-height: 20%;
-  }
-  
-  #button-addon1 {
-    color: #ccc;
-  }
-  
-  i {
-    color: #ccc;
-  }
-  
-  .form-control::placeholder {
-    font-size: 0.95rem;
-    color: #aaa;
-    font-style: italic;
-  }
-  
-  .form-control.shadow-0:focus {
-    box-shadow: none;
-  }
 
-  /* header style */ 
 
+
+
+
+
+.heading-primary-main {
+  display: block;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+
+
+
+
+.heading-primary-sub {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 7.4px;
+}
+
+
+
+
+btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+font-size: 14px; }
+
+
+/*  navegation bar  */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+ /* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+
+.menubar {
+  display: flex;
+  justify-content: space-around;
+ align-items: flex-start;
+ width: 80%;
+ margin: ;
+}
+.navMenu {
+text-align: center;
+}
+
+.navMenu a {
+  color: #504c35;
+  text-decoration: none;
+  font-size: 80%;
+  font-weight: 200;
+  width: 80px;
+  /* -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; */
+}
+
+.navMenu a:hover {
+  color: #727272;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #1d1c1b;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(110px);
+  transform: translateX(110px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(285px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+} */
+ /* navegation bar 
