@@ -15,9 +15,9 @@ const controller = {
     res.render('products/cart');
   },
 
-  // productDetail: (req, res) => {
-  //   res.render('products/productDetail');
-  // },
+  create: (req, res) => {
+    res.render('products/create');
+  },
 
   detail: (req, res) => {
     const idProduc = req.params.id;
@@ -25,6 +25,47 @@ const controller = {
       return elemento.id == idProduc;
     });
     res.render('products/detail', { product: product });
+  },
+
+  store: (req, res) => {
+    const nuevoProducto = req.body;
+    nuevoProducto.id = products.length + 1;
+    // nuevoProducto.image = req.file.filename;
+    products.push(nuevoProducto);
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+    res.redirect('/');
+  },
+  // Update - Form to edit
+  edit: (req, res) => {
+    const idProduc = req.params.id;
+    const productEdit = products.find((item) => item.id == idProduc);
+    res.render('products/edit', { productEdit });
+  },
+  // Update - Method to update
+  update: (req, res) => {
+    const idProduc = req.params.id;
+    const productEdit = req.body;
+    const product = products.find((item) => item.id == idProduc);
+
+    product.name = productEdit.name;
+    product.price = productEdit.price;
+    product.discount = productEdit.discount;
+    // product.image = productEdit.image;
+
+    if (req.file) {
+      product.image = req.file.filename;
+    }
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+    res.redirect('/');
+  },
+
+  destroy: (req, res) => {
+    const idProduc = req.params.id;
+    const productsFilter = products.filter((item) => item.id != idProduc);
+    const data = JSON.stringify(productsFilter, null, ' ');
+    fs.writeFileSync(productsFilePath, data);
+    res.redirect('/');
   },
 };
 
