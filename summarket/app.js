@@ -16,12 +16,10 @@ app.listen(3030, () => {
   console.log('puerto vivo 3030');
 });
 
-app.get('/', mRoutes);
+app.use('/', mRoutes);
 
-app.get('/productCart', cpRoutes);
+app.use('/products', cpRoutes);
 
-app.get('/register', uRoutes);
+app.use('/register', uRoutes);
 
-app.get('/login', uRoutes);
-
-app.get('/productDetail', cpRoutes);
+app.use('/login', uRoutes);
