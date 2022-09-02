@@ -25,6 +25,4 @@ app.use('/', mRoutes);
 
 app.use('/products', cpRoutes);
 
-app.use('/register', uRoutes);
-
-app.use('/login', uRoutes);
+app.use('/users', uRoutes);

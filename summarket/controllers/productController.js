@@ -65,7 +65,7 @@ const controller = {
     const productsFilter = products.filter((item) => item.id != idProduc);
     const data = JSON.stringify(productsFilter, null, ' ');
     fs.writeFileSync(productsFilePath, data);
-    res.redirect('/');
+    res.redirect('/products');
   },
 };
 
