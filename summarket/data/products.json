@@ -28,5 +28,25 @@
   "price": 14700000,
   "discount": 3,
   "colors": "Blanco"
+ },
+ {
+  "name": "Zapatillas Reebok",
+  "price": "500000",
+  "discount": "15",
+  "colors": "Negro",
+  "category": "in-sale",
+  "description": "asdadlkjakd",
+  "id": 4,
+  "image": "1662158001403-a83e57fe212e4b18bca3ae3600785a28_9366.webp"
+ },
+ {
+  "name": "kjasdklalkdsj",
+  "price": "15",
+  "discount": "10",
+  "colors": "asdad",
+  "category": "visited",
+  "description": "asdadas",
+  "id": 5,
+  "image": "1662158094502-banner2.jpg"
  }
 ]
