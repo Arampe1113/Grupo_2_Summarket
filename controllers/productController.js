@@ -30,7 +30,7 @@ const controller = {
   store: (req, res) => {
     const nuevoProducto = req.body;
     nuevoProducto.id = products.length + 1;
-    nuevoProducto.image = req.file.filename;
+    // nuevoProducto.image = req.file.filename;
     products.push(nuevoProducto);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
     res.redirect('/');
@@ -65,7 +65,7 @@ const controller = {
     const productsFilter = products.filter((item) => item.id != idProduc);
     const data = JSON.stringify(productsFilter, null, ' ');
     fs.writeFileSync(productsFilePath, data);
-    res.redirect('/products');
+    res.redirect('/');
   },
 };
 

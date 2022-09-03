@@ -8,8 +8,7 @@ const cpRoutes = require('./routers/productRouter');
 const mRoutes = require('./routers/mainRouter');
 const uRoutes = require('./routers/userRouter');
 
-app.use(express.static(path.join(__dirname, '../public')));
-
+app.use(express.static('public'));
 app.use(bp.json());
 app.use(bp.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
@@ -26,4 +25,6 @@ app.use('/', mRoutes);
 
 app.use('/products', cpRoutes);
 
-app.use('/users', uRoutes);
+app.use('/register', uRoutes);
+
+app.use('/login', uRoutes);

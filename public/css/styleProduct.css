@@ -1,0 +1,71 @@
+* {
+  font-family: 'Franklin', sans-serif;
+  box-sizing: border-box;
+}
+
+
+/* header*/
+
+.fa-id-card{
+  color: #647262;
+  position:absolute;
+  right:50px
+}
+.fa-basket-shopping-simple{
+  color: #647262;
+  position:absolute;
+  right:50px
+}
+.fa-sign-in-alt{
+  color: #647262;
+  position:absolute;
+  right:50px
+}
+section img{
+  width:100%;
+
+}
+
+header {
+  background-color: #a3b89d;
+}
+
+body {
+  background-color: rgb(217, 217, 217);
+}
+
+article{
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  color: rgb(0, 85, 115);
+}
+
+main {
+  background-color: rgb(163, 184, 157);
+}
+
+.botonHome{
+  text-align: center;
+  font-weight: bold;
+}
+
+div .info-product {
+  display: flex;
+  flex-direction: column;
+  color: rgb(0, 85, 115);
+}
+
+div .product_img {
+  display: flex;
+  flex-direction:column;
+  width: 20%;
+  padding: 0.5%;
+}
+
+.botonCarrito {
+  font-weight: bold;
+  color: rgb(0, 85, 115);
+}

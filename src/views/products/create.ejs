@@ -5,13 +5,12 @@
     <div class="container products-wrapper">
       <div class="row">
         <div class="col-12">
-          <h2 class="products-title">
-            Formulario de venta/creación de nuevo producto
-          </h2>
+          <h2 class="products-title">Formulario de creación de productos</h2>
         </div>
       </div>
       <div class="col-12">
-        <form action="/products" method="POST" enctype="multipart/form-data">
+        <!-- enctype="multipart/form-data" causa error al guardar nuevo producto y falta funcionalidad de guardar imagen -->
+        <form action="/products" method="POST">
           <div class="row product-detail">
             <div class="col-12 col-md-6">
               <label for="name" class="form-label">Nombre del producto:</label>
@@ -72,7 +71,7 @@
                 class="form-input"
               ></textarea>
             </div>
-            <div class="col-12">
+            <!-- <div class="col-12">
               <label for="product-img" class="form-label">Imagen:</label>
               <input
                 type="file"
@@ -80,7 +79,7 @@
                 name="product-img"
                 class="form-input"
               />
-            </div>
+            </div> -->
             <div class="col-12">
               <button type="submit" class="buy-now-button">
                 Guardar producto

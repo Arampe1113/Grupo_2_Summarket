@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="es">
-  <%- include('../partials/header.ejs') %>
+<html>
   <body>
+    <%- include('../partials/header.ejs') %>
     <div class="container products-wrapper">
       <div class="row">
         <div class="col-12">
           <h2 class="products-title">
-            Formulario de venta/creación de nuevo producto
+            Estás editando: <i><%= productEdit.name %></i>
           </h2>
         </div>
       </div>
       <div class="col-12">
-        <form action="/products" method="POST" enctype="multipart/form-data">
+        <form
+          action="/products/edit/<%= productEdit.id %>?_method=PUT"
+          method="POST"
+        >
           <div class="row product-detail">
             <div class="col-12 col-md-6">
               <label for="name" class="form-label">Nombre del producto:</label>
@@ -20,6 +22,7 @@
                 id="name"
                 name="name"
                 placeholder="Ej: Zapatillas Reebok"
+                value="<%= productEdit.name %>"
                 class="form-input"
               />
             </div>
@@ -30,6 +33,7 @@
                 id="price"
                 name="price"
                 placeholder="Ej: 5678"
+                value="<%= productEdit.price %>"
                 class="form-input"
               />
             </div>
@@ -40,22 +44,10 @@
                 id="discount"
                 name="discount"
                 placeholder="Ej: 15"
+                value="<%= productEdit.discount %>"
                 class="form-input"
               />
             </div>
-            <div class="col-12 col-md-6">
-              <label for="colors" class="form-label"
-                >Colores disponibles:</label
-              >
-              <input
-                type="text"
-                id="colors"
-                name="colors"
-                placeholder="Ej: Blanco"
-                class="form-input"
-              />
-            </div>
-
             <div class="col-12 col-md-6">
               <label for="category" class="form-label">Categoría:</label>
               <select name="category" id="category" class="form-input">
@@ -66,20 +58,9 @@
             </div>
             <div class="col-12">
               <label for="description" class="form-label">Descipción:</label>
-              <textarea
-                name="description"
-                id="description"
-                class="form-input"
-              ></textarea>
-            </div>
-            <div class="col-12">
-              <label for="product-img" class="form-label">Imagen:</label>
-              <input
-                type="file"
-                id="product-img"
-                name="product-img"
-                class="form-input"
-              />
+              <textarea name="description" id="description" class="form-input">
+<%= productEdit.description %></textarea
+              >
             </div>
             <div class="col-12">
               <button type="submit" class="buy-now-button">
@@ -90,7 +71,6 @@
         </form>
       </div>
     </div>
-
     <%- include('../partials/footer.ejs') %>
   </body>
 </html>

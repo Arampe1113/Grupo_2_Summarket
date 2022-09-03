@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Macbook Pro 2020",
+    "description": "Apple MacBook Pro (13 pulgadas, 2020, Chip M1, 256 GB de SSD, 8 GB de RAM) - Gris espacial",
+    "image": "01_ProdMacbook-pro-2020.jpg",
+    "category": "Últimos agregados",
+    "price": 6000000,
+    "discount": 3,
+    "colors": "Blanco"
+  },
+  {
+    "id": 2,
+    "name": "FZ-S 149cc",
+    "description": "Motocicleta marca Yamaha: FZN con gran potencia de frenado debido al disco de freno delantero sobremedida y gruesas barras de suspensión, motor BLUE CORE con Inyección electrónica, nuevo tablero de instrumentos con mucha más información, Asiento conductor y pasajero separados.",
+    "image": "02_Prod_FZ-S-2022.jpg",
+    "category": "En oferta",
+    "price": 8430000,
+    "discount": 3,
+    "colors": "Negro"
+  },
+  {
+    "id": 3,
+    "name": "XYZ Blanca 400cc",
+    "description": "Moto XYZ, color blanco, cilindrada 400 CC, documentación al día, modelo 2019, 4.200 KM, sin infracciones ni reclamaciones en aseguradora por colisiones.",
+    "image": "03_Prod_motoBlanca.jpg",
+    "category": "En Oferta",
+    "price": 14700000,
+    "discount": 3,
+    "colors": "Blanco"
+  }
+]
