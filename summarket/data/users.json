@@ -6,7 +6,7 @@
     "Email": "tdutchburn0@dailymail.co.uk",
     "Contraseña": "lxBMh8CXA",
     "Categoria": "Ambos",
-    "Imagen": "http://dummyimage.com/208x100.png/cc0000/ffffff"
+    "Imagen": "avatar-512x512-456317.png"
   },
   {
     "id": 2,
@@ -88,95 +88,5 @@
     "Contraseña": "BeLyDMyz",
     "Categoria": "Vendedor",
     "Imagen": "http://dummyimage.com/133x100.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 11,
-    "Nombre": "Ruperto",
-    "Apellido": "Atty",
-    "Email": "rattya@slashdot.org",
-    "Contraseña": "uAox20Wv5ZE",
-    "Categoria": "Ambos",
-    "Imagen": "http://dummyimage.com/212x100.png/dddddd/000000"
-  },
-  {
-    "id": 12,
-    "Nombre": "Noni",
-    "Apellido": "Martusov",
-    "Email": "nmartusovb@scribd.com",
-    "Contraseña": "eiethn",
-    "Categoria": "Comprador",
-    "Imagen": "http://dummyimage.com/108x100.png/cc0000/ffffff"
-  },
-  {
-    "id": 13,
-    "Nombre": "Nikolia",
-    "Apellido": "Master",
-    "Email": "nmasterc@list-manage.com",
-    "Contraseña": "41CaAcg",
-    "Categoria": "Ambos",
-    "Imagen": "http://dummyimage.com/157x100.png/cc0000/ffffff"
-  },
-  {
-    "id": 14,
-    "Nombre": "Ebba",
-    "Apellido": "Maron",
-    "Email": "emarond@businessweek.com",
-    "Contraseña": "PU225vh",
-    "Categoria": "Vendedor",
-    "Imagen": "http://dummyimage.com/219x100.png/dddddd/000000"
-  },
-  {
-    "id": 15,
-    "Nombre": "Aubrie",
-    "Apellido": "Germon",
-    "Email": "agermone@weebly.com",
-    "Contraseña": "a655umw1afSB",
-    "Categoria": "Ambos",
-    "Imagen": "http://dummyimage.com/201x100.png/cc0000/ffffff"
-  },
-  {
-    "id": 16,
-    "Nombre": "Naomi",
-    "Apellido": "McCrum",
-    "Email": "nmccrumf@psu.edu",
-    "Contraseña": "MgQtmyXPBFK",
-    "Categoria": "Vendedor",
-    "Imagen": "http://dummyimage.com/240x100.png/ff4444/ffffff"
-  },
-  {
-    "id": 17,
-    "Nombre": "Charlot",
-    "Apellido": "McGlade",
-    "Email": "cmcgladeg@123-reg.co.uk",
-    "Contraseña": "hUIQbfj",
-    "Categoria": "Comprador",
-    "Imagen": "http://dummyimage.com/135x100.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 18,
-    "Nombre": "Lolita",
-    "Apellido": "Gehrels",
-    "Email": "lgehrelsh@example.com",
-    "Contraseña": "Hq74fvl",
-    "Categoria": "Vendedor",
-    "Imagen": "http://dummyimage.com/218x100.png/cc0000/ffffff"
-  },
-  {
-    "id": 19,
-    "Nombre": "Reine",
-    "Apellido": "Huckster",
-    "Email": "rhucksteri@pagesperso-orange.fr",
-    "Contraseña": "cg2vmIQd",
-    "Categoria": "Comprador",
-    "Imagen": "http://dummyimage.com/138x100.png/ff4444/ffffff"
-  },
-  {
-    "id": 20,
-    "Nombre": "Eunice",
-    "Apellido": "Burgwyn",
-    "Email": "eburgwynj@t-online.de",
-    "Contraseña": "xop821vlx",
-    "Categoria": "Vendedor",
-    "Imagen": "http://dummyimage.com/137x100.png/cc0000/ffffff"
   }
 ]
