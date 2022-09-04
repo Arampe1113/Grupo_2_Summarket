@@ -1,120 +1,7 @@
 * {
   font-family: 'Franklin', sans-serif;
   box-sizing: border-box;
-  color: #647262;
 }
-
-div.imagen {
-  width: 100%;
-  text-align: center;
-}
-
-img {
-  width: 50%;
-}
-
-/* Estilos detalle producto*/
-
-div.detallePrecio{
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-body {
-  background-color: rgb(217, 217, 217);
-}
-
-article{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-p {
-  color: rgb(0, 85, 115);
-}
-
-main {
-  background-color: rgb(163, 184, 157);
-}
-
-.botonHome{
-  text-align: center;
-  font-weight: bold;
-}
-
-div .infoProduct {
-  display: flex;
-  flex-direction: column;
-  color: rgb(0, 85, 115);
-  width: 80%;
-  padding: 0.5%;
-}
-
-div .productImage {
-  display: flex;
-  flex-direction:column;
-  width: 20%;
-  padding: 0.5%;
-}
-
-.boton {
-  width: 50%;
-  justify-content: center;
-  color: rgb(0, 85, 115);
-}
-
-.botonAgregar {
-  width: 100%;
-  border-radius: 100px;
-  font-size: 16px;
-  font-weight: 700;
-  align-items: center;
-  cursor: pointer;
-  padding: 2.5%;
-}
-
-.botonCarrito {
-  width: 100%;
-  border-radius: 100px;
-  font-size: 16px;
-  font-weight: 700;
-  align-items: center;
-  cursor: pointer;
-  padding: 2.5%;
-}
-
-
-
-/* Media querys */
-
-/* version tablet */
-
-@media (min-width: 391px) {
-  form{
-      display: flex;
-      flex-direction: column;
-      /* width: 60%; */
-      text-align: left;
-  }
-
-  #nav ul {
-    display:contents;
-  }
-  
-}
-
-/* version desktop*/
-@media (min-width: 769px) {
-  form{
-      display: flex;
-      flex-direction: column;
-      width: 60%;
-      text-align: left;
-  }
-}
-
 
 
 /* header*/
@@ -133,6 +20,9 @@ div .productImage {
   color: #647262;
   position: absolute;
   right: 50px;
+}
+section img {
+  width: 100%;
 }
 
 #navegador ul {
@@ -213,15 +103,69 @@ div .productImage {
   display: none;
 }
 
+/* Estilos detalle producto*/
 
-/* Footer */
-@media (min-width: 769px) {
-  .footer-web {
-    display: initial;
-  }
-  .footer-mobile {
-    display: none;
-  }
+body {
+  background-color: rgb(217, 217, 217);
+}
+
+article{
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  color: rgb(0, 85, 115);
+}
+
+main {
+  background-color: rgb(163, 184, 157);
+}
+
+.botonHome{
+  text-align: center;
+  font-weight: bold;
+}
+
+div .infoProduct {
+  display: flex;
+  flex-direction: column;
+  color: rgb(0, 85, 115);
+  width: 80%;
+  padding: 0.5%;
+}
+
+div .productImage {
+  display: flex;
+  flex-direction:column;
+  width: 20%;
+  padding: 0.5%;
+}
+
+.boton {
+  width: 50%;
+  justify-content: center;
+  color: rgb(0, 85, 115);
+}
+
+.botonAgregar {
+  width: 100%;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  align-items: center;
+  cursor: pointer;
+  padding: 2.5%;
+}
+
+.botonCarrito {
+  width: 100%;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  align-items: center;
+  cursor: pointer;
+  padding: 2.5%;
 }
 
 /* ESTILOS PARA EL FOOTER */
@@ -248,4 +192,44 @@ footer i {
   text-align: center;
   background-color: #496954;
   color: whitesmoke;
+}
+
+
+/* Media querys */
+
+/* version tablet */
+
+@media (min-width: 391px) {
+  form{
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      text-align: left;
+  }
+
+  #nav ul {
+    display:contents;
+  }
+  
+}
+
+/* version desktop*/
+@media (min-width: 769px) {
+  form{
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      text-align: left;
+  }
+}
+
+
+/* Footer */
+@media (min-width: 769px) {
+  .footer-web {
+    display: initial;
+  }
+  .footer-mobile {
+    display: none;
+  }
 }

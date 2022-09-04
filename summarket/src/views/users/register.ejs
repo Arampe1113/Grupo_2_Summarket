@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/stylelog.css" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/stylelog.css" type="text/css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <%- include('../partials/header.ejs') %>
-    <main> 
-    <section> 
-        <form>
-            <div> </div>
-            <h3 class="registro">
-                Registro
-            </h3>
-            <div> <label for="nombre completo"> </label></div>
-            <div> <input type="text" placeholder="name" name="name"></div>
+    <div class="container products-wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="products-title">Formulario de registro de usuarios</h2>
+        </div>
+      </div>
+      <div class="col-12">
+        <form action="/users" method="POST" enctype="multipart/form-data">
+          <div class="row user-detail">
+            <div class="col-12 col-md-6">
+              <label for="firstName" class="form-label">Nombre:</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Ej: Andrea"
+                class="form-input"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="lastName" class="form-label">Apellidos:</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Ej: Suarez"
+                class="form-input"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="email" class="form-label">Correo Electronico:</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Ej: micorreo@gmail.com"
+                class="form-input"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="La contraseña debe tener caracteres alfanumericos"
+                class="form-input"
+              />
+            </div>
 
-            <div> <label for="email"> </label></div>
-            <div> <input type="email" placeholder="email" name="email"></div>
-
-            <h3> <label for="password"></label> </h3>
-            <div> <input type="password" placeholder="password" name="password"></div>
-
-
-            <p clas="olvidado tu contraseña">
-                <A HREF="../login"> ¿ya tienes cuenta? </A>
-            </p>
-            <br>
-            <button> Ingresar </button>
-            </br>
-
+            <div class="col-12">
+              <label for="image" class="form-label">Imagen de perfil:</label>
+              <input type="file" id="image" name="image" class="form-input" />
+            </div>
+            <div class="col-12">
+              <button type="submit" class="save-user">Registrarse</button>
+              <button type="reset" class="erase-form">Borrar formulario</button>
+            </div>
+          </div>
         </form>
-    </main>
-    </section>
+      </div>
+    </div>
+
     <%- include('../partials/footer.ejs') %>
-    </body>
-    </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </body>
+</html>

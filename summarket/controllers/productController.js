@@ -50,7 +50,7 @@ const controller = {
     product.name = productEdit.name;
     product.price = productEdit.price;
     product.discount = productEdit.discount;
-    // product.image = productEdit.image;
+    product.image = productEdit.image;
 
     if (req.file) {
       product.image = req.file.filename;
@@ -65,7 +65,7 @@ const controller = {
     const productsFilter = products.filter((item) => item.id != idProduc);
     const data = JSON.stringify(productsFilter, null, ' ');
     fs.writeFileSync(productsFilePath, data);
-    res.redirect('/products');
+    res.redirect('/');
   },
 };
 

@@ -27,29 +27,35 @@
 
     	<!-- product detail -->
 	<div class="container products-wrapper">
-		<div >
+		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title">Detalle del producto: <%= product.name %></h2>
 			</div>
 		</div>
 		<div class="product-detail">
-			<div >
+			<div class="row">
 				<div class="col-12 col-lg-8">
-					<img src="/images/products/<%= product.image %>" alt="product image" class="product-detail-img">
+					<img src="/images/<%= product.image %>" alt="product image" class="product-detail-img">
 					<p class="product-detail-description">
 						<%= product.description %>
 					</p>
 				</div>
 				<div class="col-12 col-lg-4">
 					<article class="product-detail-info">
-						<div class="detallePrecio">
 						<h2 class="product-detail-title"><%= product.name %></h2>
-						<p class="product-detail-price small">
-								<span>$<%= product.price %></span>
-								<b><%= product.discount %>% OFF</b>
-						</p>
-						</div>
 						
+							<p class="product-detail-price small">
+								<span>$<%= product.price %></span>
+								/
+								<b><%= product.discount %>% OFF</b>
+							</p>
+							<p class="product-detail-price">
+								$<%= product.price %>
+							</p>
+							<p class="product-detail-price">
+								$<%= product.price %>
+							</p>
+
 						<ul class="actions-list">
 							<li>
 								<i class="fas fa-credit-card"></i>
