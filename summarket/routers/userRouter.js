@@ -5,7 +5,7 @@ const userCont = require('../controllers/userController');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '/images/users');
+    cb(null, 'public/images/users');
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + '-' + file.originalname);
@@ -20,6 +20,6 @@ router.get('/login', userCont.login);
 
 // /*** CREATE new user***/
 router.get('/register', userCont.register);
-router.post('/', upload.single, userCont.save);
+router.post('/', upload.single('user-image'), userCont.save);
 
 module.exports = router;

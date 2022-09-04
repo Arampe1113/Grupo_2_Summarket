@@ -178,5 +178,13 @@
     "password": "xop821vlx",
     "category": "Vendedor",
     "image": "http://dummyimage.com/137x100.png/cc0000/ffffff"
+  },
+  {
+    "firstName": "asdasdsad",
+    "lastName": "fdsfsdf",
+    "email": "asdad@hotmail.com",
+    "password": "lkjalksjdlkasd",
+    "id": 21,
+    "image": "1662258542084-1662258504432-avatar-512x512-456317.png"
   }
 ]

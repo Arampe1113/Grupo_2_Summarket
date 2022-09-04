@@ -18,7 +18,7 @@ const controller = {
     newUser.id = users.length + 1;
     newUser.image = req.file.filename;
     users.push(newUser);
-    fs.writeFileSync(usersFilePath, JSON.stringify(products, null, ' '));
+    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
     res.redirect('/');
   },
 };
