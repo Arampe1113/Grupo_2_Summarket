@@ -17,7 +17,7 @@
     "category": "En oferta",
     "price": 8430000,
     "discount": 3,
-    "colors": "Negro"
+    "colors": "Azul"
   },
   {
     "id": 3,
@@ -28,5 +28,15 @@
     "price": 14700000,
     "discount": 3,
     "colors": "Blanco"
+  },
+  {
+    "id": 4,
+    "name": "Tennis Reebok",
+    "description": "Tennis, color negro, tallas 38-44",
+    "image": "04_Prod_tennisReebok.webp",
+    "category": "En Oferta",
+    "price": 150000,
+    "discount": 2,
+    "colors": "Negro"
   }
 ]
