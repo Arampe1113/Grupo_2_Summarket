@@ -1,7 +1,10 @@
+Primer detail
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+
+<head>
+	<!-- <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summarket - Produto</title>
@@ -14,70 +17,94 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
+      rel="stylesheet" />  -->
 
-  <body>
-    <%- include('../partials/header.ejs') %>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/styleProductDetail.css" type="text/css" />
+</head>
+<%- include('../partials/header.ejs') %>
 
-    	<!-- product detail -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Detalle del producto: <%= product.name %></h2>
-			</div>
-		</div>
-		<div class="product-detail">
+	<body> -->
+
+		<!--product detail -->
+		<div class="container-products-wrapper">
 			<div class="row">
-				<div class="col-12 col-lg-8">
-					<img src="/images/products/<%= product.image %>" alt="product image" class="product-detail-img">
-					<p class="product-detail-description">
-						<%= product.description %>
+				<div class="col-12">
+					<h2 class="products-title"><%= product.name %>
+					</h2>
+					<hr>
+				</div>
+			</div>
+			<div class="product-detail">
+				<div class="row">
+					<div class="col-12-col-lg-8">
+						<img src="/images/products/<%= product.image %>" alt="product image" class="product-detail-img">
+						<p class="product-detail-description">
+							<%= product.description %>
+						</p>
+					</div>
+				</div>
+				<div class="detalles-compra"> 
+				
+					<p class="product-detail-price small">
+						<span>$<%= product.price %></span>
+						<b>
+							<%= product.discount %>% OFF
+						</b>
+					</p>
+					<p class="product-detail-price">
+						$<%= product.price %>
 					</p>
 				</div>
-				<div class="col-12 col-lg-4">
-					<article class="product-detail-info">
-						<h2 class="product-detail-title"><%= product.name %></h2>
+					<div class="col-12-col-lg-4">
+						<article class="product-detail-info">
+							<div class="formas-de-pago">
+								<div class="boton-compra">
+								<a href="#" class="buy-now-button">¡Compra ahora!</a>
+								<br>
+								<br>
+								<hr>
+								<div class="boton-editar-comrpa"> 
+									<a href="/products/edit/<%= product.id %>" class="action-button edit">Editar
+										Compra</a>
+										</div>
+	
+	
+							</div>
+							<ul class="actions-list">
+								<!-- <li>
+									<i class="fas fa-credit-card"></i>
+									<p>Pagá en 12 cuotas sin interes</p>
+								</li>
+								<li>
+									<i class="fas fa-store"></i>
+									<p>Retiro gratis en locales del vendedor</p>
+								</li> -->
+							</ul>
 						
-							<p class="product-detail-price small">
-								<span>$<%= product.price %></span>
-								/
-								<b><%= product.discount %>% OFF</b>
-							</p>
-							<p class="product-detail-price">
-								$<%= product.price %>
-							</p>
-							<p class="product-detail-price">
-								$<%= product.price %>
-							</p>
-
-						<ul class="actions-list">
-							<li>
-								<i class="fas fa-credit-card"></i>
-								<p>Pagá en 12 cuotas sin interes</p>
-							</li>
-							<li>
-								<i class="fas fa-store"></i>
-								<p>Retiro gratis en locales del vendedor</p>
-							</li>
-						</ul>
-
-						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
-						<hr>
-
-						<a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
-						</form>
-					</article>
+								
+								</div>
+							</div>
+							</div>
+							
+									<div class="boton-eliminar"> 
+								<!-- <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
+									style="display: inline-flex"> -->
+									<hr>
+									<button type="submit" class="action-button-delete">ELIMINAR</button>
+								</div>
+								</form>
+						</article>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-    <%- include('../partials/footer.ejs') %>
-</html>
+		</div>
+		<%- include('../partials/footer.ejs') %>
+
+</html> -->
