@@ -1,92 +1,93 @@
-
-*    {
-    font-family: 'Franklin', sans-serif;
+* {
+  font-family: 'Franklin', sans-serif;
 }
 
 /* header*/
 
-.fa-id-card{
-    color: #647262;
-    position:absolute;
-    right:50px
+.fa-id-card {
+  color: #647262;
+  position: absolute;
+  right: 50px;
 }
-.fa-basket-shopping-simple{
-    color: #647262;
-    position:absolute;
-    right:50px
+.fa-basket-shopping-simple {
+  color: #647262;
+  position: absolute;
+  right: 50px;
 }
-.fa-sign-in-alt{
-    color: #647262;
-    position:absolute;
-    right:50px
+.fa-sign-in-alt {
+  color: #647262;
+  position: absolute;
+  right: 50px;
 }
-section img{
-    width:100%;
-
-}
-
-#navegador ul{
-    list-style-type: none;
-    text-align: center;
- }
- #navegador li{
-    display: inline;
-    text-align: center;
-    margin: 0 10px 0 0;
- }
- #navegador li a {
-    padding: 2px 7px 2px 7px;
-    color: #666;
-    background-color: #eeeeee;
-    border: 1px solid #ccc;
-    text-decoration: none;
- }
- #navegador li a:hover{
-    background-color: whitesmoke;
-    color: #ffffff;
- }
-.memubar{
-    border: 1px solid #a3b89d;
-    background-color: #557460;
+section img {
+  width: 100%;
 }
 
-#nav ul{
-    list-style-type: none;
-    text-align: left;
- }
- #nav li{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin: 0 2px 0 0;
-    width: 30%;
- }
- #nav li a {
-    padding: 2px 7px 2px 7px;
-    color: #666;
-    background-color: #eeeeee;
-    border: 1px solid #ccc;
-    text-decoration: none;
- }
- #nav li a:hover{
-    background-color: whitesmoke;
-    color: #ffffff;
- }
+#navegador ul {
+  list-style-type: none;
+  text-align: center;
+}
+#navegador li {
+  display: inline;
+  text-align: center;
+  margin: 0 10px 0 0;
+}
+#navegador li a {
+  padding: 2px 7px 2px 7px;
+  color: #666;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+#navegador li a:hover {
+  background-color: whitesmoke;
+  color: #ffffff;
+}
+.memubar {
+  border: 1px solid #a3b89d;
+  background-color: #557460;
+}
 
- .banner{
-     position: absolute;
-     right: 10px;
-     width:  50%;
-     top: 280px;
+#nav ul {
+  list-style-type: none;
+  text-align: left;
+}
+#nav li {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 2px 0 0;
+  width: 30%;
+}
+#nav li a {
+  padding: 2px 7px 2px 7px;
+  color: #666;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+#nav li a:hover {
+  background-color: whitesmoke;
+  color: #ffffff;
+}
 
- }
- .banner i{
-    display: flex;
-    flex-direction: right;
-    align-items: right;
-    width:  30%;
+.banner {
+  position: absolute;
+  right: 10px;
+  width: 50%;
+  top: 280px;
+}
+.banner i {
+  display: flex;
+  flex-direction: right;
+  align-items: right;
+  width: 30%;
+}
 
- }
+#carouselExampleControls {
+  display: flex;
+  justify-content: center;
+}
 /*   paleta de colores corporativos summa
 
  (186,212,5)

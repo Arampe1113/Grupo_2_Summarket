@@ -13,30 +13,47 @@
     <%- include('../partials/header.ejs') %>
 <main> 
 <section> 
-    <form>
-        <div> </div>
+    <form action="/users" method="POST">
+        
         <h3 class="ingreso">
             Entrar
         </h3>
+        <div class="col-12 col-md-6">
 
-        <div> <label for="E-mail"> </label></div>
-        <div> <input type="E-mail" placeholder="E-mail" name="email"></div>
-
-        <h3> <label for="password"></label> </h3>
-        <div> <input type="password" placeholder="Password" name="password"></div>
+            <label for="email" class="form-label">Correo Electronico:</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Ej: micorreo@gmail.com"
+              class="form-input"
+            />
+        </div>
+        <div class="col-12 col-md-6">
+            <label for="password" class="form-label">Contraseña:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Ingresa tu contraseña"
+              class="form-input"
+            />
+          </div>
 
   
         <p clas="olvidado tu contraseña">
             <A HREF="../register">  ¿Has olvidado su contraseña? </A>
         </p>
     </br>
-        <button> <A HREF="/">  Ingresar </A> </button>
+        <button type="submit"> Ingresar</button>
+        <button> Registrarse</button>
     </br>
          <A HREF="../register"> ¿No tienes cuenta? </A> 
-    <div> </div>
+   
     </form>
-</main>
+
 </section>
+</main>
 <%- include('../partials/footer.ejs') %>
 </body>
 </html>

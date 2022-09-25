@@ -16,6 +16,7 @@ var upload = multer({ storage: storage });
 
 router.get('/register', userCont.register);
 
+router.post('/login', userCont.processLogin);
 router.get('/login', userCont.login);
 
 // /*** CREATE new user***/
