@@ -1,3 +1,8 @@
+header{
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
+}
 .header {
   height: 100vh;
   background-size: cover;
@@ -8,6 +13,21 @@
     ),
     url('https://ae01.alicdn.com/kf/Hd8ccde589995480c8c17ee34f24d3e38s/Decoration-Maison-Nordic-Black-White-Stripes-Wall-Papers-Home-Decor-Minimalist-Ins-Geometric-Wallpaper-for-Living.jpg_Q90.jpg_.webp');
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+h6{
+  font-size: medium;
+}
+.contenedor-contactanos{
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: inline-block;
+}
+.somos{
+  height: auto;
+  width: 70%;
+  font-size: small;
 }
 
 .brand-box {
