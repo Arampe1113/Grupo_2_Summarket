@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-let bcrypt = require('bcryptjs');
+let bcrypt = require('bcrypt');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
@@ -11,11 +11,13 @@ const controller = {
   },
 
   processLogin: (req, res) => {
+    const usersFilePath = path.join(__dirname, '../data/users.json');
+    const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
+
     for (let i = 0; i < users.length; i++) {
       if (
-        (req.body.email =
-          users[i].email &&
-          bcrypt.compareSync(req.body.password, users[i].password))
+        req.body.emailLogin == users[i].email &&
+        bcrypt.compareSync(req.body.passwordLogin, users[i].password)
       ) {
         console.log(users[i].email + users[i].password);
         // res.send('Bienvenido');

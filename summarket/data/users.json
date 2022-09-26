@@ -186,5 +186,21 @@
     "password": "lkjalksjdlkasd",
     "id": 21,
     "image": "1662258542084-1662258504432-avatar-512x512-456317.png"
+  },
+  {
+    "firstName": "Prueba",
+    "lastName": "prueba A",
+    "email": "micorreo@gmail.com",
+    "password": "$2a$10$sX58foDlQDmD0OUrk1ctb.eAfZX5QjsWLXjvYcoZ9aQqApY9a0vZK",
+    "image": "1664140793518-Pic.jpg",
+    "id": 22
+  },
+  {
+    "firstName": "prueba2",
+    "lastName": "pruebaB",
+    "email": "correo@hotmail.com",
+    "password": "$2b$10$wudEQUWrs3lomallSV4s1e1blLm4obDRA1StoPjic3uqD9cUJgJhm",
+    "image": "1664142344884-Pic.jpg",
+    "id": 23
   }
 ]
