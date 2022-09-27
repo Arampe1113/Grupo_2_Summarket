@@ -1,6 +1,5 @@
 *{
     font-family: 'Franklin', sans-serif;
-    box-sizing: border-box;
     }
 
 .container {
@@ -18,3 +17,12 @@
     border-color: blue;
 }
 
+.imagen{
+    flex-wrap: wrap;
+    background-color: yellow;
+    border-color: blue;
+}
+
+.placeholer{
+    color: blueviolet;
+}
