@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/css/styleLogin.css" type="text/css" />
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/stylelog.css" type="text/css" />
+>>>>>>> f89f1c53ea96cdf52a2082a882d68cd1775db5a8
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include('../partials/header.ejs') %>
+<<<<<<< HEAD
 <main> 
 <section class="registro"> 
     <form action="/users" method="POST" enctype="multipart/form-data">
@@ -21,6 +38,16 @@
         <div class="col-12 col-md-6">
 
             <label for="emailLogin" class="form-label">Correo Electronico:</label>
+=======
+    <main>
+      <section>
+        <form action="/users" method="POST">
+          <h3 class="ingreso">Entrar</h3>
+          <div class="col-12 col-md-6">
+            <label for="emailLogin" class="form-label"
+              >Correo Electronico:</label
+            >
+>>>>>>> f89f1c53ea96cdf52a2082a882d68cd1775db5a8
             <input
               type="text"
               id="emailLogin"
@@ -28,8 +55,8 @@
               placeholder="Ej: micorreo@gmail.com"
               class="form-input"
             />
-        </div>
-        <div class="col-12 col-md-6">
+          </div>
+          <div class="col-12 col-md-6">
             <label for="passwordLogin" class="form-label">Contraseña:</label>
             <input
               type="password"
@@ -40,6 +67,7 @@
             />
           </div>
 
+<<<<<<< HEAD
   
         <p>
             <A HREF="../register">  ¿Has olvidado su contraseña? </A>
@@ -61,3 +89,19 @@
 <%- include('../partials/footer.ejs') %>
 </body>
 </html>
+=======
+          <p>
+            <A HREF="../register"> ¿Has olvidado su contraseña? </A>
+          </p>
+          <br />
+          <button type="submit">Ingresar</button>
+          <button>Registrarse</button>
+          <br />
+          <A HREF="../register"> ¿No tienes cuenta? </A>
+        </form>
+      </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
+>>>>>>> f89f1c53ea96cdf52a2082a882d68cd1775db5a8
