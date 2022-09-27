@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/stylelog.css" type="text/css">
+    <link rel="stylesheet" href="/css/styleLogin.css" type="text/css" />
     <title>Login</title>
 </head>
 <body>
     <%- include('../partials/header.ejs') %>
 <main> 
-<section> 
+<section class="registro"> 
     <form action="/users" method="POST" enctype="multipart/form-data">
         
         <h3 class="ingreso">
@@ -44,13 +44,17 @@
         <p>
             <A HREF="../register">  ¿Has olvidado su contraseña? </A>
         </p>
+    
     </br>
-        <button type="submit"> Ingresar</button>
-        <button> Registrarse</button>
+        <button type="submit" class="botones"> Ingresar</button>
+        <button type="submit" class="botones"> Registrarse</button>
     </br>
-         <A HREF="../register"> ¿No tienes cuenta? </A> 
-   
-    </form>
+
+    <p>
+         <A HREF="../users/register"> ¿No tienes cuenta? </A> 
+    </p>
+    
+</form>
 
 </section>
 </main>
