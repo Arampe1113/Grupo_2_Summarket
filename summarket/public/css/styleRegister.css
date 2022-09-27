@@ -1,28 +1,28 @@
-*{
-    font-family: 'Franklin', sans-serif;
-    }
+* {
+  font-family: 'Franklin', sans-serif;
+}
 
 .container {
-    background-color: #f2f2f2;
-    padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
 }
 
-.save-user{
-    border-color: blue;
+.save-user {
+  border-color: blue;
 }
 
-.erase-form{
-    border-color: blue;
+.erase-form {
+  border-color: blue;
 }
 
-.imagen{
-    flex-wrap: wrap;
-    background-color: yellow;
-    border-color: blue;
+.imagen {
+  flex-wrap: wrap;
+  background-color: yellow;
+  border-color: blue;
 }
 
-.placeholer{
-    color: blueviolet;
+.placeholer {
+  color: blueviolet;
 }

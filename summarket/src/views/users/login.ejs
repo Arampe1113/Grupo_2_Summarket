@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/stylelog.css" type="text/css" />
+    <link rel="stylesheet" href="/css/styleLogin.css" type="text/css" />
     <title>Login</title>
   </head>
   <body>
@@ -44,17 +44,24 @@
             />
           </div>
 
-          <p>
-            <A HREF="../register"> ¿Has olvidado su contraseña? </A>
-          </p>
-          <br />
-          <button type="submit">Ingresar</button>
-          <button>Registrarse</button>
-          <br />
-          <A HREF="../register"> ¿No tienes cuenta? </A>
-        </form>
-      </section>
-    </main>
-    <%- include('../partials/footer.ejs') %>
-  </body>
+  
+        <p>
+            <A HREF="../register">  ¿Has olvidado su contraseña? </A>
+        </p>
+    
+    </br>
+        <button type="submit" class="botones"> Ingresar</button>
+        <button type="submit" class="botones"> Registrarse</button>
+    </br>
+
+    <p>
+         <A HREF="../users/register"> ¿No tienes cuenta? </A> 
+    </p>
+    
+</form>
+
+</section>
+</main>
+<%- include('../partials/footer.ejs') %>
+</body>
 </html>

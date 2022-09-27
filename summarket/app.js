@@ -1,4 +1,3 @@
-// const { application, response } = require("express");
 const path = require('path');
 const express = require('express');
 const app = express();
@@ -25,4 +24,4 @@ app.use('/', mRoutes);
 
 app.use('/products', cpRoutes);
 
-app.use('/users', uRoutes);
+app.use('/user', uRoutes);
