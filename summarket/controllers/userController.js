@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-let bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
@@ -11,20 +11,8 @@ const controller = {
   },
 
   processLogin: (req, res) => {
-    const usersFilePath = path.join(__dirname, '../data/users.json');
-    const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
-
-    for (let i = 0; i < users.length; i++) {
-      if (
-        req.body.emailLogin == users[i].email &&
-        bcrypt.compareSync(req.body.passwordLogin, users[i].password)
-      ) {
-        console.log(users[i].email + users[i].password);
-        // res.send('Bienvenido');
-      } else {
-        res.send('error');
-      }
-    }
+    let userToLogin = users.findByField('email', req.body.emailLogin);
+    return res.send(userToLogin);
   },
 
   register: (req, res) => {
@@ -43,7 +31,7 @@ const controller = {
 
     users.push(newUser);
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-    res.redirect('/');
+    return res.redirect('/users/login');
   },
 };
 
