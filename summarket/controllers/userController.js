@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
@@ -20,18 +21,32 @@ const controller = {
   },
 
   save: (req, res) => {
-    const newUser = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      password: bcrypt.hashSync(req.body.password, 10),
-      image: req.file.filename,
-      id: users.length + 1,
-    };
+    const resultValidation = validationResult(req);
 
-    users.push(newUser);
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-    return res.redirect('/users/login');
+    if (resultValidation.errors.length > 0) {
+      return res.render('users/register', {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+
+    return res.send('Validaciones exitosas');
+
+    // const newUser = {
+    //   firstName: req.body.firstName,
+    //   lastName: req.body.lastName,
+    //   email: req.body.email,
+    //   password: bcrypt.hashSync(req.body.password, 10),
+    //   image: req.file.filename,
+    //   id: users.length + 1,
+    // };
+    // users.push(newUser);
+    // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+    // return res.redirect('/user/login');
+  },
+
+  profile: (req, res) => {
+    return res.send('Perfil de usuario');
   },
 };
 

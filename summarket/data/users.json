@@ -1,10 +1,26 @@
 [
-  {
-    "firstName": "Prueba1",
-    "lastName": "Prueba apellido",
-    "email": "correo@gmail.com",
-    "password": "$2a$10$oJ/lWMsUB6lBWC/uORw13eCY9uC9c7Qo3txOvebjmdeSBCS7tDK5q",
-    "image": "1664237639690-1662258504432-avatar-512x512-456317.png",
-    "id": 1
-  }
+ {
+  "firstName": "Prueba1",
+  "lastName": "Prueba apellido",
+  "email": "correo@gmail.com",
+  "password": "$2a$10$oJ/lWMsUB6lBWC/uORw13eCY9uC9c7Qo3txOvebjmdeSBCS7tDK5q",
+  "image": "1664237639690-1662258504432-avatar-512x512-456317.png",
+  "id": 1
+ },
+ {
+  "firstName": "prueba",
+  "lastName": "prueba2",
+  "email": "correo2@gmail.com",
+  "password": "$2a$10$MJwAh0z8tEB14YcXazgMqOohAaCeHTR0HcWDKM/76xicqzl1w9nP2",
+  "image": "1664246596073-avatar-512x512-456321.png",
+  "id": 2
+ },
+ {
+  "firstName": "prueba2",
+  "lastName": "prueba2",
+  "email": "correo3@gmail.com",
+  "password": "$2a$10$YGl0SGwH1g6IHBio3/QNnuL7GibHtGiSp1PtMfAZfngVOd6w38FPi",
+  "image": "1664246656704-avatar-512x512-456321.png",
+  "id": 3
+ }
 ]
