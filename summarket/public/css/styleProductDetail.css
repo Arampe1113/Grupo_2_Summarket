@@ -134,6 +134,9 @@ button .action-button-delete{
   height: auto;
   max-width: 40%;
 }
+.formas-de-pago{
+  border-top: 1px solid rgb(104, 122, 104)
+}
 /* version tablet */
 @media (min-width: 391px) {
   form{
@@ -166,7 +169,6 @@ button .action-button-delete{
   .col-12-col-lg-4 {
     width: 100%;
     height: auto;
-    align-content: center;
     border: 1px solid lightgray;
     padding-left: 5%
   }
