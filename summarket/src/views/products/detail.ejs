@@ -29,7 +29,7 @@ Primer detail
 </head>
 <%- include('../partials/header.ejs') %>
 
-	<body> -->
+	<body>
 
 		<!--product detail -->
 		<div class="container-products-wrapper">
@@ -51,7 +51,7 @@ Primer detail
 				</div>
 				<div class="detalles-compra"> 
 				
-					<p class="product-detail-price small">
+					<p class="product-detail-price-small">
 						<span>$<%= product.price %></span>
 						<b>
 							<%= product.discount %>% OFF
@@ -76,11 +76,8 @@ Primer detail
 
 												  <!-- nuevo seccion -->
 										<h4 v-if="stockAvailability">Stock Available</h4>
-										<h4 v-else="stockAvailability">Oops!! Out Of Stock</h4>
-										<h3 class="my-3">Details</h3>
-										<ul v-for="detail in productChecks">
-										  <li>{{detail}}</li>
-										</ul>
+
+								
 										<button type="button" class="btn btn-outline-primary btn-lg btn-block btn-custom-color" @click="addToCart">
 										  ADD TO CART
 
