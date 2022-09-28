@@ -18,7 +18,7 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <section>
+      <section class="login">
         <form action="/users" method="POST">
           <h3 class="ingreso">Entrar</h3>
           <div class="col-12 col-md-6">
@@ -61,7 +61,10 @@
 </form>
 
 </section>
-</main>
+</main >
+
+<section class="login">
 <%- include('../partials/footer.ejs') %>
+</section>
 </body>
 </html>
