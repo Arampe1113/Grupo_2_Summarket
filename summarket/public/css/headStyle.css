@@ -18,11 +18,16 @@ header{
 h6{
   font-size: medium;
 }
-.contenedor-contactanos{
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  display: inline-block;
+
+ .container2 {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    
+} 
+.fa-paper-plane:before {
+  content: "\f1d8";
 }
 .somos{
   height: auto;
@@ -76,7 +81,7 @@ h6{
   letter-spacing: 7.4px;
 }
 
-btn:link,
+.btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
