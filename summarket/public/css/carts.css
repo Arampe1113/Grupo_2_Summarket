@@ -88,13 +88,12 @@
       position: relative;
     }
     
-    
-    
+
     .btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
-    
+
     
     
     
@@ -102,9 +101,7 @@
       transform: translateY(-1px);
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
-    
-    
-    
+
     .btn-white {
       background-color: #fff;
       color: #777;
@@ -182,13 +179,6 @@
       opacity: 1;
     }
     
-    .navMenu a:nth-child(4):hover ~ .dot {
-      -webkit-transform: translateX(285px);
-      transform: translateX(285px);
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      opacity: 1;
-    }
 
      /* Carrito de compras  */
 
