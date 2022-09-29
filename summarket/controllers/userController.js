@@ -13,7 +13,32 @@ const controller = {
   },
 
   processLogin: (req, res) => {
-    return res.send(req.body);
+    let userToLogin = User.findByField('email', req.body.emailLogin);
+
+    if (userToLogin) {
+      let passwordOk = bcryptjs.compareSync(
+        req.body.passwordLogin,
+        userToLogin.password
+      );
+      if (passwordOk) {
+        return res.redirect('profile');
+      }
+      return res.render('users/login', {
+        errors: {
+          email: {
+            msg: 'Las credenciales son invalidas',
+          },
+        },
+      });
+    }
+    return res.render('users/login', {
+      errors: {
+        email: {
+          msg: 'Correo no registrado en Summarket',
+        },
+      },
+    });
+    // return res.send(req.body);
   },
 
   register: (req, res) => {
@@ -55,7 +80,7 @@ const controller = {
   },
 
   profile: (req, res) => {
-    return res.send('Perfil de usuario');
+    return res.render('users/profile');
   },
 };
 

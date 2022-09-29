@@ -22,6 +22,6 @@ router.post(
   userCont.save
 );
 
-router.get('/profile/:userID', userCont.profile);
+router.get('/profile', userCont.profile);
 
 module.exports = router;
