@@ -7,8 +7,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
 const controller = {
-  index: (req, res) => {
-    res.render('products/index', { products: products });
+  products: (req, res) => {
+    res.render('products/all', { products: products });
   },
 
   cart: (req, res) => {

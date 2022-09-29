@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const User = require('../models/User');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
@@ -12,8 +13,7 @@ const controller = {
   },
 
   processLogin: (req, res) => {
-    let userToLogin = users.findByField('email', req.body.emailLogin);
-    return res.send(userToLogin);
+    return res.send(req.body);
   },
 
   register: (req, res) => {
@@ -30,19 +30,28 @@ const controller = {
       });
     }
 
-    return res.send('Validaciones exitosas');
+    let userInDB = User.findByField('email', req.body.email);
 
-    // const newUser = {
-    //   firstName: req.body.firstName,
-    //   lastName: req.body.lastName,
-    //   email: req.body.email,
-    //   password: bcrypt.hashSync(req.body.password, 10),
-    //   image: req.file.filename,
-    //   id: users.length + 1,
-    // };
-    // users.push(newUser);
-    // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-    // return res.redirect('/user/login');
+    if (userInDB) {
+      return res.render('users/register', {
+        errors: {
+          email: {
+            msg: 'Ya existe un usuario registrado con este correo',
+          },
+        },
+        oldData: req.body,
+      });
+    }
+
+    let userToCreate = {
+      ...req.body,
+      password: bcryptjs.hashSync(req.body.password, 10),
+      avatar: req.file.filename,
+    };
+
+    let userCreate = User.create(userToCreate);
+
+    return res.redirect('login');
   },
 
   profile: (req, res) => {
