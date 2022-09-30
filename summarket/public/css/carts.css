@@ -1,185 +1,89 @@
+.container {
+  background-color: rgb(247, 244, 244);
+  border-bottom: 1px solid rgb(24, 22, 22);
+  padding: 20px;
+  box-shadow:
+    inset 0 -3em 3em rgba(216, 216, 216, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(94, 94, 94, 0.3);
+}
 
-.header {
-    height: 100vh; 
-    background-size:     cover;
-      background-image: 
-      linear-gradient(to right bottom, 
-       rgba(175, 179, 180, 0.8),
-       rgba(99, 99, 100, 0.8)),
-       url('https://ae01.alicdn.com/kf/Hd8ccde589995480c8c17ee34f24d3e38s/Decoration-Maison-Nordic-Black-White-Stripes-Wall-Papers-Home-Decor-Minimalist-Ins-Geometric-Wallpaper-for-Living.jpg_Q90.jpg_.webp');
-      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    
-      
-    }
-    
-    
-    .brand-box {
-      position: absolute;
-      top: 40px;
-      left: 40px;
-    } 
-    
-    
-    
-    
-    
-    
-    
-    
-    .brand { font-size: 20px; }
-    
-    .text-box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    } 
-    
-    
-    
-    .heading-primary {
-      color: #fff;
-      text-transform: uppercase;
-    
-      
-      
-      
-      backface-visibility: hidden;
-      margin-bottom: 30px;
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    .heading-primary-main {
-      display: block;
-      font-size: 26px;
-      font-weight: 400;
-      letter-spacing: 5px;
-    }
-    
-    
-    
-    
-    
-    .heading-primary-sub {
-      display: block;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 7.4px;
-    }
-    
-    
-    
-    
-    btn:link,
-    .btn:visited {
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 10px 20px;
-      display: inline-block;
-      border-radius: 100px;
-      transition: all .2s;
-      position: relative;
-    }
-    
+p {
+ 
+  border: 1px solid #908f8f;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  padding: 10px;
+}
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+.row {
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-    
-    
-    
-    .btn:active {
-      transform: translateY(-1px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
+form {
+  overflow: hidden;
+}
 
-    .btn-white {
-      background-color: #fff;
-      color: #777;
-    font-size: 14px; }
-    
-    
-    /*  navegation bar  */
-    
-    
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-     /* {
-      margin: 0;
-      padding: 0;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-    } */
-    
-    .menubar {
-      display: flex;
-      justify-content: space-around;
-     align-items: flex-start;
-     width: 80%;
-    }
-    .navMenu {
-    text-align: center;
-    }
-    
-    .navMenu a {
-      color: #504c35;
-      text-decoration: none;
-      font-size: 80%;
-      font-weight: 200;
-      width: 80px;
-      /* -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; */
-    }
-    
-    .navMenu a:hover {
-      color: #727272;
-    }
-    
-    .navMenu .dot {
-      width: 6px;
-      height: 6px;
-      background: #1d1c1b;
-      border-radius: 50%;
-      opacity: 0;
-      -webkit-transform: translateX(30px);
-      transform: translateX(30px);
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-    }
-    
-    .navMenu a:nth-child(1):hover ~ .dot {
-      -webkit-transform: translateX(30px);
-      transform: translateX(30px);
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      opacity: 1;
-    }
-    
-    .navMenu a:nth-child(2):hover ~ .dot {
-      -webkit-transform: translateX(110px);
-      transform: translateX(110px);
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      opacity: 1;
-    }
-    
-    .navMenu a:nth-child(3):hover ~ .dot {
-      -webkit-transform: translateX(200px);
-      transform: translateX(200px);
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      opacity: 1;
-    }
-    
+label {
+  float: left;
+  width: 200px;
+  padding-right: 24px;
+  margin: 7px;
+}
 
-     /* Carrito de compras  */
+input {
+  float: left;
+  width: calc(100% - 200px);
+  border: 1px solid #000000;
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+padding: 10px;
+}
 
-     
+
+button {
+  float: right;
+  width: calc(100% - 200px);
+}
+.productos{
+  border: 1px solid #000000;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  padding: 10px;
+}
+.form{
+    border: 1px solid #000000;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+  }
+
+@media (min-width: 769px) {
+  form{
+      /* display: flex; */
+      flex-direction: column;
+      width: 60%;
+      text-align: left;
+  }
+  .contenedor-formulario{
+    display: flex;
+    justify-content: center;
+  }
+.container3{
+  display: flex;
+}
+.container-products {
+  margin: 5px;
+
+}
+/* .productos{
+  border: 1px solid #000000;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  padding: 10px;
+} */
+}
+.col-75{
+
+}
