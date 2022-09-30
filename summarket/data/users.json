@@ -77,5 +77,13 @@
     "email": "carlos2@correo5.com",
     "password": "$2a$10$LrpRmo9Ctbtfuh28aipvb.Ora1IC/ycHNBKWTamjoEavetWtA4cnu",
     "avatar": "1664409913813-avatar-512x512-456323.png"
+  },
+  {
+    "id": 11,
+    "firstName": "Carlos",
+    "lastName": "Camargo",
+    "email": "correoCarlos@hotmail.com",
+    "password": "$2a$10$dJH0sv7BMWjZq/QY95TEkeoRb1ikdnQUHtdFmH8xvs1PQqpwKQ3Dq",
+    "avatar": "1664579245263-1664251962683-1662258542084-1662258504432-avatar-512x512-456317.png"
   }
 ]
