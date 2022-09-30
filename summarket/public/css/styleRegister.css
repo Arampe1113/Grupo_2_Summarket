@@ -7,6 +7,9 @@
   padding: 5px 20px 15px 20px;
   border: 1px solid lightgrey;
   border-radius: 3px;
+  margin: 2%;
+  padding: 5%;
+  
 }
 
 .save-user {
@@ -33,4 +36,29 @@
   border-radius: 3px;
   cursor: pointer;
   font-size: 17px;
+}
+
+form {
+  overflow: hidden;
+}
+
+label {
+  float: left;
+  width: 200px;
+  padding-right: 24px;
+  margin: 7px;
+}
+
+input { }
+
+
+
+button {
+  float: right;
+  width: calc(100% - 200px);
+  border: 1px solid #000000;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  padding: 10px;
+  border-color: #000000;
 }

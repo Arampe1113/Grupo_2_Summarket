@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
-    <link rel="stylesheet" href="/css/cartStyle.css" />
+    <link rel="stylesheet" href="/css/carts.css"/>
     
     <link
     rel="stylesheet"
@@ -16,7 +16,9 @@
     <%- include('../partials/header.ejs') %>
     <div class="row">
       <div class="col-75">
-        <div class="container">
+        <div class="contenedor-formulario">
+        <div class="container-products">
+          <div class="productos">
           <h4>
             Carrito
             <span class="price" style="color: black">
@@ -24,7 +26,7 @@
               <b>4</b>
             </span>
           </h4>
-          <p><a href="#">Producto 1</a> <span class="price">$15</span></p>
+          <p><a href="#">Producto 1</a> <span class="price">8</span></p>
           <p><a href="#">Producto 2</a> <span class="price">$5</span></p>
           <p><a href="#">Producto 3</a> <span class="price">$8</span></p>
           <p><a href="#">Producto 4</a> <span class="price">$2</span></p>
@@ -33,10 +35,8 @@
             Total <span class="price" style="color: black"><b>$30</b></span>
           </p>
         </div>
+        </div>
 
-      </div>
-      <div class="col-25">
-        <div class="container">
           <form action="/action_page.php">
             <div class="row">
               <div class="col-50">
@@ -96,12 +96,14 @@
                     />
                   </div>
                 </div>
-              </div>
+              
 
               <div class="col-50">
-                <h3>Pago</h3>
+
+                <!-- <h3>Pago</h3>
+                <hr> -->
                 <label for="fname">Tarjetas de credito aceptadas</label>
-                <div class="icon-container">
+                <div class="icon-container4">
                   <i class="fa fa-cc-visa" style="color: navy"></i>
                   <i class="fa fa-cc-amex" style="color: blue"></i>
                   <i class="fa fa-cc-mastercard" style="color: red"></i>
@@ -131,7 +133,7 @@
 
                 <div class="row">
                   <div class="col-50">
-                    <label for="expyear">Año de expiración/label>
+                    <label for="expyear">Año de expiración </label>
                     <input
                       type="text"
                       id="expyear"
@@ -152,13 +154,13 @@
             </label>
             <input type="submit" value="Continuar al checkout" class="btn" />
           </form>
-        </div>
+        
       </div>
-
+</div>
       
     </div>
 
-    <section class="container">
+    <section class="container5">
       <%- include('../partials/footer.ejs') %>
     </section>
 
