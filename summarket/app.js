@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const bp = require('body-parser');
 const methodOverride = require('method-override');
@@ -11,6 +12,13 @@ app.use(express.static(__dirname + '/public'));
 app.use(bp.json());
 app.use(bp.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(
+  session({
+    secret: "Shhh, it's a secret",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
 app.set('views', path.join(__dirname, '/src/views/'));
 

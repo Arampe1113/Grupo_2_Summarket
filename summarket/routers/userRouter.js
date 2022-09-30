@@ -7,14 +7,16 @@ const userCont = require('../controllers/userController');
 // Middlewares
 const upload = require('../middlewares/multerMiddleware');
 const validations = require('../middlewares/validateRegisterMiddleware');
+const guest = require('../middlewares/guestMiddleware');
+const auth = require('../middlewares/authMiddleware');
 
 /*** Loging***/
 
-router.get('/login', userCont.login);
+router.get('/login', guest, userCont.login);
 router.post('/login', userCont.processLogin);
 
 // /*** CREATE new user***/
-router.get('/register', userCont.register);
+router.get('/register', guest, userCont.register);
 router.post(
   '/register',
   upload.single('userImage'),
@@ -22,6 +24,10 @@ router.post(
   userCont.save
 );
 
-router.get('/profile', userCont.profile);
+//User Profile
+router.get('/profile', auth, userCont.profile);
+
+//Logut
+router.get('/logout', userCont.logout);
 
 module.exports = router;

@@ -3,6 +3,7 @@ const path = require('path');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const User = require('../models/User');
+const { request } = require('http');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
@@ -21,6 +22,8 @@ const controller = {
         userToLogin.password
       );
       if (passwordOk) {
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
         return res.redirect('profile');
       }
       return res.render('users/login', {
@@ -80,7 +83,14 @@ const controller = {
   },
 
   profile: (req, res) => {
-    return res.render('users/profile');
+    return res.render('users/profile', {
+      user: req.session.userLogged,
+    });
+  },
+
+  logout: (req, res) => {
+    req.session.destroy();
+    return res.redirect('/');
   },
 };
 

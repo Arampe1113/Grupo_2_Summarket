@@ -9,7 +9,21 @@
   <body>
     <%- include('../partials/header.ejs') %>
 
-    <h3>Perfil de usuario</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h2>Bienvenido <%= user.firstName %></h2>
+          <img src="/images/users/<%= user.avatar %> " />
+          <br />
+          <br />
+          <div class="alert alert-success"><%= user.email %></div>
+          <button type="button">
+            <a href="/user/logout">Cerrar Sesión</a>
+          </button>
+          <but
+        </div>
+      </div>
+    </div>
 
     <%- include('../partials/footer.ejs') %>
   </body>
