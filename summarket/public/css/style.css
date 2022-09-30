@@ -88,6 +88,10 @@ section img {
   display: flex;
   justify-content: center;
 }
+.carousel-inner{
+max-height: 30%;
+
+}
 /*   paleta de colores corporativos summa
 
  (186,212,5)
