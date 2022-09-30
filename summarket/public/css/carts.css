@@ -48,15 +48,19 @@ button {
   width: calc(100% - 200px);
 }
 .productos{
-  border: 1px solid #000000;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid lightgrey;
 }
 .form{
-    border: 1px solid #000000;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
+    background-color: #f2f2f2;
+  border: 1px solid lightgrey;
+  margin: 5%;
+  padding: 5%;
   }
 
 @media (min-width: 769px) {
@@ -65,10 +69,16 @@ button {
       flex-direction: column;
       width: 60%;
       text-align: left;
+      background-color: #f2f2f2;
+      border: 1px solid lightgrey;
+      margin-left: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
   }
   .contenedor-formulario{
     display: flex;
     justify-content: center;
+    margin-top: 5%
   }
 .container3{
   display: flex;
