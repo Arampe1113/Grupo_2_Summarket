@@ -1,118 +1,111 @@
-Primer detail
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<!-- <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Summarket - Produto</title>
-    <link href="/css/styleProductDetail.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/styleProductDetail.css" type="text/css" />
+  </head>
+  <%- include('../partials/header.ejs') %>
+
+  <body>
+    <!--product detail -->
+    <div class="container-products-wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="products-title"><%= product.name %></h2>
+          <hr />
+        </div>
+      </div>
+      <div class="product-detail">
+        <div class="row">
+          <div class="col-12-col-lg-8">
+            <img
+              class="zoom"
+              src="/images/products/<%= product.image %>"
+              alt="product image"
+              class="product-detail-img"
+            />
+            <p class="product-detail-description"><%= product.description %></p>
+          </div>
+        </div>
+        <div class="detalles-compra">
+          <p class="product-detail-price-small">
+            <span>$<%= product.price %></span>
+            <b> <%= product.discount %>% OFF </b>
+          </p>
+          <p class="product-detail-price">$<%= product.price %></p>
+        </div>
+        <div class="col-12-col-lg-4">
+          <article class="product-detail-info">
+            <div class="formas-de-pago">
+              <div class="boton-compra">
+                <a href="#" class="buy-now-button">¡Compra ahora!</a>
+                <br />
+                <br />
+                <hr />
+                <div class="boton-editar-comrpa">
+                  <a
+                    href="/products/edit/<%= product.id %>"
+                    class="action-button edit"
+                    >Editar producto</a
+                  >
+                </div>
+
+                <!-- nuevo seccion -->
+                <h4 v-if="stockAvailability">Stock Available</h4>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-lg btn-block btn-custom-color"
+                  @click="addToCart"
+                >
+                  ADD TO CART
+                </button>
+              </div>
+
+              <!-- nuevo seccion -->
+            </div>
+
+            <div class="boton-eliminar">
+              <form
+                action="/products/delete/<%= product.id %>?_method=DELETE"
+                method="POST"
+                style="display: inline-flex"
+              >
+                <button type="submit" class="action-button-delete">
+                  Eliminar producto
+                </button>
+              </form>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <section class="login"><%- include('../partials/footer.ejs') %></section>
     <script
-      src="https://kit.fontawesome.com/a3ef6331ff.js"
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
       crossorigin="anonymous"
     ></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap"
-      rel="stylesheet"/>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-      rel="stylesheet" />  -->
-
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="/css/styleProductDetail.css" type="text/css" />
-</head>
-<%- include('../partials/header.ejs') %>
-
-	<body>
-
-		<!--product detail -->
-		<div class="container-products-wrapper">
-			<div class="row">
-				<div class="col-12">
-					<h2 class="products-title"><%= product.name %>
-					</h2>
-					<hr>
-				</div>
-			</div>
-			<div class="product-detail">
-				<div class="row">
-					<div class="col-12-col-lg-8">
-						<img class="zoom" src="/images/products/<%= product.image %>" alt="product image" class="product-detail-img">
-						<p class="product-detail-description">
-							<%= product.description %>
-						</p>
-					</div>
-				</div>
-				<div class="detalles-compra"> 
-				
-					<p class="product-detail-price-small">
-						<span>$<%= product.price %></span>
-						<b>
-							<%= product.discount %>% OFF
-						</b>
-					</p>
-					<p class="product-detail-price">
-						$<%= product.price %>
-					</p>
-				</div>
-					<div class="col-12-col-lg-4">
-						<article class="product-detail-info">
-							<div class="formas-de-pago">
-								<div class="boton-compra">
-								<a href="#" class="buy-now-button">¡Compra ahora!</a>
-								<br>
-								<br>
-								<hr>
-								<div class="boton-editar-comrpa"> 
-									<a href="/products/edit/<%= product.id %>" class="action-button edit">Editar
-										producto</a>
-										</div>
-
-												  <!-- nuevo seccion -->
-										<h4 v-if="stockAvailability">Stock Available</h4>
-
-								
-										<button type="button" class="btn btn-outline-primary btn-lg btn-block btn-custom-color" @click="addToCart">
-										  ADD TO CART
-
-										  <!-- nuevo seccion -->
-	
-							</div>
-							<ul class="actions-list">
-								<!-- <li>
-									<i class="fas fa-credit-card"></i>
-									<p>Pagá en 12 cuotas sin interes</p>
-								</li>
-								<li>
-									<i class="fas fa-store"></i>
-									<p>Retiro gratis en locales del vendedor</p>
-								</li> -->
-							</ul>
-						
-								
-								</div>
-							</div>
-							</div>
-							
-									<div class="boton-eliminar"> 
-								<form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
-									style="display: inline-flex">
-									<hr>
-									<button type="submit" class="action-button-delete">ELIMINAR</button>
-								</div>
-								</form>
-						</article>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-		<%- include('../partials/footer.ejs') %>
-
-</html> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -26,7 +26,7 @@
     <main>
       <section class="login">
         <form action="/user/login" method="POST">
-          <h3 class="ingreso">Entrar</h3>
+          <h3 class="ingreso">Iniciar sesión:</h3>
           <div class="col-12 col-md-6">
             <label for="emailLogin" class="form-label"
               >Correo Electronico:</label
@@ -39,9 +39,7 @@
               class="form-input"
             />
             <% if (locals.errors && errors.email) { %>
-             <div class="text-danger">
-              <%= errors.email.msg %> 
-             </div>
+            <div class="text-danger"><%= errors.email.msg %></div>
             <% } %>
           </div>
           <div class="col-12 col-md-6">
@@ -54,38 +52,40 @@
               class="form-input"
             />
           </div>
+          <div class="col-md-6 my-2">
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  name="remember_user"
+                />Recordar mi usuario
+              </label>
+            </div>
+          </div>
 
-  
-        <p>
-            <A HREF="../register">  ¿Has olvidado su contraseña? </A>
-        </p>
-    
-    </br>
-        <button type="submit" class="botones"> Ingresar</button>
-        <button type="submit" class="botones"> Registrarse</button>
-    </br>
+          <br />
+          <button type="submit" class="botones">Ingresar</button>
+          <button type="submit" class="botones">Olvidé mi contraseña</button>
+          <br />
 
-    <p>
-         <A HREF="../users/register"> ¿No tienes cuenta? </A> 
-    </p>
-    
-</form>
+          <p>
+            <a HREF="/user/register"> ¿No tienes cuenta? </a>
+          </p>
+        </form>
+      </section>
+    </main>
 
-</section>
-</main >
-
-<section class="login">
-<%- include('../partials/footer.ejs') %>
-</section>
-<script
-src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-crossorigin="anonymous"
-></script>
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-crossorigin="anonymous"
-></script>
-</body>
+    <section class="login"><%- include('../partials/footer.ejs') %></section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

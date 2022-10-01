@@ -1,12 +1,6 @@
-const fs = require('fs');
-const path = require('path');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const User = require('../models/User');
-const { request } = require('http');
-
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
 
 const controller = {
   login: (req, res) => {
@@ -24,6 +18,13 @@ const controller = {
       if (passwordOk) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
+
+        if (req.body.remember_user) {
+          res.cookie('userEmail', req.body.emailLogin, {
+            maxAge: 1000 * 60 * 2,
+          });
+        }
+
         return res.redirect('profile');
       }
       return res.render('users/login', {
@@ -41,7 +42,6 @@ const controller = {
         },
       },
     });
-    // return res.send(req.body);
   },
 
   register: (req, res) => {
@@ -89,6 +89,7 @@ const controller = {
   },
 
   logout: (req, res) => {
+    res.clearCookie('userEmail');
     req.session.destroy();
     return res.redirect('/');
   },

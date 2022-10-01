@@ -1,4 +1,4 @@
-header{
+header {
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
@@ -12,24 +12,23 @@ header{
       rgba(99, 99, 100, 0.8)
     ),
     url('https://ae01.alicdn.com/kf/Hd8ccde589995480c8c17ee34f24d3e38s/Decoration-Maison-Nordic-Black-White-Stripes-Wall-Papers-Home-Decor-Minimalist-Ins-Geometric-Wallpaper-for-Living.jpg_Q90.jpg_.webp');
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 52% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 52% 100%);
 }
 
-h6{
+h6 {
   font-size: medium;
 }
 
- .container2 {
-    background-color: #f2f2f2;
-    padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-    
-} 
-.fa-paper-plane:before {
-  content: "\f1d8";
+.container2 {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
 }
-.somos{
+.fa-paper-plane:before {
+  content: '\f1d8';
+}
+.somos {
   height: auto;
   width: 70%;
   font-size: small;
@@ -45,10 +44,10 @@ h6{
   font-size: 20px;
   top: 5%;
 }
-.brand-box{
+.brand-box {
   top: 10%;
   text-align: center;
-  left: 50%
+  left: 50%;
 }
 
 .text-box {
@@ -122,7 +121,7 @@ h6{
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  width: 80%;
+  /* width: 80%; */
 }
 .navMenu {
   text-align: center;

@@ -3,26 +3,19 @@ const router = express.Router();
 const multer = require('multer');
 const productCont = require('../controllers/productController');
 
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'public/images/products');
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + '-' + file.originalname);
-  },
-});
-
-var upload = multer({ storage: storage });
+// Middlewares
+const auth = require('../middlewares/authMiddleware');
+const upload = require('../middlewares/multerMiddleware');
 
 router.get('/', productCont.products);
 
-router.get('/Cart', productCont.cart);
+router.get('/Cart', auth, productCont.cart);
 
 // /*** GET ONE PRODUCT ***/
 router.get('/detail/:id/', productCont.detail);
 
 // /*** CREATE ONE PRODUCT ***/
-router.get('/create', productCont.create);
+router.get('/create', auth, productCont.create);
 router.post('/', upload.single('product-img'), productCont.store);
 
 // /*** EDIT ONE PRODUCT ***/
