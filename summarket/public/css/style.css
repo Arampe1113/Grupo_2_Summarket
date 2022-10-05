@@ -19,9 +19,6 @@
   position: absolute;
   right: 50px;
 }
-section img {
-  width: 100%;
-}
 
 #navegador ul {
   list-style-type: none;
@@ -84,14 +81,18 @@ section img {
   width: 30%;
 }
 
+/* carrousel */
+
 #carouselExampleControls {
   display: flex;
   justify-content: center;
 }
-.carousel-inner{
-max-height: 30%;
-
+.carousel-inner img {
+  height: 280px;
+  padding-left: 25%;
+  padding-right: 25%;
 }
+
 /*   paleta de colores corporativos summa
 
  (186,212,5)
