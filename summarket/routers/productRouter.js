@@ -4,7 +4,19 @@ const productCont = require('../controllers/productController');
 
 // Middlewares
 const auth = require('../middlewares/authMiddleware');
-const upload = require('../middlewares/multerMiddleware');
+
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images/products');
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);
+  },
+});
+
+var upload = multer({ storage: storage });
 
 router.get('/', productCont.products);
 
@@ -19,7 +31,7 @@ router.post('/', upload.single('product-img'), productCont.store);
 
 // /*** EDIT ONE PRODUCT ***/
 router.get('/edit/:id/', productCont.edit);
-router.put('/edit/:id', productCont.update);
+router.put('/edit/:id', upload.single('product-img'), productCont.update);
 
 // /*** DELETE ONE PRODUCT***/
 router.delete('/delete/:id', productCont.destroy);
