@@ -1,11 +1,12 @@
 [
  {
-  "name": "TV",
-  "price": "1000000",
-  "discount": "50",
-  "colors": "Negro",
-  "category": "visited",
-  "description": "Negro",
-  "id": 2
+  "name": "Moto",
+  "price": "5000000",
+  "discount": "10",
+  "colors": "Roja",
+  "category": "in-sale",
+  "description": "Moto roja casi nueva",
+  "image": "1665691624650-moto.jpg",
+  "id": 1
  }
 ]
