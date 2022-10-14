@@ -13,6 +13,7 @@
         <form
           action="/products/edit/<%= productEdit.id %>?_method=PUT"
           method="POST"
+          enctype="multipart/form-data"
         >
           <div class="row product-detail">
             <div class="col-12 col-md-6">
@@ -69,6 +70,7 @@
                 id="product-img"
                 name="product-img"
                 class="form-input"
+                value="<%= productEdit.image %>"
               />
             <div class="col-12">
               <button type="submit" class="buy-now-button">

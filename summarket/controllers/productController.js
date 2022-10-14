@@ -50,7 +50,6 @@ const controller = {
     product.name = productEdit.name;
     product.price = productEdit.price;
     product.discount = productEdit.discount;
-    product.image = productEdit.image;
 
     if (req.file) {
       product.image = req.file.filename;

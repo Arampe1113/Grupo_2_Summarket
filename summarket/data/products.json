@@ -8,5 +8,15 @@
   "description": "Moto roja casi nueva",
   "image": "1665691624650-moto.jpg",
   "id": 1
+ },
+ {
+  "name": "Zapatillas Nike - Blanco",
+  "price": "450000",
+  "discount": "15",
+  "colors": "Blanco",
+  "category": "in-sale",
+  "description": "Nike Air Force 1 Mid '07",
+  "image": "1665709240105-04421d64-7214-4718-ba73-93e6d1447bac.jpg",
+  "id": 2
  }
 ]
