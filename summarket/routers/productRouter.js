@@ -30,10 +30,10 @@ router.get('/create', auth, productCont.create);
 router.post('/', upload.single('product-img'), productCont.store);
 
 // /*** EDIT ONE PRODUCT ***/
-router.get('/edit/:id/', productCont.edit);
+router.get('/edit/:id/', auth, productCont.edit);
 router.put('/edit/:id', upload.single('product-img'), productCont.update);
 
 // /*** DELETE ONE PRODUCT***/
-router.delete('/delete/:id', productCont.destroy);
+router.delete('/delete/:id', auth, productCont.destroy);
 
 module.exports = router;
