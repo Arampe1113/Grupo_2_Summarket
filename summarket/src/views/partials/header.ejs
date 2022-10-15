@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7057735af3.js"
+      crossorigin="anonymous"
+    ></script>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-    />
+    /> -->
     <link rel="stylesheet" href="/css/styleLogin.css" type="text/css" />
     <link rel="stylesheet" href="/css/headStyle.css" type="text/css" />
   </head>
@@ -27,6 +31,7 @@
 
         <ul class="navbar-nav align-items-center">
           <% if (locals.isLogged) { %>
+
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -53,6 +58,7 @@
               <a class="dropdown-item" href="/user/logout">Cerrar Sesión</a>
             </ul>
           </li>
+
           <% } else { %>
           <li class="nav-item">
             <a class="nav-link" href="/user/register">Crear cuenta</a>
@@ -62,6 +68,7 @@
           </li>
           <% } %>
         </ul>
+        <i class="fa-solid fa-cart-shopping"></i>
       </div>
 
       <div class="header">
