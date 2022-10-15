@@ -1,18 +1,26 @@
 [
-  {
-    "id": 1,
-    "firstName": "Carlos",
-    "lastName": "Camargo",
-    "email": "CarlosC@gmail.com",
-    "password": "$2a$10$XnMtLgLR.0QjZ1/OLjesrOoFgkvk5E5Pxrc4GjkofhNVvLdBERQHK",
-    "avatar": "1664589176556-1664409378145-avatar-512x512-456331.png"
-  },
-  {
-    "id": 2,
-    "firstName": "Geovani",
-    "lastName": "Rivera",
-    "email": "riverageovani@gmail.com",
-    "password": "$2a$10$vYA6EAQSMS7O8F/niMzZKuFkN3InHz0PtOzkmD9yMTYH/4giXHdim",
-    "avatar": "1665691530565-Geo.png"
-  }
+ {
+  "id": 1,
+  "firstName": "Carlos",
+  "lastName": "Camargo",
+  "email": "CarlosC@gmail.com",
+  "password": "$2a$10$XnMtLgLR.0QjZ1/OLjesrOoFgkvk5E5Pxrc4GjkofhNVvLdBERQHK",
+  "avatar": "1664589176556-1664409378145-avatar-512x512-456331.png"
+ },
+ {
+  "id": 2,
+  "firstName": "Geovani",
+  "lastName": "Rivera",
+  "email": "riverageovani@gmail.com",
+  "password": "$2a$10$vYA6EAQSMS7O8F/niMzZKuFkN3InHz0PtOzkmD9yMTYH/4giXHdim",
+  "avatar": "1665691530565-Geo.png"
+ },
+ {
+  "id": 3,
+  "firstName": "Andrea",
+  "lastName": "Aramburo",
+  "email": "aaramburop1113@gmail.com",
+  "password": "$2a$10$BKfhp4HfDvJ/3OM7rqfPX.Gjka8SNAzRfdAWq76MYCW1XSXfrkVii",
+  "avatar": "1665846049531-MV5BMTgwMjAyMzExN15BMl5BanBnXkFtZTcwMDg2ODMyMw@@._V1_.jpg"
+ }
 ]
