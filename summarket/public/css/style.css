@@ -4,6 +4,10 @@
 
 /* header*/
 
+.carrusel {
+  background-color: grey;
+}
+
 .fa-id-card {
   color: #647262;
   position: absolute;
