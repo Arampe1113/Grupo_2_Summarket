@@ -66,6 +66,12 @@ const controller = {
     fs.writeFileSync(productsFilePath, data);
     res.redirect('/');
   },
+
+  carrito: (req, res) => {
+    res.render('products/carrito');
+  },
 };
+
+
 
 module.exports = controller;
