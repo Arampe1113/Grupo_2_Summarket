@@ -36,4 +36,7 @@ router.put('/edit/:id', upload.single('product-img'), productCont.update);
 // /*** DELETE ONE PRODUCT***/
 router.delete('/delete/:id', auth, productCont.destroy);
 
+router.get ('/Cart', auth, productCont.cart);
+
+
 module.exports = router;
