@@ -68,9 +68,9 @@ CREATE TABLE IF NOT EXISTS `summarket`.`products` (
   `brand_id` INT(11) NOT NULL,
   `color_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_productcategory_idx` (`category_id` ASC) VISIBLE,
-  INDEX `fk_productbrand` (`brand_id` ASC) VISIBLE,
-  INDEX `fk_productcolor` (`color_id` ASC) VISIBLE,
+  INDEX `fk_productcategory_idx` (`category_id` ASC) ,
+  INDEX `fk_productbrand` (`brand_id` ASC) ,
+  INDEX `fk_productcolor` (`color_id` ASC) ,
   CONSTRAINT `fk_productbrand`
     FOREIGN KEY (`brand_id`)
     REFERENCES `summarket`.`brand` (`idbrand`)
@@ -119,8 +119,8 @@ CREATE TABLE IF NOT EXISTS `summarket`.`order_history` (
   `order_status` VARCHAR(45) NOT NULL,
   `quantity` INT(11) NOT NULL,
   PRIMARY KEY (`order_id`),
-  INDEX `fk_user` (`user_id` ASC) VISIBLE,
-  INDEX `fk_product` (`product_id` ASC) VISIBLE,
+  INDEX `fk_user` (`user_id` ASC) ,
+  INDEX `fk_product` (`product_id` ASC) ,
   CONSTRAINT `fk_product`
     FOREIGN KEY (`product_id`)
     REFERENCES `summarket`.`products` (`id`)
@@ -143,8 +143,8 @@ CREATE TABLE IF NOT EXISTS `summarket`.`user_product` (
   `product_id` INT(11) NOT NULL,
   `user_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_userID` (`user_id` ASC) VISIBLE,
-  INDEX `fk_productID` (`product_id` ASC) VISIBLE,
+  INDEX `fk_userID` (`user_id` ASC) ,
+  INDEX `fk_productID` (`product_id` ASC) ,
   CONSTRAINT `fk_productID`
     FOREIGN KEY (`product_id`)
     REFERENCES `summarket`.`products` (`id`)
