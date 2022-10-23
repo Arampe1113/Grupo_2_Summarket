@@ -15,15 +15,18 @@ header {
   margin: 0 auto;
 }
 .header {
-  height: 35vh;
+  height: 40vh;
   background-size: cover;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to right bottom,
-      rgba(175, 179, 180, 0.8),
-      rgba(99, 99, 100, 0.8)
-    ),
-    url('https://ae01.alicdn.com/kf/Hd8ccde589995480c8c17ee34f24d3e38s/Decoration-Maison-Nordic-Black-White-Stripes-Wall-Papers-Home-Decor-Minimalist-Ins-Geometric-Wallpaper-for-Living.jpg_Q90.jpg_.webp');
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 52% 100%);
+      /* rgba(175, 179, 180, 0.477),
+      rgba(99, 99, 100, 0.183) 
+    ), */
+    
+    background-image:
+    url('https://images.unsplash.com/photo-1650346910532-fb4ecff18107?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80');
+    /* url('https://ae01.alicdn.com/kf/Hd8ccde589995480c8c17ee34f24d3e38s/Decoration-Maison-Nordic-Black-White-Stripes-Wall-Papers-Home-Decor-Minimalist-Ins-Geometric-Wallpaper-for-Living.jpg_Q90.jpg_.webp'); */
+  /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 52% 100%); */
 }
 
 h6 {
@@ -134,6 +137,12 @@ h6 {
   align-items: flex-start;
   /* width: 80%; */
 }
+.menubar1{
+  display: flex;
+  flex-direction: column;
+  
+}
+
 .navMenu {
   text-align: center;
 }

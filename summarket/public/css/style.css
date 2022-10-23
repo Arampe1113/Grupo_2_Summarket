@@ -85,6 +85,55 @@
   width: 30%;
 }
 
+.quienes-box{
+  align-items: center;
+  width: 70%;
+}
+.quienes-box2{
+  align-items: center;
+  align-content: space-between;
+  width: 70%;
+}
+.todo{
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.todo2{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.nosotros{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  justify-content: center;
+  max-width: fit-content;
+}
+.nosotros2{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  justify-content: center;
+  max-width: fit-content;
+}
+.somos{
+  font-size: medium;
+  color:#666;
+}
+.mediana{
+  align-items:right;
+  height: 80%;
+}
 /* carrousel */
 
 #carouselExampleControls {
@@ -96,6 +145,61 @@
   padding-left: 25%;
   padding-right: 25%;
 }
+
+
+@media (min-width: 769px) {
+.quienes-box{
+  align-items: center;
+  width: 70%;
+  margin-left: 15px;
+  
+}
+.quienes-box2{
+  align-items: center;
+  align-content: space-between;
+  width: 70%;
+  margin-left: 15px;
+}
+.todo{
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.todo2{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.nosotros{
+  display: flex;
+  flex-direction:column;
+  text-align: left;
+  width: 90%;
+  justify-content: center;
+  max-width: fit-content;
+}
+.nosotros2{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  justify-content: center;
+  max-width: fit-content;
+}
+.somos{
+  font-size: medium;
+  color:#666;
+}
+.mediana{
+  align-items:right;
+  height: 80%;
+  margin-left: 15px;
+}}
 
 /*   paleta de colores corporativos summa
 
