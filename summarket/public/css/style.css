@@ -126,9 +126,10 @@
   justify-content: center;
   max-width: fit-content;
 }
-.somos{
-  font-size: medium;
+.somos2{
+  font-size: small;
   color:#666;
+  align-items: center;
 }
 .mediana{
   align-items:right;
@@ -181,6 +182,7 @@
   width: 90%;
   justify-content: center;
   max-width: fit-content;
+  font-size: 40px;
 }
 .nosotros2{
   display: flex;
@@ -191,15 +193,21 @@
   justify-content: center;
   max-width: fit-content;
 }
-.somos{
+.somos2{
   font-size: medium;
   color:#666;
 }
 .mediana{
   align-items:right;
-  height: 80%;
   margin-left: 15px;
-}}
+  width: 100%;
+  height: auto;
+}
+.somos2{
+  font-size: large;
+  margin: 15px;
+}
+}
 
 /*   paleta de colores corporativos summa
 

@@ -48,5 +48,15 @@
   "description": "Clases de guitarra, valor mes para 10 clases",
   "id": 5,
   "image": "1665961405526-05_ClaseGuitarra.jpg"
+ },
+ {
+  "name": "celular iphone 11",
+  "price": "2000000",
+  "discount": "30",
+  "colors": "negro",
+  "category": "in-sale",
+  "description": "Iphone 11 poco uso negro",
+  "id": 6,
+  "image": "1666559721914-9722714_1.jpeg"
  }
 ]
