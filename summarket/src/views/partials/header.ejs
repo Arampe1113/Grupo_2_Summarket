@@ -1,70 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/7057735af3.js"
-      crossorigin="anonymous"
-    ></script>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <!-- <link
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/7057735af3.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     /> -->
-    <link rel="stylesheet" href="/css/styleLogin.css" type="text/css" />
-    <link rel="stylesheet" href="/css/headStyle.css" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <div class="menubar">
-        <nav class="navMenu">
-          <a href="/">Home</a>
-          <a href="/products">Productos en Venta</a>
-          <a href="/products/create">Vende tu producto</a>
-            <a href="ver_carrito.php" class="button is-success">
-                <strong>Ver carrito <span id="conteoCarrito">
-                      </span>&nbsp;<i class="fa fa-shopping-cart"></i></strong>
-            </a>
-        </div>
-        </nav>
+  <link rel="stylesheet" href="/css/styleLogin.css" type="text/css" />
+  <link rel="stylesheet" href="/css/headStyle.css" type="text/css" />
+</head>
 
-        <ul class="navbar-nav align-items-center">
-          <% if (locals.isLogged) { %>
+<body>
+  <header>
+    <div class="menubar">
+      <nav class="navMenu">
+        <a href="/">Home</a>
+        <a href="/products">Productos en Venta</a>
+        <a href="/products/create">Vende tu producto</a>
+        <a href="/products/cart" class="button is-success">
+          <strong>Ver carrito <span id="conteoCarrito">
+            </span>&nbsp;<i class="fa fa-shopping-cart"></i></strong>
+        </a>
+    </div>
+    </nav>
 
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropUser"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                src="/images/users/<%= locals.userLogged.avatar %>"
-                width="40"
-                style="border-radius: 100%"
-              />
-              Hola <%= locals.userLogged.firstName %>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/user/profile">Mi perfil</a>
-              <li><hr class="dropdown-divider" /></li>
-              <a class="dropdown-item" href="/products/cart"
-                >Mi carrito de compras</a
-              >
-              <li><hr class="dropdown-divider" /></li>
-              <a class="dropdown-item" href="/user/logout">Cerrar Sesión</a>
-            </ul>
-          </li>
+    <ul class="navbar-nav align-items-center">
+      <% if (locals.isLogged) { %>
 
-          <% } else { %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="/images/users/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%" />
+            Hola <%= locals.userLogged.firstName %>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/user/profile">Mi perfil</a>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <a class="dropdown-item" href="/products/cart">Mi carrito de compras</a>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <a class="dropdown-item" href="/user/logout">Cerrar Sesión</a>
+          </ul>
+        </li>
+
+        <% } else { %>
           <li class="nav-item">
             <a class="nav-link" href="/user/register">Crear cuenta</a>
           </li>
@@ -72,25 +60,53 @@
             <a class="nav-link" href="/user/login">Iniciar Sesión</a>
           </li>
           <% } %>
-        </ul>
-        <i class="fa-solid fa-cart-shopping"></i>
-      </div>
+    </ul>
+    <i class="fa-solid fa-cart-shopping"></i>
+    </div>
 
-      <div class="header">
-        <!-- <div class="brand-box">
+    <div class="header">
+      <!-- <div class="brand-box">
           <span class="brand">Summarket</span>
         </div> -->
 
-        <div class="text-box">
-          <h1 class="heading-primary">
-            <span class="heading-primary-main">SUMMARKET</span>
-            <span class="heading-primary-sub"
-              >Compras internas a emprendimientos amigos</span
-            >
-          </h1>
-          <a href="#" class="btn btn-white btn-animated">Conocenos</a>
-        </div>
+      <div class="text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary-main">SUMMARKET</span>
+          <span class="heading-primary-sub">Compras internas a emprendimientos amigos</span>
+        </h1>
+        <a href="#" class="btn btn-white btn-animated">Conocenos</a>
       </div>
-    </header>
-  </body>
+
+      <div>
+        <a class="cart_anchor"></a>
+        <ul class="items">
+          <li><img src="pro-image1.png" /><a href="javascript:void(0);" class="add-to-cart">Add to cart</a></li>
+          <li><img src="pro-image2.png" /><a href="javascript:void(0);" class="add-to-cart">Add to cart</a></li>
+          <li><img src="pro-image3.jpg" /><a href="javascript:void(0);" class="add-to-cart">Add to cart</a></li>
+          <li><img src="pro-image4.png" /><a href="javascript:void(0);" class="add-to-cart">Add to cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- fly to -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type='text/javascript' src="fly.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.add-to-cart').on('click', function () {
+        //Scroll to top if cart icon is hidden on top
+        $('html, body').animate({
+          'scrollTop': $(".cart_anchor").position().top
+        });
+        //Select item image and pass to the function
+        var itemImg = $(this).parent().find('img').eq(0);
+        flyToElement($(itemImg), $('.cart_anchor'));
+      });
+    });
+
+// !-- fly to -->
+  </script>
+</body>
+
 </html>
