@@ -147,7 +147,9 @@ button .action-button-delete{
 
 }
 
-  
+.col-12{
+  border-color: #77807cb8;
+}
 /* version tablet */
 @media (min-width: 391px) {
   form{

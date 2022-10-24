@@ -48,5 +48,66 @@
     "description": "Clases de guitarra, valor mes para 10 clases",
     "id": 5,
     "image": "1665961405526-05_ClaseGuitarra.jpg"
+  },
+
+  {
+    "name": "Moto",
+    "price": "15.000.000",
+    "discount": "10",
+    "colors": "Roja",
+    "category": "in-sale",
+    "description": "Moto roja casi nueva",
+    "image": "1665691624650-moto.jpg",
+    "id": 1
+  },
+  {
+    "name": "Zapatillas Nike - Blanco",
+    "price": "450.000",
+    "discount": "15",
+    "colors": "Blanco",
+    "category": "in-sale",
+    "description": "Nike Air Force 1 Mid '07",
+    "image": "1665709240105-04421d64-7214-4718-ba73-93e6d1447bac.jpg",
+    "id": 2
+  },
+  {
+    "name": "Clases de tejido",
+    "price": "60.000",
+    "discount": "0",
+    "colors": "na",
+    "category": "visited",
+    "description": "Clases de tejido, el valor es para mensualidad de 6 horas",
+    "id": 3,
+    "image": "1665766026749-05_Prod_claseTejido1.jpg"
+  },
+  {
+    "name": "Bicleta",
+    "price": "150.000",
+    "discount": "5",
+    "colors": "Verde",
+    "category": "visited",
+    "description": "Bicicleta verde, con velocidades, accesorios originales, en muy buen estado",
+    "id": 4,
+    "image": "1665960869117-04_BicicletaVerde.jpg"
+  },
+  {
+    "name": "Clases de guitarra",
+    "price": "60.000",
+    "discount": "0",
+    "colors": "na",
+    "category": "visited",
+    "description": "Clases de guitarra, valor mes para 10 clases",
+    "id": 5,
+    "image": "1665961405526-05_ClaseGuitarra.jpg"
+  },
+  {
+    "name": "celular iphone 11",
+    "price": "2000000",
+    "discount": "30",
+    "colors": "negro",
+    "category": "in-sale",
+    "description": "Iphone 11 poco uso negro",
+    "id": 6,
+    "image": "1666559721914-9722714_1.jpeg"
   }
 ]
