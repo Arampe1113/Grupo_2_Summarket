@@ -22,5 +22,53 @@
   "email": "aaramburop1113@gmail.com",
   "password": "$2a$10$BKfhp4HfDvJ/3OM7rqfPX.Gjka8SNAzRfdAWq76MYCW1XSXfrkVii",
   "avatar": "1665846049531-MV5BMTgwMjAyMzExN15BMl5BanBnXkFtZTcwMDg2ODMyMw@@._V1_.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "andrea",
+  "lastName": "ejemplo1",
+  "email": "1234@gmail.com",
+  "password": "$2a$10$Zus1hh0aYHgrNBDFZeyDT.hBUW4tisFX8gol1859qfBPLIgd3yqMi",
+  "avatar": "1666654148645-descarga.png"
+ },
+ {
+  "id": 5,
+  "firstName": "Andrea",
+  "lastName": "ejemplo ",
+  "email": "12345@gmail.com",
+  "password": "$2a$10$jgP2Sf7TSLWjqxt2ZoUGgee8WGfTryzQv1AQW5EruWCDg8Sz4o1qC",
+  "avatar": "1666654207684-descarga.png"
+ },
+ {
+  "id": 6,
+  "firstName": "Andrea",
+  "lastName": "Aramburo1",
+  "email": "1233455@gmail.com",
+  "password": "$2a$10$627WOv30ayVhWjc.upjJYeaSBPhZc0UMvSUTMv1em/.t8l7yZ/Q8e",
+  "avatar": "1666655368559-descarga.png"
+ },
+ {
+  "id": 7,
+  "firstName": "ejemplo 1",
+  "lastName": "ejemplo 2",
+  "email": "1@gmail.com",
+  "password": "$2a$10$dzLVs9l6wGYPzbd9DtQlKuogtKfRZof6qA673PbF1CYdIQUpkkgjW",
+  "avatar": "1666655415148-descarga.png"
+ },
+ {
+  "id": 8,
+  "firstName": "ejemplo 2",
+  "lastName": "ejmeplo 2",
+  "email": "12@gmail.com",
+  "password": "$2a$10$ircsMiGonKR7ZOvVPj7zSuksnSasHWiGSVC3NSEEU6BO7.iQQ/ar2",
+  "avatar": "1666655473804-descarga.png"
+ },
+ {
+  "id": 9,
+  "firstName": "1234",
+  "lastName": "1234",
+  "email": "123@gmial.com",
+  "password": "$2a$10$dX2z0SWcAZm/7J61HnzXsOEDne/Lkcww1zlmaRLB7g/DsotB1AbS.",
+  "avatar": "1666655561302-descarga.png"
  }
 ]

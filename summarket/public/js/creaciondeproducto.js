@@ -1,5 +1,3 @@
-const { json } = require("body-parser");
-
 window.onload = () => {
     let firstName = document.querySelector("#firstName");
     let lastName = document.querySelector("#lastName");
@@ -32,8 +30,3 @@ window.onload = () => {
             })
         console.log(data)
     })
-
-
-
-}
-
