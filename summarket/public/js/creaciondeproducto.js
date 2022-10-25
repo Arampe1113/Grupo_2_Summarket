@@ -29,4 +29,4 @@ window.onload = () => {
                 console.log(data);
             })
         console.log(data)
-    })
+    })}
