@@ -32,6 +32,9 @@
                 placeholder="Ej: Zapatillas Reebook"
                 class="form-input"
               />
+              <% if (locals.errors && errors.name) { %>
+                <div class="text-danger"><%= errors.name.msg %></div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="price" class="form-label">Precio del producto:</label>
@@ -42,6 +45,9 @@
                 placeholder="Ej: 5678"
                 class="form-input"
               />
+              <% if (locals.errors && errors.price) { %>
+                <div class="text-danger"><%= errors.price.msg %></div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="discount" class="form-label">Descuento:</label>
@@ -52,6 +58,9 @@
                 placeholder="Ej: 15"
                 class="form-input"
               />
+              <% if (locals.errors && errors.discount) { %>
+                <div class="text-danger"><%= errors.discount.msg %></div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="colors" class="form-label"
@@ -64,6 +73,9 @@
                 placeholder="Ej: Blanco"
                 class="form-input"
               />
+              <% if (locals.errors && errors.colors) { %>
+                <div class="text-danger"><%= errors.colors.msg %></div>
+                <% } %>
             </div>
 
             <div class="col-12 col-md-6">
@@ -73,6 +85,9 @@
                 <option value="in-sale">En oferta</option>
                 <option value="visited">Últimos agregados</option>
               </select>
+              <% if (locals.errors && errors.category) { %>
+                <div class="text-danger"><%= errors.category.msg %></div>
+                <% } %>
             </div>
             <div class="col-12">
               <label for="description" class="form-label">Descipción:</label>
@@ -81,6 +96,9 @@
                 id="description"
                 class="form-input"
               ></textarea>
+              <% if (locals.errors && errors.description) { %>
+                <div class="text-danger"><%= errors.description.msg %></div>
+                <% } %>
             </div>
             <div class="col-12">
               <label for="product-img" class="form-label">Imagen:</label>
@@ -90,6 +108,9 @@
                 name="product-img"
                 class="form-input"
               />
+              <% if (locals.errors && errors.product-img) { %>
+                <div class="text-danger"><%= errors.product-img.msg %></div>
+                <% } %>
             </div>
             <div class="col-12">
               <button type="submit" class="buy-now-button">
