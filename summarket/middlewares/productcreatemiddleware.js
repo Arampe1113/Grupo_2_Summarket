@@ -5,34 +5,64 @@ module.exports = [
   body('name')
     .notEmpty()
     .withMessage('El campo Nombre no puede estar vacio')
-    .islenght ({min:2}).withMessage('Debe tener al menos 2 caracteres')
-    .islenght ({max:2}).withMessage('Debe tener menos de 20 caracteres'),
-        
+    .bail()
+    .isLength({ min: 2 })
+    .withMessage('Debe tener al menos 2 caracteres')
+    .bail()
+    .isLength({ max: 2 })
+    .withMessage('Debe tener menos de 20 caracteres'),
+
   body('price')
     .notEmpty()
     .withMessage('El precio debe ser entre 10 y 10000000')
-    .islenght ({min:4}).withMessage('Debe tener al menos 4 caracteres')
-    .islenght ({max:8}).withMessage('Debe tener al menos 8 caracteres'),
+    .bail()
+    .isLength({ min: 4 })
+    .withMessage('Debe tener al menos 4 caracteres')
+    .bail()
+    .isLength({ max: 8 })
+    .withMessage('Debe tener al menos 8 caracteres'),
 
   body('discount')
     .notEmpty()
     .withMessage('Debes incluir un descuento para que se venda facil')
-    .islenght ({min:1}).withMessage('Debe tener al menos 1 caracteres')
-    .islenght ({max:3}).withMessage('Debe tener al menos 3 caracteres'),
+    .bail()
+    .isLength({ min: 1 })
+    .withMessage('Debe tener al menos 1 caracteres')
+    .bail()
+    .isLength({ max: 3 })
+    .withMessage('Debe tener al menos 3 caracteres'),
 
-  body('Color').notEmpty().withMessage('Debes decirnos de que color es')
-  .islenght ({min:2}).withMessage('Debe tener al menos 2 caracteres')
-  .islenght ({max:20}).withMessage('Debe tener menos de 20 caracteres'),
+  body('Color')
+    .notEmpty()
+    .withMessage('Debes decirnos de que color es')
+    .bail()
+    .isLength({ min: 2 })
+    .withMessage('Debe tener al menos 2 caracteres')
+    .bail()
+    .isLength({ max: 20 })
+    .withMessage('Debe tener menos de 20 caracteres'),
 
-  body('category').notEmpty().withMessage('a que categoría pertenece')
-  .islenght ({min:2}).withMessage('Debe tener al menos 2 caracteres')
-  .islenght ({max:20}).withMessage('Debe tener menos de 20 caracteres'),
+  body('category')
+    .notEmpty()
+    .withMessage('a que categoría pertenece')
+    .bail()
+    .isLength({ min: 2 })
+    .withMessage('Debe tener al menos 2 caracteres')
+    .bail()
+    .isLength({ max: 20 })
+    .withMessage('Debe tener menos de 20 caracteres'),
 
-  body('description').notEmpty().withMessage('Debes indicarnos como es')
-  .islenght ({min:50}).withMessage('Debe tener al menos 50 caracteres')
-  .islenght ({max:200}).withMessage('Debe tener menos de 200 caracteres'),
-  
-  body('product-img').custom((value, { req }) => {
+  body('description')
+    .notEmpty()
+    .withMessage('Debes indicarnos como es')
+    .bail()
+    .isLength({ min: 50 })
+    .withMessage('Debe tener al menos 50 caracteres')
+    .bail()
+    .isLength({ max: 200 })
+    .withMessage('Debe tener menos de 200 caracteres'),
+
+  body('productImg').custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
