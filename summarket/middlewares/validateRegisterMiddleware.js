@@ -21,6 +21,7 @@ module.exports = [
     .bail()
     .isEmail()
     .withMessage('Debes usar un formato de correo valido @...')
+    .bail()
     .custom((value, { req }) => {
       let email = req.body.email;
       let validation = user.findByField('email', email);
@@ -28,20 +29,35 @@ module.exports = [
         throw new Error(
           'Este correo ya está registrado en nuestra base de datos'
         );
+      } else {
+        return true;
       }
     }),
 
-  body('password').notEmpty().withMessage('Debes escribir una contraseña'),
+  body('password')
+    .notEmpty()
+    .withMessage('Debes escribir una contraseña')
+    .bail()
+    .isLength({ min: 8 })
+    .withMessage('Debe tener al menos 8 caracteres')
+    .bail()
+    .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9_])/)
+    .withMessage(
+      'Tu contraseña debe incluir una letra mayuscula, minuscula, un numero y un caracter especial'
+    ),
+
   body('userImage').custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = ['.jpg', '.png', '.gif'];
+    let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
     if (!file) {
       throw new Error('Tienes que subir una imagen');
     } else {
       let fileExtension = path.extname(file.originalname);
       if (!acceptedExtensions.includes(fileExtension)) {
-        throw new Error('Solo se permiten imagenes en formato jpg, png o gif');
+        throw new Error(
+          'Solo se permiten imagenes en formato jpg, png, jpeg o gif'
+        );
       }
     }
 
