@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `summarket`.`user` (
   `email` VARCHAR(45) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
   `avatar` VARCHAR(45) NOT NULL,
-  `rol` VARCHAR(45) NOT NULL,
+  `rol` VARCHAR(45) NOT NULL DEFAULT 'user',
   PRIMARY KEY (`user_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
