@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 
+let db = require("../database/models")
+
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 
@@ -38,11 +40,20 @@ const controller = {
       });
     }
 
-    const nuevoProducto = req.body;
+    /*const nuevoProducto = req.body;
     nuevoProducto.id = products.length + 1;
     nuevoProducto.image = req.file.filename;
     products.push(nuevoProducto);
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')); */
+
+    db.Productos.create({
+      name: req.file.name,
+      description: req.file.description,
+      image: req.file.filename,
+      price: req.file.price,
+      discount: req.file.discount,
+      quantity: "Prueba"
+    })
     res.redirect('/');
   },
   // Update - Form to edit
