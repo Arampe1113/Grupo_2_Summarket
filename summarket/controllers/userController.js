@@ -21,7 +21,7 @@ const controller = {
 
         if (req.body.remember_user) {
           res.cookie('userEmail', req.body.emailLogin, {
-            maxAge: 1000 * 60 * 2,
+            maxAge: 2000 * 60 * 2,
           });
         }
 
