@@ -84,6 +84,11 @@
                 <option value="">Selecciona una opción:</option>
                 <option value="in-sale">En oferta</option>
                 <option value="visited">Últimos agregados</option>
+                <option value="clothing">Calzado y Moda</option>
+                <option value="Vehicles">Vehiculos</option>
+                <option value="Home">Home</option>
+                <option value="Tecnology">Tecnologia</option>
+                <option value="Other">Otra</option>
               </select>
               <% if (locals.errors && errors.category) { %>
               <div class="text-danger"><%= errors.category.msg %></div>
@@ -113,7 +118,7 @@
               <% } %>
             </div>
             <div class="col-12">
-              <button type="submit" class="buy-now-button">
+              <button type="submit" class="buy-now-button" value="upload">
                 Guardar producto
               </button>
             </div>
@@ -133,5 +138,6 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+    <script scr="/js/product.js"></script>
   </body>
 </html>

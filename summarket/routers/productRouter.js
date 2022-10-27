@@ -32,7 +32,12 @@ router.post('/', upload.single('productImg'), validations, productCont.store);
 
 // /*** EDIT ONE PRODUCT ***/
 router.get('/edit/:id/', auth, productCont.edit);
-router.put('/edit/:id', upload.single('productImg'), productCont.update);
+router.put(
+  '/edit/:id',
+  upload.single('productImg'),
+  validations,
+  productCont.update
+);
 
 // /*** DELETE ONE PRODUCT***/
 router.delete('/delete/:id', auth, productCont.destroy);
