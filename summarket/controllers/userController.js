@@ -81,11 +81,12 @@ const controller = {
 
 
     db.Usuarios.create({
-      firstName: "Prueba",
-      lastName: "Prueba",
-      email: "Prueba",
-      password: "Prueba",
-      rol: "Prueba"
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      password: bcryptjs.hashSync(req.body.password, 10),
+      avatar: req.file.filename,
+      rol: "user"
     })
 
     /*let userCreate = User.create(userToCreate);*/
