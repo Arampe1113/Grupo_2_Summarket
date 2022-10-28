@@ -10,13 +10,13 @@ const usercontroller = {
     "list":(req,res) => {
         db.user.findAll()
         .then (user => {
-            res.JSON ("userlist.ejs", {users})
+            res.JSON ("userList.ejs", {users})
         })
     },
     "detail":(req,res) =>{
         db.user.findByPk (req,params.id)
         .then (user => {
-            res.JSON("userdetail.ejs", {users2});
+            res.JSON("userDetail.ejs", {users2});
 
         });
 
