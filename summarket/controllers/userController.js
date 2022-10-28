@@ -1,7 +1,7 @@
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const User = require('../models/Users.js');
-let db = require("../database/models")
+let db = require('../database/models');
 
 const controller = {
   login: (req, res) => {
@@ -79,15 +79,14 @@ const controller = {
       rol: 'user',
     };*/
 
-
     db.Usuarios.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
       password: bcryptjs.hashSync(req.body.password, 10),
       avatar: req.file.filename,
-      rol: "user"
-    })
+      rol: 'user',
+    });
 
     /*let userCreate = User.create(userToCreate);*/
 

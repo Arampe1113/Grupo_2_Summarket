@@ -14,13 +14,13 @@ window.onload = () => {
 
   let ncontador = Name.value.length;
 
-  Name.addEventListener('focusout', function () {
-    if (ncontador < 4) {
-      containerErrores.innerHTML =
-        '<li>El nombre del producto debe tener minimo 2 caracteres</li>';
-      containerErrores.style.color = 'red';
-    }
-  });
+  // Name.addEventListener('focusout', function () {
+  //   if (ncontador < 4) {
+  //     containerErrores.innerHTML =
+  //       '<li>El nombre del producto debe tener minimo 2 caracteres</li>';
+  //     containerErrores.style.color = 'red';
+  //   }
+  // });
 
   //   let ncontador = Name.value.length;
   //   function contar() {
@@ -30,14 +30,14 @@ window.onload = () => {
   //     }
   //   }
 
-  let dcontador = description.value.length;
-  function contar() {
-    if (dcontador <= 20) {
-      p.innerText =
-        'La descripción del producto debe tener minimo 20 caracteres ';
-      p.style.color = 'red';
-    }
-  }
+  // let dcontador = description.value.length;
+  // function contar() {
+  //   if (dcontador <= 20) {
+  //     p.innerText =
+  //       'La descripción del producto debe tener minimo 20 caracteres ';
+  //     p.style.color = 'red';
+  //   }
+  // }
 
   //    let form = document.getElementById('uploadForm'),
   //     imageInput = document.getElementById('file');
