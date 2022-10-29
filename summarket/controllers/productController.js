@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 
-let db = require("../database/models")
+let db = require('../database/models');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
@@ -47,13 +47,13 @@ const controller = {
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')); */
 
     db.Productos.create({
-      name: req.file.name,
-      description: req.file.description,
+      name: req.body.name,
+      description: req.body.description,
       image: req.file.filename,
-      price: req.file.price,
-      discount: req.file.discount,
-      quantity: "Prueba"
-    })
+      price: req.body.price,
+      discount: req.body.discount,
+      quantity: req.body.quantity,
+    });
     res.redirect('/');
   },
   // Update - Form to edit
