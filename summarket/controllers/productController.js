@@ -53,6 +53,7 @@ const controller = {
       price: req.body.price,
       discount: req.body.discount,
       quantity: req.body.quantity,
+      category: 1,
     });
     res.redirect('/');
   },
