@@ -19,7 +19,21 @@ const controller = {
   },
 
   create: (req, res) => {
-    res.render('products/create');
+    let categorias = db.Categorias.findAll();
+    let colores = db.Colores.findAll();
+    let marcas = db.Marcas.findAll();
+
+    Promise.all([categorias, colores, marcas]).then(function ([
+      categorias,
+      colores,
+      marcas,
+    ]) {
+      return res.render('products/create', {
+        categorias: categorias,
+        marcas: marcas,
+        colores: colores,
+      });
+    });
   },
 
   detail: (req, res) => {
@@ -53,6 +67,9 @@ const controller = {
       price: req.body.price,
       discount: req.body.discount,
       quantity: req.body.quantity,
+      category: req.body.category,
+      color: req.body.colors,
+      brand: req.body.brand,
     });
     res.redirect('/');
   },

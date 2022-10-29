@@ -66,13 +66,29 @@
               <label for="colors" class="form-label"
                 >Colores disponibles:</label
               >
-              <input
-                type="text"
-                id="colors"
-                name="colors"
-                placeholder="Ej: Blanco"
-                class="form-input"
-              />
+              <select name="colors" id="colors" class="form-input">
+                <% for( let i = 0; i < colores.length; i++ ) { %>
+
+                <option value="<%=colores[i].idcolor  %> ">
+                  <%= colores[i].color %>
+                </option>
+                <% } %>
+              </select>
+              <% if (locals.errors && errors.colors) { %>
+              <div class="text-danger"><%= errors.colors.msg %></div>
+              <% } %>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="brands" class="form-label">Marcas:</label>
+              <select name="brands" id="brands" class="form-input">
+                <% for( let i = 0; i < marcas.length; i++ ) { %>
+
+                <option value="<%=marcas[i].idbrand  %> ">
+                  <%= marcas[i].brand %>
+                </option>
+                <% } %>
+              </select>
               <% if (locals.errors && errors.colors) { %>
               <div class="text-danger"><%= errors.colors.msg %></div>
               <% } %>
@@ -81,14 +97,12 @@
             <div class="col-12 col-md-6">
               <label for="category" class="form-label">Categoría:</label>
               <select name="category" id="category" class="form-input">
-                <option value="">Selecciona una opción:</option>
-                <option value="in-sale">En oferta</option>
-                <option value="visited">Últimos agregados</option>
-                <option value="clothing">Calzado y Moda</option>
-                <option value="Vehicles">Vehiculos</option>
-                <option value="Home">Home</option>
-                <option value="Tecnology">Tecnologia</option>
-                <option value="Other">Otra</option>
+                <% for( let i = 0; i < categorias.length; i++ ) { %>
+                <option value="<%=categorias[i].idcategory  %> ">
+                  <%=categorias[i].category_name %>
+                </option>
+
+                <% } %>
               </select>
               <% if (locals.errors && errors.category) { %>
               <div class="text-danger"><%= errors.category.msg %></div>
