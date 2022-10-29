@@ -23,6 +23,7 @@
         <form action="/products" method="POST" enctype="multipart/form-data">
           <ul class="errores" id="errores"></ul>
           <div class="row product-detail">
+
             <div class="col-12 col-md-6">
               <label for="name" class="form-label">Nombre del producto:</label>
               <input
@@ -36,19 +37,21 @@
               <div class="text-danger"><%= errors.name.msg %></div>
               <% } %>
             </div>
+
             <div class="col-12 col-md-6">
               <label for="price" class="form-label">Precio del producto:</label>
               <input
                 type="text"
                 id="price"
                 name="price"
-                placeholder="Ej: 5678"
+                placeholder="Ej: 5.678"
                 class="form-input"
               />
               <% if (locals.errors && errors.price) { %>
               <div class="text-danger"><%= errors.price.msg %></div>
               <% } %>
             </div>
+
             <div class="col-12 col-md-6">
               <label for="discount" class="form-label">Descuento:</label>
               <input
@@ -62,6 +65,21 @@
               <div class="text-danger"><%= errors.discount.msg %></div>
               <% } %>
             </div>
+
+            <div class="col-12 col-md-6">
+              <label for="quantity" class="form-label">Cantidad:</label>
+              <input
+                type="text"
+                id="quantity"
+                name="quantity"
+                placeholder="Ej: 2"
+                class="form-input"
+              />
+              <% if (locals.errors && errors.quantity) { %>
+              <div class="text-danger"><%= errors.quantity.msg %></div>
+              <% } %>
+            </div>
+
             <div class="col-12 col-md-6">
               <label for="colors" class="form-label"
                 >Colores disponibles:</label
@@ -108,6 +126,7 @@
               <div class="text-danger"><%= errors.category.msg %></div>
               <% } %>
             </div>
+
             <div class="col-12">
               <label for="description" class="form-label">Descripción:</label>
               <textarea
@@ -119,6 +138,7 @@
               <div class="text-danger"><%= errors.description.msg %></div>
               <% } %>
             </div>
+
             <div class="col-12">
               <label for="productImg" class="form-label">Imagen:</label>
               <input
@@ -131,6 +151,7 @@
               <div class="text-danger"><%= errors.productImg.msg %></div>
               <% } %>
             </div>
+
             <div class="col-12">
               <button type="submit" class="buy-now-button" value="upload">
                 Guardar producto
