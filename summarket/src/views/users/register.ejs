@@ -31,6 +31,10 @@
           <h2 class="products-title">Formulario de registro de usuarios</h2>
         </div>
       </div>
+
+      <div class="errores">
+        <ul></ul>
+      </div>
       <div class="col-12">
         <form
           action="/user/register"
@@ -92,6 +96,13 @@
               <div class="text-danger"><%= errors.email.msg %></div>
               <% } %>
             </div>
+            <div class="col-8 col-lg-10">
+              <small class="text-danger errEmail"></small>
+            </div>
+            <% if (typeof errores != 'undefined') { %> <% for( let i = 0; i <
+            errores.length; i++ ) { %> <% if (errores[i].param == "email") { %>
+            <small class="text-danger"> <%= errores[i].msg %> </small>
+            <% } %> <% } %> <% } %>
             <div class="col-12 col-md-6">
               <label for="password" class="form-label">Contraseña:</label>
               <input

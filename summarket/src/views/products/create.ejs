@@ -19,11 +19,9 @@
         </div>
       </div>
       <div class="col-12">
-        <!-- enctype="multipart/form-data" causa error al guardar nuevo producto y falta funcionalidad de guardar imagen -->
         <form action="/products" method="POST" enctype="multipart/form-data">
           <ul class="errores" id="errores"></ul>
           <div class="row product-detail">
-
             <div class="col-12 col-md-6">
               <label for="name" class="form-label">Nombre del producto:</label>
               <input
@@ -75,9 +73,6 @@
                 placeholder="Ej: 2"
                 class="form-input"
               />
-              <% if (locals.errors && errors.quantity) { %>
-              <div class="text-danger"><%= errors.quantity.msg %></div>
-              <% } %>
             </div>
 
             <div class="col-12 col-md-6">
@@ -85,21 +80,24 @@
                 >Colores disponibles:</label
               >
               <select name="colors" id="colors" class="form-input">
+                <option hidden disabled selected value>
+                  -- Selecciona una opción --
+                </option>
                 <% for( let i = 0; i < colores.length; i++ ) { %>
 
-                <option value="<%=colores[i].idcolor  %> ">
+                <option value="<%=colores[i].idcolor  %>">
                   <%= colores[i].color %>
                 </option>
                 <% } %>
               </select>
-              <% if (locals.errors && errors.colors) { %>
-              <div class="text-danger"><%= errors.colors.msg %></div>
-              <% } %>
             </div>
 
             <div class="col-12 col-md-6">
               <label for="brands" class="form-label">Marcas:</label>
               <select name="brands" id="brands" class="form-input">
+                <option hidden disabled selected value>
+                  -- Selecciona una opción --
+                </option>
                 <% for( let i = 0; i < marcas.length; i++ ) { %>
 
                 <option value="<%=marcas[i].idbrand  %> ">
@@ -107,14 +105,14 @@
                 </option>
                 <% } %>
               </select>
-              <% if (locals.errors && errors.colors) { %>
-              <div class="text-danger"><%= errors.colors.msg %></div>
-              <% } %>
             </div>
 
             <div class="col-12 col-md-6">
               <label for="category" class="form-label">Categoría:</label>
               <select name="category" id="category" class="form-input">
+                <option hidden disabled selected value>
+                  -- Selecciona una opción --
+                </option>
                 <% for( let i = 0; i < categorias.length; i++ ) { %>
                 <option value="<%=categorias[i].idcategory  %> ">
                   <%=categorias[i].category_name %>
@@ -122,9 +120,6 @@
 
                 <% } %>
               </select>
-              <% if (locals.errors && errors.category) { %>
-              <div class="text-danger"><%= errors.category.msg %></div>
-              <% } %>
             </div>
 
             <div class="col-12">

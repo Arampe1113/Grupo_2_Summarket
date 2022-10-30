@@ -11,7 +11,9 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
 const controller = {
   products: (req, res) => {
-    res.render('products/all', { products: products });
+    db.Productos.findAll().then(function (products) {
+      res.render('products/all', { products: products });
+    });
   },
 
   cart: (req, res) => {
@@ -64,12 +66,12 @@ const controller = {
       name: req.body.name,
       description: req.body.description,
       image: req.file.filename,
+      category_id: req.body.category,
       price: req.body.price,
       discount: req.body.discount,
       quantity: req.body.quantity,
-      category: req.body.category,
-      color: req.body.colors,
-      brand: req.body.brand,
+      brand_id: req.body.brands,
+      color_id: req.body.colors,
     });
     res.redirect('/');
   },

@@ -29,29 +29,30 @@
         <div class="col-12">
           <h2 class="products-title">Todos los productos</h2>
         </div>
-        <% products.forEach(product => { %>
+
+        <% for( let i = 0; i < products.length; i++ ) { %>
 
         <div class="col-12 col-sm-6 col-lg-3">
           <section class="product-box">
-            <a href="/products/detail/<%= product.id %>">
+            <a href="/products/detail/<%= products[i].id %>">
               <figure class="product-box_image">
                 <img
                   class="zoom"
-                  src="/images/products/<%= product.image %>"
+                  src="/images/products/<%= products[i].image %>"
                   alt="imagen de producto"
                   width="400"
                 />
               </figure>
               <article class="product-box_data">
-                <h2>$Precio final: <%= product.price %></h2>
-                <span>Descuento% <%= product.discount %></span>
-                <p>Nombre: <%= product.name %></p>
+                <h2>$Precio final: <%= products[i].price %></h2>
+                <span>Descuento% <%= products[i].discount %></span>
+                <p>Nombre: <%= products[i].name %></p>
                 <i class="fas fa-truck"></i>
               </article>
             </a>
           </section>
         </div>
-        <% }) %>
+        <% } %>
       </div>
     </div>
     <!-- /todos los productos -->

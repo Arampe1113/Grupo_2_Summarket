@@ -1,4 +1,3 @@
-// const path = require('path');
 const multer = require('multer');
 
 const storage = multer.diskStorage({
@@ -6,7 +5,8 @@ const storage = multer.diskStorage({
     cb(null, 'public/images/users');
   },
   filename: function (req, file, cb) {
-    cb(null, Date.now() + '-' + file.originalname);
+    let fileExtension = path.extname(file.originalname).split('.')[1];
+    cb(null, Date.now() + '-' + file.originalname + fileExtension);
   },
 });
 
