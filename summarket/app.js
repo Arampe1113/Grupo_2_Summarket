@@ -10,6 +10,7 @@ const mRoutes = require('./routers/mainRouter');
 const uRoutes = require('./routers/userRouter');
 const userLogged = require('./middlewares/userLoggedMiddleware');
 const apiuserroute =require ('./routers/api/userroute');
+const apicontrollerroute= require('./routers/api/productroute' )
 
 app.use(express.static(__dirname + '/public'));
 app.use(bp.json());
@@ -43,4 +44,6 @@ app.use('/products', cpRoutes);
 
 app.use('/user', uRoutes);
 
-app.use(apiuserroute);
+app.use("/api/v1", apiuserroute);
+
+app.use("/api/v1", apicontrollerroute);

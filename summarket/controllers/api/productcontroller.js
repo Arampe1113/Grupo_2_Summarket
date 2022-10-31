@@ -5,19 +5,19 @@ const sequelize = db.sequelize;
 // exports.index=fuction(req,res,next){
 //     models.user.findAll({attributes: ["id", "username"]});
 // };
-const usercontroller = {
+const productcontroller = {
     list:(req,res) => {
-        db.Usuario.findAll()
-        .then (user => {
-            res.json({user})
+        db.Productos.findAll()
+        .then (product => {
+            res.json({product})
         })
     },
     detail:(req,res) =>{
-        db.Usuario.findByPk (req,params.id)
-        .then (user => {
-            res.json({user});
+        db.Productos.findByPk (req,params.id)
+        .then (product => {
+            res.json({product});
 
         });
     }
 }
-module.exports = usercontroller;
+module.exports = productcontroller;
