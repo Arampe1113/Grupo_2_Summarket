@@ -58,4 +58,11 @@ Conclusiones:
 
 ## Sprint 7:
 
+    Se crean los scripts para productos y usuarios, acorde con el diagrama de base de datos para SQL, la carpeta database con los archivos para la configuración de Sequelize. Tenemos dficultad para conexión con sql y creación de productos, se revisa la configuración. 
+    Se trabajan en sesiones extras y fines de semana para repasar los pendientes de sprint pasados y desatrazarlos o afinarlos.
+
 ## Sprint 8:
+
+    Se realizan reuniones del equipo para avanzar en pendientes, aún se tienen problemas con la base de datos pero se han venido solucionando los errores, Carlos soluciona la creación de tablas de productos y ya se puede conectar. 
+    Se mejoran algunas vistas de home, detalle de productos y carrito de compras.
+    Se trabaja en creación de API y tablero con React. 
