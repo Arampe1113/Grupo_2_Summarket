@@ -52,11 +52,19 @@ const controller = {
     });
   },
 
+
+
   detail: (req, res) => {
     db.Productos.findByPk(req.params.id).then(function (producto) {
-      res.render('products/detail', { producto: producto });
+     const addtocart= (producto) => {
+      
+      console.log('Me ejecuté', producto);
+      res.render('products/carrito', { producto });       
+     }
+      res.render('products/detail', { producto, events:{ addtocart } });
     });
   },
+
 
   store: (req, res) => {
     const resultValidation = validationResult(req);
@@ -181,6 +189,15 @@ const controller = {
   carrito: (req, res) => {
     res.render('products/carrito');
   },
+
+
+ 
+    
 };
+
+
+  
+
+
 
 module.exports = controller;

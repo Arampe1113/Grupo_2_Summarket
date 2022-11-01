@@ -53,9 +53,10 @@
           <article class="product-detail-info">
             <div class="formas-de-pago">
               <div class="boton-compra">
-                <a href="/products/cart" class="buy-now-button"
-                  >¡Compra ahora!</a
-                >
+                <button class="buy-now-button" id="addedToCar" onClick="<%= events.addtocart %>"> 
+                <!-- <button onclick="events.addtocart (producto)" class="buy-now-button"></button> -->
+                  ¡Compra ahora!</button>
+                 
                 <br />
                 <br />
                 <hr />
@@ -99,7 +100,7 @@
       </div>
     </div>
     <section class="login"><%- include('../partials/footer.ejs') %></section>
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
       crossorigin="anonymous"
@@ -108,8 +109,11 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
 
-    <script src="../../../controllers/carritocontroler.js"></script>
+   
+
+    <script src="../../../controllers/pedidodecarrito.js"></script>
+
   </body>
 </html>

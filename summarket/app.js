@@ -38,6 +38,8 @@ app.listen(3030, () => {
   console.log('puerto vivo 3030');
 });
 
+app.locals.productsToCar = [];
+
 app.use('/', mRoutes);
 
 app.use('/products', cpRoutes);
