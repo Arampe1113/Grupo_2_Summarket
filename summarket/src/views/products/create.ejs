@@ -80,7 +80,7 @@
                 >Colores disponibles:</label
               >
               <select name="colors" id="colors" class="form-input">
-                <option hidden disabled selected value>
+                <option value="" selected disabled>
                   -- Selecciona una opción --
                 </option>
                 <% for( let i = 0; i < colores.length; i++ ) { %>
@@ -90,12 +90,15 @@
                 </option>
                 <% } %>
               </select>
+              <% if (locals.errors && errors.colors) { %>
+              <div class="text-danger"><%= errors.colors.msg %></div>
+              <% } %>
             </div>
 
             <div class="col-12 col-md-6">
               <label for="brands" class="form-label">Marcas:</label>
               <select name="brands" id="brands" class="form-input">
-                <option hidden disabled selected value>
+                <option value="" selected disabled>
                   -- Selecciona una opción --
                 </option>
                 <% for( let i = 0; i < marcas.length; i++ ) { %>
@@ -105,21 +108,26 @@
                 </option>
                 <% } %>
               </select>
+              <% if (locals.errors && errors.brands) { %>
+              <div class="text-danger"><%= errors.brands.msg %></div>
+              <% } %>
             </div>
 
             <div class="col-12 col-md-6">
               <label for="category" class="form-label">Categoría:</label>
               <select name="category" id="category" class="form-input">
-                <option hidden disabled selected value>
+                <option value="" selected disabled>
                   -- Selecciona una opción --
                 </option>
                 <% for( let i = 0; i < categorias.length; i++ ) { %>
                 <option value="<%=categorias[i].idcategory  %> ">
                   <%=categorias[i].category_name %>
                 </option>
-
                 <% } %>
               </select>
+              <% if (locals.errors && errors.category) { %>
+              <div class="text-danger"><%= errors.category.msg %></div>
+              <% } %>
             </div>
 
             <div class="col-12">

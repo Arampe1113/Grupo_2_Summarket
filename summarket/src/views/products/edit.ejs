@@ -5,16 +5,15 @@
       <div class="row">
         <div class="col-12">
           <h2 class="products-title">
-            Estás editando: <i><%= productEdit.name %></i>
+            Estás editando: <i><%= producto.name %></i>
           </h2>
         </div>
       </div>
       <div class="col-12">
         <form
-          action="/products/edit/<%= productEdit.id %>?_method=PUT"
+          action="/products/edit/<%= producto.id %>?_method=PUT"
           method="POST"
-          enctype="multipart/form-data"
-        >
+          enctype="multipart/form-data">
           <div class="row product-detail">
             <div class="col-12 col-md-6">
               <label for="name" class="form-label">Nombre del producto:</label>
@@ -23,7 +22,7 @@
                 id="name"
                 name="name"
                 placeholder="Ej: Zapatillas Reebok"
-                value="<%= productEdit.name %>"
+                value="<%= producto.name %>"
                 class="form-input"
               />
             </div>
@@ -34,7 +33,7 @@
                 id="price"
                 name="price"
                 placeholder="Ej: 5678"
-                value="<%= productEdit.price %>"
+                value="<%= producto.price %>"
                 class="form-input"
               />
             </div>
@@ -45,23 +44,24 @@
                 id="discount"
                 name="discount"
                 placeholder="Ej: 15"
-                value="<%= productEdit.discount %>"
+                value="<%= producto.discount %>"
                 class="form-input"
               />
             </div>
             <div class="col-12 col-md-6">
               <label for="category" class="form-label">Categoría:</label>
               <select name="category" id="category" class="form-input">
-                <option value="">Selecciona una opción:</option>
-                <option value="in-sale">En oferta</option>
-                <option value="visited">Últimos agregados</option>
+                <% for( let i = 0; i < categorias.length; i++ ) { %>
+                  <option value="<%=categorias[i].idcategory  %> ">
+                    <%=categorias[i].category_name %>
+                  </option>  
+                  <% } %>
               </select>
             </div>
-            <div class="col-12">
+            <div class="col-12">  
               <label for="description" class="form-label">Descipción:</label>
               <textarea name="description" id="description" class="form-input">
-<%= productEdit.description %></textarea
-              >
+              <%= producto.description %></textarea>
             </div>
             <div class="col-12">
               <label for="productImg" class="form-label">Imagen:</label>
@@ -70,7 +70,7 @@
                 id="productImg"
                 name="productImg"
                 class="form-input"
-                value="<%= productEdit.image %>"
+                value="<%= producto.image %>"
               />
             <div class="col-12">
               <button type="submit" class="buy-now-button">

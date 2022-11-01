@@ -27,7 +27,7 @@
     <div class="container-products-wrapper">
       <div class="row">
         <div class="col-12">
-          <h2 class="products-title"><%= product.name %></h2>
+          <h2 class="products-title">Produto: <%= producto.name %></h2>
           <hr />
         </div>
       </div>
@@ -36,19 +36,18 @@
           <div class="col-12-col-lg-8">
             <img
               class="zoom"
-              src="/images/products/<%= product.image %>"
+              src="/images/products/<%= producto.image %>"
               alt="product image"
               class="product-detail-img"
             />
-            <p class="product-detail-description"><%= product.description %></p>
+            <p class="product-detail-description">Descripción: <%= producto.description %></p>
           </div>
         </div>
         <div class="detalles-compra">
           <p class="product-detail-price-small">
-            <span>$<%= product.price %></span>
-            <b> <%= product.discount %>% OFF </b>
-          </p>
-          <p class="product-detail-price">$<%= product.price %></p>
+            <span>Precio: $<%= producto.price %></span>
+            <b>Descuento: <%= producto.discount %>% OFF </b>
+          </p>         
         </div>
         <div class="col-12-col-lg-4">
           <article class="product-detail-info">
@@ -62,7 +61,7 @@
                 <hr />
                 <div class="boton-editar-comrpa">
                   <a
-                    href="/products/edit/<%= product.id %>"
+                    href="/products/edit/<%= producto.id %>"
                     class="action-button edit"
                     >Editar producto</a
                   >
@@ -86,7 +85,7 @@
 
             <div class="boton-eliminar">
               <form
-                action="/products/delete/<%= product.id %>?_method=DELETE"
+                action="/products/delete/<%= producto.id %>?_method=DELETE"
                 method="POST"
                 style="display: inline-flex"
               >
