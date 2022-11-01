@@ -16,6 +16,16 @@ module.exports = [
     .isLength({ min: 20 })
     .withMessage('Debe tener al menos 20 caracteres'),
 
+  body('colors')
+    .notEmpty()
+    .withMessage('Seleciona al menos un color de la lista'),
+  body('brands')
+    .notEmpty()
+    .withMessage('Seleciona al menos una marca de la lista'),
+  body('category')
+    .notEmpty()
+    .withMessage('Seleciona al menos una categoria de la lista'),
+
   body('productImg').custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
