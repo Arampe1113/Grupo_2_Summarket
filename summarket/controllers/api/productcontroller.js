@@ -16,8 +16,10 @@ const productcontroller = {
         db.Productos.findByPk (req,params.id)
         .then (product => {
             res.json({product});
-
+            console.log(productcontroller); 
         });
     }
 }
+
+
 module.exports = productcontroller;

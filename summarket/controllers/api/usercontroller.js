@@ -17,7 +17,10 @@ const usercontroller = {
         .then (user => {
             res.json({user});
 
+            console.log(usercontroller);
+
         });
     }
 }
+
 module.exports = usercontroller;
