@@ -7,18 +7,22 @@ function userLoggedMiddleware(req, res, next) {
 
   let emailCookie = req.cookies.userEmail;
 
-  let userInCookie = user.findByField('email', emailCookie);
-
-  if (userInCookie) {
-    req.session.userLogged = userInCookie;
+  if (emailCookie != undefined) {
+    db.Usuario.findOne({
+      where: {
+        email: emailCookie,
+      },
+    }).then((userFromCookie) => {
+      req.session.userLogged = userFromCookie;
+      if (req.session.userLogged) {
+        res.locals.isLogged = true;
+        res.locals.userLogged = req.session.userLogged;
+      }
+    });
   }
-
-  if (req.session.userLogged) {
-    res.locals.isLogged = true;
-    res.locals.userLogged = req.session.userLogged;
-  }
-
   next();
 }
+
+// let userInCookie = user.findByField('email', emailCookie);
 
 module.exports = userLoggedMiddleware;

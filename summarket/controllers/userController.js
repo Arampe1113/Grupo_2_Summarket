@@ -1,4 +1,4 @@
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 const User = require('../models/Users.js');
 let db = require('../database/models');
@@ -13,30 +13,39 @@ const controller = {
       where: {
         email: req.body.emailLogin,
       },
-    }).then((user) => {
-      if (user) {
-        const passwordOk = bcryptjs.compareSync(
+    }).then((userData) => {
+      if (userData) {
+        let isOkThePassword = bcrypt.compareSync(
           req.body.passwordLogin,
-          user.password
+          userData.password
         );
-        if (passwordOk) {
-          delete user.password;
-          req.session.userLogged = user;
-        }
-        if (req.body.remember_user) {
-          res.cookie('userEmail', req.body.emailLogin, {
-            maxAge: 2000 * 60 * 2,
+        if (isOkThePassword) {
+          delete userData.dataValues.password;
+          req.session.userLogged = userData;
+          if (req.body.remember_user) {
+            res.cookie('userEmail', req.body.emailLogin, {
+              maxAge: 1000 * 60 * 60,
+            });
+          }
+          return res.redirect('/user/profile');
+        } else {
+          return res.render('users/login', {
+            errors: {
+              email: {
+                msg: 'Las credenciales ingresadas son invalidas, ingresalas nuevamente',
+              },
+            },
           });
         }
+      } else {
+        return res.render('users/login', {
+          errors: {
+            email: {
+              msg: 'El email o la contraseña son incorrectos, ingresalos nuevamente',
+            },
+          },
+        });
       }
-      return res.render('users/profile', { user: user }); //Esta linea está dando problemas?
-    });
-    return res.render('users/login', {
-      errors: {
-        email: {
-          msg: 'Las credenciales son invalidas',
-        },
-      },
     });
   },
 
@@ -90,18 +99,24 @@ const controller = {
       });
     }
 
-    let userInDB = User.findByField('email', req.body.email);
+    // let userInDB = User.findByField('email', req.body.email);
 
-    if (userInDB) {
-      return res.render('users/register', {
-        errors: {
-          email: {
-            msg: 'Ya existe un usuario registrado con este correo',
+    db.Usuario.findOne({
+      where: {
+        email: req.body.email,
+      },
+    }).then((userFound) => {
+      if (userFound) {
+        return res.render('users/register', {
+          errors: {
+            email: {
+              msg: 'Ya existe un usuario registrado con este correo',
+            },
           },
-        },
-        oldData: req.body,
-      });
-    }
+          oldData: req.body,
+        });
+      }
+    });
 
     /*let userToCreate = {
       ...req.body,
@@ -114,7 +129,7 @@ const controller = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
-      password: bcryptjs.hashSync(req.body.password, 10),
+      password: bcrypt.hashSync(req.body.password, 10),
       avatar: req.file.filename,
       rol: 'user',
     });
@@ -125,6 +140,7 @@ const controller = {
   },
 
   profile: (req, res) => {
+    console.log(res.locals);
     return res.render('users/profile', {
       user: req.session.userLogged,
     });
