@@ -1,9 +1,12 @@
 const user = require('../models/Users');
 
+let db = require('../database/models');
+
 function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false;
 
   let emailCookie = req.cookies.userEmail;
+
   let userInCookie = user.findByField('email', emailCookie);
 
   if (userInCookie) {

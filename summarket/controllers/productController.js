@@ -52,19 +52,15 @@ const controller = {
     });
   },
 
-
-
   detail: (req, res) => {
     db.Productos.findByPk(req.params.id).then(function (producto) {
-     const addtocart= (producto) => {
-      
-      console.log('Me ejecuté', producto);
-      res.render('products/carrito', { producto });       
-     }
-      res.render('products/detail', { producto, events:{ addtocart } });
+      const addtocart = (producto) => {
+        console.log('Me ejecuté', producto);
+        res.render('products/Cart', { producto });
+      };
+      res.render('products/detail', { producto, events: { addtocart } });
     });
   },
-
 
   store: (req, res) => {
     const resultValidation = validationResult(req);
@@ -179,25 +175,26 @@ const controller = {
   },
 
   destroy: (req, res) => {
-    const idProduc = req.params.id;
-    const productsFilter = products.filter((item) => item.id != idProduc);
-    const data = JSON.stringify(productsFilter, null, ' ');
-    fs.writeFileSync(productsFilePath, data);
-    res.redirect('/');
+    db.Productos.destroy(
+      {
+        where: {
+          id: req.params.id,
+        },
+      }.then(() => {
+        res.redirect('/products');
+      })
+    );
+
+    // const idProduc = req.params.id;
+    // const productsFilter = products.filter((item) => item.id != idProduc);
+    // const data = JSON.stringify(productsFilter, null, ' ');
+    // fs.writeFileSync(productsFilePath, data);
+    // res.redirect('/');
   },
 
   carrito: (req, res) => {
     res.render('products/carrito');
   },
-
-
- 
-    
 };
-
-
-  
-
-
 
 module.exports = controller;

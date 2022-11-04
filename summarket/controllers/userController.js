@@ -9,41 +9,72 @@ const controller = {
   },
 
   processLogin: (req, res) => {
-    let userToLogin = User.findByField('email', req.body.emailLogin);
-
-    if (userToLogin) {
-      let passwordOk = bcryptjs.compareSync(
-        req.body.passwordLogin,
-        userToLogin.password
-      );
-      if (passwordOk) {
-        delete userToLogin.password;
-        req.session.userLogged = userToLogin;
-
+    db.Usuario.findOne({
+      where: {
+        email: req.body.emailLogin,
+      },
+    }).then((user) => {
+      if (user) {
+        const passwordOk = bcryptjs.compareSync(
+          req.body.passwordLogin,
+          user.password
+        );
+        if (passwordOk) {
+          delete user.password;
+          req.session.userLogged = user;
+        }
         if (req.body.remember_user) {
           res.cookie('userEmail', req.body.emailLogin, {
             maxAge: 2000 * 60 * 2,
           });
         }
-
-        return res.redirect('profile');
       }
-      return res.render('users/login', {
-        errors: {
-          email: {
-            msg: 'Las credenciales son invalidas',
-          },
-        },
-      });
-    }
+      return res.render('users/profile', { user: user }); //Esta linea está dando problemas?
+    });
     return res.render('users/login', {
       errors: {
         email: {
-          msg: 'Correo no registrado en Summarket',
+          msg: 'Las credenciales son invalidas',
         },
       },
     });
   },
+
+  // let userToLogin = User.findByField('email', req.body.emailLogin);
+
+  // if (userToLogin) {
+  //   let passwordOk = bcryptjs.compareSync(
+  //     req.body.passwordLogin,
+  //     userToLogin.password
+  //   );
+  //     if (userToLogin) {
+  //       delete userToLogin.password;
+  //       req.session.userLogged = userToLogin;
+
+  //       if (req.body.remember_user) {
+  //         res.cookie('userEmail', req.body.emailLogin, {
+  //           maxAge: 2000 * 60 * 2,
+  //         });
+  //       }
+
+  //       return res.redirect('profile');
+  //     }
+  //     return res.render('users/login', {
+  //       errors: {
+  //         email: {
+  //           msg: 'Las credenciales son invalidas',
+  //         },
+  //       },
+  //     });
+  //   }
+  //   return res.render('users/login', {
+  //     errors: {
+  //       email: {
+  //         msg: 'Correo no registrado en Summarket',
+  //       },
+  //     },
+  //   });
+  // },
 
   register: (req, res) => {
     res.render('users/register');
@@ -79,7 +110,7 @@ const controller = {
       rol: 'user',
     };*/
 
-    db.Usuarios.create({
+    db.Usuario.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
