@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './components/App';
-import './App.css';
+import './css/App.css';
 import {BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
