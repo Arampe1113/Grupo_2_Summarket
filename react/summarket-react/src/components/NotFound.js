@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenFondo from '../../public/images/404.jpg';
+import imagenFondo from '../images/404.jpg';
 
 function NotFound(){
     return(

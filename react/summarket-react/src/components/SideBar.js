@@ -2,6 +2,9 @@ import React from 'react';
 import image from '../images/summa2.png';
 import '../css/App.css';
 import {Link, Route, Switch} from 'react-router-dom';
+import UsersInDb from './UsersInDb';
+import ProductsInDb from './ProductsInDb';
+import NotFound from './NotFound';
 
 function SideBar(){
     return(
@@ -60,7 +63,7 @@ function SideBar(){
             </ul>
             {/*<!-- End of Sidebar -->*/}
    
-            {/* <Switch>
+            <Switch>
                 <Route exact path="/">
                     <SideBar />
                 </Route>
@@ -71,7 +74,7 @@ function SideBar(){
                     <ProductsInDb />
                 </Route>               
                 <Route component={NotFound} />
-            </Switch> */}
+            </Switch>
 
         </React.Fragment>
     )
