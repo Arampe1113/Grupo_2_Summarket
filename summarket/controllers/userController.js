@@ -22,7 +22,7 @@ const controller = {
         if (isOkThePassword) {
           delete userData.dataValues.password;
           req.session.userLogged = userData;
-          if (req.body.remember_user == 'on') {
+          if (req.body.remember_user) {
             res.cookie('userEmail', req.body.emailLogin, {
               maxAge: 2000 * 60 * 2,
             });
@@ -41,7 +41,7 @@ const controller = {
         return res.render('users/login', {
           errors: {
             email: {
-              msg: 'El email o la contraseña son incorrectos, ingresalos nuevamente',
+              msg: 'El email o la contraseña son incorrectos o no están registrados, ingresalos nuevamente o crea tu cuenta',
             },
           },
         });
@@ -140,7 +140,6 @@ const controller = {
   },
 
   profile: (req, res) => {
-    console.log(req.session);
     return res.render('users/profile', {
       user: req.session.userLogged,
     });
