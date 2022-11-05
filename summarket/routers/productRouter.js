@@ -5,6 +5,7 @@ const productCont = require('../controllers/productController');
 // Middlewares
 const auth = require('../middlewares/authMiddleware');
 const validations = require('../middlewares/productcreatemiddleware');
+const admin = require('../middlewares/adminMiddleware');
 
 const multer = require('multer');
 

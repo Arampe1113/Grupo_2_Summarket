@@ -22,9 +22,9 @@ const controller = {
         if (isOkThePassword) {
           delete userData.dataValues.password;
           req.session.userLogged = userData;
-          if (req.body.remember_user) {
+          if (req.body.remember_user == 'on') {
             res.cookie('userEmail', req.body.emailLogin, {
-              maxAge: 1000 * 60 * 60,
+              maxAge: 2000 * 60 * 2,
             });
           }
           return res.redirect('/user/profile');
@@ -140,7 +140,7 @@ const controller = {
   },
 
   profile: (req, res) => {
-    console.log(res.locals);
+    console.log(req.session);
     return res.render('users/profile', {
       user: req.session.userLogged,
     });

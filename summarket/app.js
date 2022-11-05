@@ -9,8 +9,8 @@ const cpRoutes = require('./routers/productRouter');
 const mRoutes = require('./routers/mainRouter');
 const uRoutes = require('./routers/userRouter');
 const userLogged = require('./middlewares/userLoggedMiddleware');
-const apiuserroute =require ('./routers/api/userroute');
-const apicontrollerroute= require('./routers/api/productroute' )
+const apiuserroute = require('./routers/api/userroute');
+const apicontrollerroute = require('./routers/api/productroute');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bp.json());
@@ -23,8 +23,6 @@ app.use(
     saveUninitialized: false,
   })
 );
-
-
 
 app.use(cookies());
 
@@ -46,6 +44,6 @@ app.use('/products', cpRoutes);
 
 app.use('/user', uRoutes);
 
-app.use("/api/v1", apiuserroute);
+app.use('/api/v1', apiuserroute);
 
-app.use("/api/v1", apicontrollerroute);
+app.use('/api/v1', apicontrollerroute);
