@@ -63,7 +63,7 @@ function SideBar(){
             </ul>
             {/*<!-- End of Sidebar -->*/}
    
-            <Switch>
+            {/* <Switch>
                 <Route exact path="/">
                     <SideBar />
                 </Route>
@@ -74,7 +74,7 @@ function SideBar(){
                     <ProductsInDb />
                 </Route>               
                 <Route component={NotFound} />
-            </Switch>
+            </Switch> */}
 
         </React.Fragment>
     )
