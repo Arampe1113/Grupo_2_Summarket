@@ -2,6 +2,7 @@ import React from 'react';
 import SideBar from './SideBar';
 import {useState, useEffect, useRef} from 'react';
 import '../css/App.css';
+import Product from './ProductsInDb';
 
 function App() {
 

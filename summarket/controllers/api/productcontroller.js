@@ -9,16 +9,25 @@ const productcontroller = {
     list:(req,res) => {
         db.Productos.findAll()
         .then (product => {
-            res.json({product})
+            res.json({
+                meta: {
+                    url: "api/v1/products"
+                },
+                data: product
+            })
         })
     },
-    detail:(req,res) =>{
-        db.Productos.findByPk (req,params.id)
-        .then (product => {
-            res.json({product});
-            console.log(productcontroller); 
-        });
-    }
+        detail:(req,res) => {
+            db.Productos.findByPk(req.params.id)
+            .then (product => {
+                res.json({
+                    meta: {
+                        url: "api/v1/products/:id"
+                    },
+                    data: product
+                })
+            })
+        },
 }
 
 
