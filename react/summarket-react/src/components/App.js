@@ -14,7 +14,7 @@ const urlUsers = 'http://localhost:3030/api/v1/users'
 //hook para ver estados
   const [user, setUser] = useState()
   const fetchApi = async () => {
-    const response = await fetch(user)
+    const response = await fetch(urlUsers)
     const responseJSON = await response.json()
     setUser(responseJSON)
   }
@@ -29,14 +29,12 @@ return (
     <div className="App">
     <h1 className='Title'>Summarket</h1>
     <SideBar />
-
-    
 {/*     
     { !user ? 'Cargando..' : 
       user.map( (user,index)=> {
         return <span key={index}>{user.user_id} {user.completed ? 'OK': 'NO'}</span>
       })
-    } */}
+    }
     
 
     {/* prueba cargando de API listado de tareas */}
