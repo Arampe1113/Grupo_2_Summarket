@@ -1,10 +1,13 @@
 import React from 'react';
+import {Link, Route, Switch} from 'react-router-dom';
+
 import image from '../images/summa2.png';
 import '../css/App.css';
-import {Link, Route, Switch} from 'react-router-dom';
 import UsersInDb from './UsersInDb';
 import ProductsInDb from './ProductsInDb';
 import NotFound from './NotFound';
+
+
 
 function SideBar(){
     return(
@@ -13,9 +16,9 @@ function SideBar(){
             <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         {/*<!-- Sidebar - Brand -->*/}
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/" >
           <div className="sidebar-brand-icon">
-                            <img className="w-100" src={image} alt="Summarket"/>
+                <img className="w-100" src={image} alt="Summarket"/>
           </div>
         </a>
 
@@ -64,9 +67,7 @@ function SideBar(){
       {/*<!-- End of Sidebar -->*/}
 
       <Switch>
-        <Route exact path="/">
-          <SideBar />
-        </Route>
+    
         <Route path="/UsersInDb">
           <UsersInDb />
         </Route>
