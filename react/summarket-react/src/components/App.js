@@ -2,6 +2,7 @@ import React from 'react';
 import SideBar from './SideBar';
 import {useState, useEffect, useRef} from 'react';
 import '../css/App.css';
+import Product from './ProductsInDb';
 
 function App() {
 
@@ -19,15 +20,17 @@ const urlUsers = 'http://localhost:3030/api/v1/users'
   }
 
 //hook que permite tomar del ciclo de vida y ejecutarlo por una vez al iniciar la app
-  useEffect(() => {
-    fetchApi()
-  }, [])
+  // useEffect(() => {
+  //   fetchApi()
+  // }, [])
   
 return (
   <React.Fragment>
     <div className="App">
     <h1 className='Title'>Summarket</h1>
     <SideBar />
+
+    
 {/*     
     { !user ? 'Cargando..' : 
       user.map( (user,index)=> {
