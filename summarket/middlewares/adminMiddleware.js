@@ -7,15 +7,18 @@ function adminMiddleware(req, res, next) {
   console.log('Auth Middleware');
   console.log(emailCookie);
 
-  User.findOne({
-    where: {
-      email: emailCookie,
-    },
-  }).then((userFromCookie) => {
-    if (userFromCookie.rol != 'admin') {
-      return res.redirect('/products');
-    }
-  });
+  if (emailCookie != undefined) {
+    User.findOne({
+      where: {
+        email: emailCookie,
+      },
+    }).then((userFromCookie) => {
+      if (userFromCookie.rol != 'admin') {
+        return res.redirect('/products');
+      }
+    });
+  }
+
   next();
 }
 

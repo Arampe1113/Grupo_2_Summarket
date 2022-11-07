@@ -32,5 +32,6 @@ router.get('/logout', userCont.logout);
 
 //Admin
 router.get('/admin', auth, userCont.admin);
+router.put('/update/:id', auth, userCont.updateRol);
 
 module.exports = router;

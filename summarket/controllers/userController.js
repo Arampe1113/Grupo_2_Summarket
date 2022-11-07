@@ -161,6 +161,18 @@ const controller = {
       return res.render('users/admin', { Usuario: Usuario });
     });
   },
+  updateRol: (req, res) => {
+    const newRol = {
+      rol: req.body.rol,
+    };
+
+    db.Usuario.update(newRol, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.redirect('/users/admin');
+  },
 };
 
 module.exports = controller;

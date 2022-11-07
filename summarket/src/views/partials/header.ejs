@@ -49,6 +49,12 @@
               <hr class="dropdown-divider" />
             </li>
             <a class="dropdown-item" href="/user/logout">Cerrar Sesión</a>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <% if (locals.userLogged.rol == 'admin') { %>
+             <a class="dropdown-item" href="/user/admin">Administrar usuarios</a>
+            <% } %>
           </ul>
         </li>
 
