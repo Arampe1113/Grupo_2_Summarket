@@ -1,67 +1,36 @@
 import React from 'react';
 import image from '../images/summa2.png';
-
-import UsersInDb from './UsersInDb';
-import ProductsInDb from './ProductsInDb';
-import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
+// import UsersInDb from './UsersInDb';
+// import ProductsInDb from './ProductsInDb';
+// import NotFound from './NotFound';
 
 
 function SideBar(){
-    return(
+    return (
         <React.Fragment>
-            {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <main className="productos"> 
+            <img src={image} alt="Summarket"/>
+            <h2>Acciones</h2>
+         
+            {/* <li>
+            <Link claseName='productos' to="/"> <span>Tablero - Summarket</span>
+            </Link>
+            </li>
+         
+            <li>
+            <Link claseName='productos' to="/UsersInDb"> <span>Usuarios en BD</span>
+            </Link>
+            </li> */}
 
-                {/*<!-- Sidebar - Brand -->*/}
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-                    <div className="sidebar-brand-icon">
-                    <img className="w-100" src={image} alt="Summarket"/>
-                    </div>
-                </a>
+                <article>
+               <h2>Lorem, ipsum.</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni mollitia blanditiis natus dicta error, cum alias ipsam libero odio impedit, fuga at dolore voluptatem illum pariatur cupiditate fugit, ullam amet?</p>
+                <button>Ver más</button>
+            </article>
+        </main>
 
-                {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider my-0"/>
-
-                {/*<!-- Nav Item - Dashboard -->*/}
-                <li className="nav-item active">
-                    <Link className="nav-link" to="/">
-                        <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Tablero - Summarket</span></Link>
-                </li>
-
-                {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider"/>
-
-                {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Acciones</div>
-       
-                {/*<!-- Nav Item - Users -->*/}
-                        <li className="nav-item">
-                         <Link className="nav-link" to="/UsersInDb">
-                            <i className="fas fa-fw fa-folder"></i>
-                            <span>Usuarios en BD</span></Link>
-                         </li>
-
-                         {/*<!-- Nav Item - Products -->*/}
-                         <li className="nav-item">
-                         <Link className="nav-link" to="/ProductsInDb">
-                         <i className="fas fa-fw fa-folder"></i>
-                         <span>Productos en BD</span></Link>
-                         </li>
-                {/*<!-- Nav Item - Tables -->*/}
-                        <li className="nav-item nav-link">
-                       <Link className="nav-link" to="/ContentRowProducts">
-                       <i className="fas fa-fw fa-table"></i>
-                       <span>Tablas Usuarios y Productos</span></Link>
-                       </li>
-
-                {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider d-none d-md-block"/>
-            </ul>
-
-
-            <Switch>
+            {/* <Switch>
             <Route exact path="/UsersInDb" >
             <UsersInDb />
             </Route>
@@ -69,9 +38,15 @@ function SideBar(){
             <ProductsInDb />
             </Route>               
             <Route component={NotFound} />
-            </Switch>   
+            </Switch>    */}
 
         </React.Fragment>
     )
-}
+  }  
+  
 export default SideBar;
+
+
+
+ 
+

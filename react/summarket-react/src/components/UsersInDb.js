@@ -1,35 +1,52 @@
-import React from "react";
-import '../css/App.css';
+import React, { useEffect, useState } from "react";
+import image from '../images/summa2.png';
 
-function UsersInDb() {
 
-    return (
+// const User = () => {
+//     const [users, setUsers] = useState([])
+//     const fetchUserData = () => {
+//       fetch('http://localhost:3030/api/v1/users')
+//         .then(response => {
+//           return response.json()
+//         })
+//         .then(data => {
+//           setUsers(data)
+//         })
+//     }
+//       useEffect(() => {
+//         fetchUserData()
+//       }, [])
+//   return (
+//       <div>
+//       <img src={image} alt="Summarket"/>
+//         {users.length > 0 && (
+//           <ul>
+//             {users.map(user => (
+//               <li key={user.id}>{user.name}</li>
+//             ))}
+//           </ul>
+//         )}
+//       </div>
+//   );
+// }
 
-      <div className="col-lg-6 mb-4">
-        
-           <h1>Hola</h1>
-        <p>PRUEBA   </p>
+// export default User();
 
-        <div className="card shadow mb-4">
-          <div className="card-header py-3">
-            <h5 className="m-0 font-weight-bold text-gray-800">
-              Users in Data Base
-            </h5>
-          </div>
-          <div className="card-body">
-            <div className="row">
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Usuarios</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-    );
-  }
-  
+function UsersInDb(){
+  return (
+      <main className="usuarios"> 
+          <img src={image} alt="Summarket"/>
+          <h2 id="usuarios">Usuarios</h2>
+          <article>
+             <h2>Lorem, ipsum.</h2>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni mollitia blanditiis natus dicta error, cum alias ipsam libero odio impedit, fuga at dolore voluptatem illum pariatur cupiditate fugit, ullam amet?</p>
+              <button>Ver más</button>
+          </article>
+      </main>
+
+  )
+}  
+
   export default UsersInDb;
   
