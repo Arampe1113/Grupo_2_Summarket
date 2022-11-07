@@ -30,4 +30,7 @@ router.get('/profile', auth, userCont.profile);
 //Logut
 router.get('/logout', userCont.logout);
 
+//Admin
+router.get('/admin', auth, userCont.admin);
+
 module.exports = router;

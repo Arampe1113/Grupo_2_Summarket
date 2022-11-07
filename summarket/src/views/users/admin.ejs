@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <title>Administrador</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding-top: 1%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <table style="width: 80%">
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Rol</th>
+      </tr>
+
+      <% for( let i = 0; i < Usuario.length; i++ ) { %>
+      <tr>
+        <th><%= Usuario[i].firstName %></th>
+        <th><%= Usuario[i].lastName %></th>
+        <th><%= Usuario[i].email %></th>
+        <th>
+          <select>
+            <option value="<%= Usuario[i].user_id %>">
+              <%= Usuario[i].rol %>
+            </option>
+            <option>admin</option>
+          </select>
+        </th>
+      </tr>
+      <% } %>
+    </table>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

@@ -150,6 +150,17 @@ const controller = {
     req.session.destroy();
     return res.redirect('/');
   },
+
+  admin: (req, res) => {
+    db.Usuario.findAll({
+      where: {
+        rol: 'user',
+      },
+    }).then(function (Usuario) {
+      console.log(Usuario);
+      return res.render('users/admin', { Usuario: Usuario });
+    });
+  },
 };
 
 module.exports = controller;
