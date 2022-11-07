@@ -3,7 +3,7 @@ import SmallCard from './SmallCard';
 
 /*  Cada set de datos es un objeto literal */
 
-/* <!-- Users in DB --> */
+/* <!-- Product in DB --> */
 
 let ProductsInDB = {
     title: 'Productos en BD',
@@ -12,7 +12,7 @@ let ProductsInDB = {
     icon: 'fa-clipboard-list'
 }
 
-/* <!-- Products in DB --> */
+/* <!-- Users in DB --> */
 
 let UsersInDb = {
     title:'Usuarios', 
