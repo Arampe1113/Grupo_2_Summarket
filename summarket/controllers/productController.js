@@ -175,15 +175,13 @@ const controller = {
   },
 
   destroy: (req, res) => {
-    db.Productos.destroy(
-      {
-        where: {
-          id: req.params.id,
-        },
-      }.then(() => {
-        res.redirect('/products');
-      })
-    );
+    db.Productos.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then(() => {
+      res.redirect('/products');
+    });
 
     // const idProduc = req.params.id;
     // const productsFilter = products.filter((item) => item.id != idProduc);

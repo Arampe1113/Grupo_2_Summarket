@@ -4,8 +4,6 @@ const User = db.Usuario;
 
 function adminMiddleware(req, res, next) {
   let emailCookie = req.cookies.userEmail;
-  console.log('Auth Middleware');
-  console.log(emailCookie);
 
   if (emailCookie != undefined) {
     User.findOne({

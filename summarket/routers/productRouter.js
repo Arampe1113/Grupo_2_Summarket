@@ -32,7 +32,7 @@ router.get('/create', auth, admin, productCont.create);
 router.post('/', upload.single('productImg'), validations, productCont.store);
 
 // /*** EDIT ONE PRODUCT ***/
-router.get('/edit/:id/', auth, admin, productCont.edit);
+router.get('/edit/:id/', admin, auth, productCont.edit);
 router.put(
   '/edit/:id',
   upload.single('productImg'),
@@ -41,7 +41,7 @@ router.put(
 );
 
 // /*** DELETE ONE PRODUCT***/
-router.delete('/delete/:id', auth, admin, productCont.destroy);
+router.delete('/delete/:id', admin, auth, productCont.destroy);
 
 router.get('/Cart', productCont.cart);
 
