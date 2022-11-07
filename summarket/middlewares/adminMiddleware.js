@@ -3,7 +3,9 @@ let db = require('../database/models');
 const User = db.Usuario;
 
 function adminMiddleware(req, res, next) {
-  let emailCookie = req.session.email;
+  let emailCookie = req.cookies.userEmail;
+  console.log('Auth Middleware');
+  console.log(emailCookie);
 
   User.findOne({
     where: {

@@ -8,6 +8,7 @@ function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false;
 
   let emailCookie = req.cookies.userEmail;
+
   // console.log('middleware console log');
   // console.log(emailCookie);
 
@@ -19,7 +20,7 @@ function userLoggedMiddleware(req, res, next) {
     }).then((userFromCookie) => {
       req.session.userLogged = userFromCookie;
 
-      if (userFromCookie) {
+      if (req.session.userLogged) {
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
       }

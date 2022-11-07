@@ -28,11 +28,11 @@ router.get('/Cart', auth, productCont.cart);
 router.get('/detail/:id/', productCont.detail);
 
 // /*** CREATE ONE PRODUCT ***/
-router.get('/create', auth, productCont.create);
+router.get('/create', auth, admin, productCont.create);
 router.post('/', upload.single('productImg'), validations, productCont.store);
 
 // /*** EDIT ONE PRODUCT ***/
-router.get('/edit/:id/', auth, productCont.edit);
+router.get('/edit/:id/', auth, admin, productCont.edit);
 router.put(
   '/edit/:id',
   upload.single('productImg'),
@@ -41,8 +41,8 @@ router.put(
 );
 
 // /*** DELETE ONE PRODUCT***/
-router.delete('/delete/:id', auth, productCont.destroy);
+router.delete('/delete/:id', auth, admin, productCont.destroy);
 
-router.get('/Cart', auth, productCont.cart);
+router.get('/Cart', productCont.cart);
 
 module.exports = router;
