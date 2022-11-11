@@ -25,7 +25,7 @@ router.get('/', productCont.products);
 router.get('/Cart', auth, productCont.cart);
 
 // /*** GET ONE PRODUCT ***/
-router.get('/detail/:id/', productCont.detail);
+router.get('/detail/:id/', auth, productCont.detail);
 
 // /*** CREATE ONE PRODUCT ***/
 router.get('/create', auth, admin, productCont.create);

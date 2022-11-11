@@ -5,409 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-    crossorigin="anonymous"
-  />
-  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/carts.css"/>
-    
+
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
+    <!-- <link rel="stylesheet" href="/css/carts.css" /> -->
 
     <title>Carrito de Compras</title>
-
-<!-- nuevo codigo 2 -->
-<!-- <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Basket</title>
-
-
   </head>
-
   <body>
-    <%- include('../partials/header.ejs') %>
+    <header><%- include('../partials/header'); %></header>
 
-
-    <main>
-      <div class="basket">
-        <div class="basket-module">
-          <label for="promo-code">Enter a promotional code</label>
-          <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
-          <button class="promo-code-cta">Apply</button>
-        </div>
-        <div class="basket-labels">
-          <ul>
-            <li class="item item-heading">Item</li>
-            <li class="price">Price</li>
-            <li class="quantity">Quantity</li>
-            <li class="subtotal">Subtotal</li>
-          </ul>
-        </div>
-        <div class="basket-product">
-          <div class="item">
-            <div class="product-image">
-              <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame">
+    <main class="mt-5 pt-4">
+      <div class="container wow fadeIn animated">
+        <h2 class="mt-5 mb-3 h2 text-center">Productos en mi carrito</h2>
+        <div class="card my-5">
+          <div class="card-body">
+            <table class="table table-responsive-md mb-0">
+              <thead>
+                <tr>
+                  <th style="width: 50px">
+                    <strong>#</strong>
+                  </th>
+                  <th class="th-lg">
+                    <strong>Producto</strong>
+                  </th>
+                  <th class="th-lg">
+                    <strong>Precio</strong>
+                  </th>
+                  <th class="text-center">
+                    <strong>Cantidad</strong>
+                  </th>
+                  <th class="text-center">
+                    <strong>Subtotal</strong>
+                  </th>
+                  <th style="width: 50px"></th>
+                </tr>
+              </thead>
+              <tbody class="cartRows"></tbody>
+            </table>
+            <div class="card-footer text-right">
+              <h2>Total: <span class="totalAmount">$ 0</span></h2>
             </div>
-            <div class="product-details">
-              <h1><strong><span class="item-quantity">4</span> x Eliza J</strong> Lace Sleeve Cuff Dress</h1>
-              <p><strong>Navy, Size 18</strong></p>
-              <p>Product Code - 232321939</p>
-            </div>
-          </div>
-          <div class="price">26.00</div>
-          <div class="quantity">
-            <input type="number" value="4" min="1" class="quantity-field">
-          </div>
-          <div class="subtotal">104.00</div>
-          <div class="remove">
-            <button>Remove</button>
           </div>
         </div>
-        <div class="basket-product">
-          <div class="item">
-            <div class="product-image">
-              <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame">
+        <div class="card">
+          <div class="card-header text-center">Terminar la compra</div>
+          <form class="card-body" id="checkoutCart">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label for="country">Tipo Envio</label>
+                <select
+                  class="custom-select d-block w-100"
+                  id="shippingMethod"
+                  name=" shippingMethod"
+                  required=""
+                >
+                  <option value="">Elegir...</option>
+                  <option value="Servientrega">Servientrega</option>
+                  <option value="Interrapidisimo">Interrapidisimo</option>
+                  <option value="Recoger">Quiero recoger mi producto</option>
+                  <option value="DHL">DHL</option>
+                </select>
+                <div class="invalid-feedback">Elija un tipo de envio.</div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <label for="country">Pago</label>
+                <select
+                  class="custom-select d-block w-100"
+                  id="paymentMethod"
+                  name="paymentMethod"
+                  required=""
+                >
+                  <option value="">Elegir...</option>
+                  <option value="Efectivo">Efectivo</option>
+                  <option value="Débito">Tarjeta Débito</option>
+                  <option value="Crédito">Tarjeta Crédito</option>
+                </select>
+                <div class="invalid-feedback">Elija un tipo de envio.</div>
+              </div>
             </div>
-            <div class="product-details">
-              <h1><strong><span class="item-quantity">1</span> x Whistles</strong> Amella Lace Midi Dress</h1>
-              <p><strong>Navy, Size 10</strong></p>
-              <p>Product Code - 232321939</p>
-            </div>
-          </div>
-          <div class="price">26.00</div>
-          <div class="quantity">
-            <input type="number" value="1" min="1" class="quantity-field">
-          </div>
-          <div class="subtotal">26.00</div>
-          <div class="remove">
-            <button>Remove</button>
-          </div>
+            <button
+              class="btn btn-primary btn-lg btn-block waves-effect waves-light"
+              type="submit"
+            >
+              Comprar
+            </button>
+          </form>
         </div>
       </div>
-      <aside>
-        <div class="summary">
-          <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
-          <div class="summary-subtotal">
-            <div class="subtotal-title">Subtotal</div>
-            <div class="subtotal-value final-value" id="basket-subtotal">130.00</div>
-            <div class="summary-promo hide">
-              <div class="promo-title">Promotion</div>
-              <div class="promo-value final-value" id="basket-promo"></div>
-            </div>
-          </div>
-          <div class="summary-delivery">
-            <select name="delivery-collection" class="summary-delivery-selection">
-              <option value="0" selected="selected">Select Collection or Delivery</option>
-              <option value="collection">Collection</option>
-              <option value="first-class">Royal Mail 1st Class</option>
-              <option value="second-class">Royal Mail 2nd Class</option>
-              <option value="signed-for">Royal Mail Special Delivery</option>
-            </select>
-          </div>
-          <div class="summary-total">
-            <div class="total-title">Total</div>
-            <div class="total-value final-value" id="basket-total">130.00</div>
-          </div>
-          <div class="summary-checkout">
-            <button class="checkout-cta">Go to Secure Checkout</button>
-          </div>
-        </div>
-      </aside>
     </main>
-  </body>
-<script scr="../../controllers/carritocontroller.js"> </script> -->
-<!-- nuevo carrito  -->
 
-<!-- <div class="row">
-      <div class="col-75">
-        <div class="contenedor-formulario">
-        <div class="container-products">
-          <div class="productos">
-          <h4> -->
-          <!-- Carrito
-          <div class="container-products-wrapper"> --> 
-            <!-- <span class="price" style="color: black">
-              <i class="fa fa-shopping-cart"></i>
-              <b>4</b>
-            </span>
-          </h4>
-          <p><a href="#">Producto 1</a> <span class="price">8</span></p>
-          <p><a href="#">Producto 2</a> <span class="price">$5</span></p>
-          <p><a href="#">Producto 3</a> <span class="price">$8</span></p>
-          <p><a href="#">Producto 4</a> <span class="price">$2</span></p>
-          <hr />
-          <p>
-            Total <span class="price" style="color: black"><b>$30</b></span>
-          </p> -->
-
-
-
-
-<!-- nuevo carrito con agregar // Intento 2  -->
-
-<section class="shopping-cart">
-  <div class="container">
-      <h1 class="text-center">CARRITO</h1>
-      <hr>
-      <div class="row">
-          <div class="col-6">
-              <div class="shopping-cart-header">
-                  <h6>Producto</h6>
-              </div>
-          </div>
-          <div class="col-2">
-              <div class="shopping-cart-header">
-                  <h6 class="text-truncate">Precio</h6>
-              </div>
-          </div>
-          <div class="col-4">
-              <div class="shopping-cart-header">
-                  <h6>Cantidad</h6>
-              </div>
-          </div>
-      </div>
-      <!-- ? START SHOPPING CART ITEMS -->
-      <div class="shopping-cart-items shoppingCartItemsContainer">
-      </div>
-      <!-- ? END SHOPPING CART ITEMS -->
-
-      <!-- START TOTAL -->
-      <section class="shopping-cart">
-        <div class="container">
-            <h1 class="text-center">CARRITO</h1>
-            <hr>
-            <div class="row">
-                <div class="col-6">
-                    <div class="shopping-cart-header">
-                        <h6>Producto</h6>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="shopping-cart-header">
-                        <h6 class="text-truncate">Precio</h6>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="shopping-cart-header">
-                        <h6>Cantidad</h6>
-                    </div>
-                </div>
-            </div>
-            <!-- ? START SHOPPING CART ITEMS -->
-            <div class="shopping-cart-items shoppingCartItemsContainer">
-            </div>
-            <!-- ? END SHOPPING CART ITEMS -->
-
-            <!-- START TOTAL -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="shopping-cart-total d-flex align-items-center">
-                        <p class="mb-0">Total</p>
-                        <p class="ml-4 mb-0 shoppingCartTotal">0€</p>
-                        <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
-                            data-delay="2000">
-                            <div class="toast-header">
-                                <span>✅</span>
-                                <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
-                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="toast-body text-white">
-                                Se aumentó correctamente la cantidad
-                            </div>
-                        </div>
-                        <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
-                            data-target="#comprarModal">Comprar</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- END TOTAL -->
-
-            <!-- START MODAL COMPRA -->
-            <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Pronto recibirá su pedido</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END MODAL COMPRA -->
-
-
-        </div>
-
-    </section>
-    <!-- END SECTION SHOPPING CART -->
-
-<!-- nuevo carrito con agregar  // Intento 2 -->
-
-
-
-
-        </div>
-        <h class="shoppingCartItemQuantity"></h>
-        <bottom class="bottonDelete">
-        </bottom>
-        </div>
-
-          <form>
-            <div class="row">
-              <div class="col-50">
-                <h3>Dirección de facturación</h3>
-                <label for="fname"
-                  ><i class="fa fa-user"></i> Nombre Completo</label
-                >
-                <input
-                  type="text"
-                  id="fname"
-                  name="firstname"
-                  placeholder="John M. Doe"
-                />
-                <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  placeholder="john@example.com"
-                />
-                <label for="adr"
-                  ><i class="fa fa-address-card-o"></i> Dirección</label
-                >
-                <input
-                  type="text"
-                  id="adr"
-                  name="address"
-                  placeholder="542 W. 15th Street"
-                />
-                <label for="city"
-                  ><i class="fa fa-institution"></i> Ciudad</label
-                >
-                <input
-                  type="text"
-                  id="city"
-                  name="city"
-                  placeholder="Medellin"
-                />
-
-                <div class="row">
-                  <div class="col-50">
-                    <label for="state">Departamento</label>
-                    <input
-                      type="text"
-                      id="state"
-                      name="state"
-                      placeholder="ANT"
-                    />
-                  </div>
-                  <div class="col-50">
-                    <label for="zip">Codigo Postal</label>
-                    <input
-                      type="text"
-                      id="zip"
-                      name="zip"
-                      placeholder="10001"
-                    />
-                  </div>
-                </div>
-              
-
-              <div class="col-50">
-
-                <h3>Pago</h3>
-                <hr> 
-                <label for="fname">Tarjetas de credito aceptadas</label>
-                <div class="icon-container4">
-                  <i class="fa fa-cc-visa" style="color: navy"></i>
-                  <i class="fa fa-cc-amex" style="color: blue"></i>
-                  <i class="fa fa-cc-mastercard" style="color: red"></i>
-                  <i class="fa fa-cc-discover" style="color: orange"></i>
-                </div>
-                <label for="cname">Nombre en la tarjeta</label>
-                <input
-                  type="text"
-                  id="cname"
-                  name="cardname"
-                  placeholder="John More Doe"
-                />
-                <label for="ccnum">Numero Tarjeta de Credito</label>
-                <input
-                  type="text"
-                  id="ccnum"
-                  name="cardnumber"
-                  placeholder="1111-2222-3333-4444"
-                />
-                <label for="expmonth">Mes de expiración</label>
-                <input
-                  type="text"
-                  id="expmonth"
-                  name="expmonth"
-                  placeholder="September"
-                />
-
-                <div class="row">
-                  <div class="col-50">
-                    <label for="expyear">Año de expiración </label>
-                    <input
-                      type="text"
-                      id="expyear"
-                      name="expyear"
-                      placeholder="2018"
-                    /> -->
-                  </div>
-                  <div class="col-50">
-                    <label for="cvv">CVV</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="352" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <label>
-              <input type="checkbox" checked="checked" name="sameadr" />
-              La dirección de envio es igual a la dirección de facturación
-            </label>
-            <input type="submit" value="Continuar al checkout" class="btn" />
-          </form> 
-    
-      </div>
-
-      
-    </div>
-
-    <section class="container5">
-      <%- include('../partials/footer.ejs') %>
-    </section>
+    <footer><%- include('../partials/footer'); %></footer>
     <script
-    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-    crossorigin="anonymous"
-  ></script>
-  <script src="../../../controllers/pedidodecarrito.js"></script>
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/productCart.js"></script>
+    <script src="/js/cart.js"></script>
   </body>
 </html>

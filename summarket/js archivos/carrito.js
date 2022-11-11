@@ -18,7 +18,7 @@ $('.product-removal button').click( function() {
 function recalculateCart()
 {
   var subtotal = 0;
-  /
+  
   /* Sum up row totals */
   $('.product').each(function () {
     subtotal += parseFloat($(this).children('.product-line-price').text());

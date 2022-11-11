@@ -12,21 +12,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     /> -->
+ 
   <link rel="stylesheet" href="/css/styleLogin.css" type="text/css" />
   <link rel="stylesheet" href="/css/headStyle.css" type="text/css" />
+  
 </head>
 
 <body>
   <header>
+    
     <div class="menubar">
       <nav class="navMenu">
         <a href="/">Home</a>
         <a href="/products">Productos en Venta</a>
-        <a href="/products/create">Vende tu producto</a>
+        <% if (locals.isLogged && locals.userLogged.rol == 'admin') { %>    
+        <a href="/products/create">Crear producto</a>
+        <% } %>
+        <% if (locals.isLogged) { %>  
         <a class="carrito" href="/products/cart" class="button is-success">
-          <strong>Ver carrito <span id="conteoCarrito">
-            </span><i class="fa fa-shopping-cart"></i></strong>
+          <i class="fa fa-shopping-cart"></i>
+         <span class="clearfix d-none d-sm-inline-block">Carrito</span>
+         <span class="red z-depth-1 mr-1 cart-number">0</span>
+          
         </a>
+         <% } %>
     </div>
     </nav>
 
@@ -52,7 +61,7 @@
             <li>
               <hr class="dropdown-divider" />
             </li>
-            <% if (locals.userLogged.rol == 'admin') { %>
+            <% if (locals.isLogged && locals.userLogged.rol == 'admin') { %>
              <a class="dropdown-item" href="/user/admin">Administrar usuarios</a>
             <% } %>
           </ul>
@@ -68,7 +77,7 @@
 
           <% } %>
     </ul>
-    <i class="fa-solid fa-cart-shopping"></i>
+   
     
 
     <div class="header">
