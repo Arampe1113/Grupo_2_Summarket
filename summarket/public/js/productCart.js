@@ -23,16 +23,16 @@ if (localStorage.carrito) {
   carrito.forEach((item, index) => {
     fetch(`/api/v1/products/${item.id}`)
       .then((res) => res.json())
-      .then((product) => {
-        console.log(product);
+      .then((data) => {
+        console.log(data);
         cartRows.innerHTML += `
         <tr id="row${index}">
         <th scope="row">${index + 1}</th>
-        <td>${product.name}</td>
-        <td>${product.price}</td>
+        <td>${data.data.name}</td>
+        <td>${data.data.price}</td>
         <td class="text-center">${item.quantity}</td>
         <td class="text-center">$ ${parseFloat(
-          product.price * item.quantity,
+          data.data.price * item.quantity,
           2
         ).toFixed(2)}</td>
         <td><button class="btn btn-danger btn-sm" onclick=removeItem(${index})></button></td>
