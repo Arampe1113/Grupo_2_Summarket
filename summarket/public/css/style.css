@@ -142,9 +142,9 @@
   justify-content: center;
 }
 .carousel-inner img {
-  height: 280px;
-  padding-left: 25%;
-  padding-right: 25%;
+  height: 400px;
+  padding-left: 33%;
+  padding-right: 33%;
 }
 
 

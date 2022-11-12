@@ -62,12 +62,6 @@ VALUES(DEFAULT,"Andrea","Aramburo","andrea@email.com","Cont123*","img2","admin")
 INSERT INTO user
 VALUES(DEFAULT,"Geovani","Rivera","geovani@email.com","cont12345**","img3","admin");
 
-INSERT INTO user
-VALUES(DEFAULT,"Julian","Perez","julian@email.com","cont1234*!","img4","admin");
-
 -- Inserts para productos
 INSERT INTO products
-VALUES(DEFAULT,"Zapatillas Nike","Zapatillas nuevas, originales, color blanco","productImg1",1,450000,5,1,1,1);
-
-INSERT INTO products
-VALUES(DEFAULT,"Portatil Lenovo","ThinkPad X1 Carbon 9na Gen (14, Intel)","productImg2",5,2000000,2,1,2,2)
+VALUES(DEFAULT,"Portatil Lenovo","ThinkPad X1 Carbon 9na Gen (14, Intel)","1668268403553-01_ProdMacbook-pro-2020.jpg",5,2000000,2,1,2,2)

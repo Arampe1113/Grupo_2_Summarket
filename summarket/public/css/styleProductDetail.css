@@ -56,7 +56,7 @@
   display: flexbox;
 }
 .product-detail-info{
-  width: 100%;
+  width: 64%;
   height: auto;
   align-content:stretch;
 }
@@ -116,7 +116,7 @@ display:contents;
     width: 100%;
 }
 .boton-eliminar{
-  margin:20px;
+  margin-top:5px;
 }
 button .action-button-delete{
   margin-top: 30px;
@@ -155,7 +155,7 @@ button .action-button-delete{
   form{
       display: flex;
       flex-direction: column;
-      width: 60%;
+      width: 100%;
       text-align: left;
   }
   #nav ul {
