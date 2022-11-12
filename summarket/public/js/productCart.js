@@ -35,7 +35,7 @@ if (localStorage.carrito) {
           data.data.price * item.quantity,
           2
         ).toFixed(2)}</td>
-        <td><button class="btn btn-danger btn-sm" onclick=removeItem(${index})></button></td>
+        <td><button class="btn btn-danger btn-sm" onclick=removeItem(${index})><i class="fa-solid fa-trash-can"></i></button></td>
         </tr>
         `;
       });

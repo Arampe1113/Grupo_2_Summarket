@@ -7,7 +7,12 @@ const sequelize = db.sequelize;
 // };
 const productcontroller = {
   list: (req, res) => {
-    db.Productos.findAll().then((product) => {
+    let producto = db.Productos.findAll();
+    let categorias = db.Categorias.findAll();
+    let colores = db.Colores.findAll();
+    let marcas = db.Marcas.findAll();
+
+    Promise.all([producto, categorias, colores, marcas]).then((product) => {
       res.json({
         meta: {
           url: 'api/v1/products',
