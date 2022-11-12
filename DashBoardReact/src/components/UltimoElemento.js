@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import SmallCard from './SmallCard';
+import UltimoElemento from './UltimoElementolist';
 
 
 
@@ -76,30 +76,70 @@ class Lastproduct extends Component {
 		// const {cardProps} = [usuarios,autos,marcas];
 
 		return (
+			<div
+
+      style={{
+        padding: 40,
+        textAlign: "left",
+        color: "#3c3a2d"
+		
+      }}
+    >
+      <h1
+        style={{
+          fontSize: 30,
+          fontWeight: 900
+        }}
+      > </h1>
 			<React.Fragment>
 				<div className="row">
+				{
+									lista1.map((lista2)=>(
+										<tr>
+											<td>{lista2.name}</td>
+											<td>{lista2.firstName}</td>
+											<td>{lista2.lastName}</td>
+											<td>{lista2.email}</td>
+											
+					
+
+
+
+
+										</tr>
+										)
+									)
+		
+								}
+
 
 					{/* <SmallCard
-						cantUsuarios={lista1[lista1.length-1]}
-						cantAutos={lista2[0]?.name || 'No estoy actualizando'}
-						cantPro={lista3.length}
+					Nombre={lista1[lista2.name]}
+						Descripcion={lista2[0]?.name || 'No estoy actualizando'}
+						Precio={lista3.length}
 					/> */}
 
 
-				
-					{lista2.length >= 0 ? (<h1>{lista2[0]?.name}</h1>) : (<li></li>)}
-					{lista2.length >= 0 ? (<h1>{lista2[0]?.description}    </h1>) : (<li></li>)}
-					{lista2.length >= 0 ? (<h1>{lista2[0]?.color}    </h1>) : (<li></li>)}
-					{lista2.length >= 0 ? (<h1>{lista2[0]?.price}</h1>) : (<li></li>)}
+				<tr> <h2> Ultimo Elemento Agregado:
+					
+					 </h2>
+
+					<ul> Producto:  {lista2.length >= 0 ? (<p>{lista2[0]?.name}</p>): (<li></li>)}  </ul> 
+					<ul> Descripción:  {lista2.length >= 0 ? (<p>{lista2[0]?.  description}    </p>) : (<li></li>)}</ul> 
+					<ul> {lista2.length >= 0 ? (<p>{lista2[0]?.  color}</p>) : (<li></li>)}</ul> 
+					<ul> Precio: {lista2.length >= 0 ? (<p>{lista2[0]?.  price}</p>) : (<li></li>)} </ul> 
+					</tr>
+
+
 
 				</div>
 
 			</React.Fragment>
+			</div>
 
 		)
 	}
 }
 
 export default Lastproduct;
-
 

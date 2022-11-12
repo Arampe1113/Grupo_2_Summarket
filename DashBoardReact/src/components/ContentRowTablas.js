@@ -74,11 +74,10 @@ class ContentRowTablasXXX extends Component{
 		return(
 			<React.Fragment>
 				<div className= "row">
-					
 					<SmallCard
 						cantUsuarios={lista1.length}
-						cantAutos={lista2.length}
-						cantPro={lista3.length}
+						cantProduct={lista2.length}
+						// cantMarcas={lista3.length}
 					/>
 					
 				</div>
