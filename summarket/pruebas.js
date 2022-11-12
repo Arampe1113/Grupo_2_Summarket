@@ -1,5 +1,11 @@
-const bcryptjs = require('bcryptjs');
+let db = require('./database/models');
 
-let hash = bcryptjs.hashSync('Holamundo', 10);
-console.log(hash);
-console.log(bcryptjs.compareSync('Holamundo12', hash));
+const products = db.Productos;
+
+products.findAll().then((products) => {
+  return products;
+});
+
+function agregarProducto(id) {
+  console.log(id);
+}

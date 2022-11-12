@@ -1,4 +1,4 @@
-const db=require("../../database/models");
+const db = require('../../database/models');
 const sequelize = db.sequelize;
 // const User = require('../../database/models/Usuario.js');
 
@@ -6,29 +6,26 @@ const sequelize = db.sequelize;
 //     models.user.findAll({attributes: ["id", "username"]});
 // };
 const productcontroller = {
-    list:(req,res) => {
-        db.Productos.findAll()
-        .then (product => {
-            res.json({
-                meta: {
-                    url: "api/v1/products"
-                },
-                data: product
-            })
-        })
-    },
-        detail:(req,res) => {
-            db.Productos.findByPk(req.params.id)
-            .then (product => {
-                res.json({
-                    meta: {
-                        url: "api/v1/products/:id"
-                    },
-                    data: product
-                })
-            })
+  list: (req, res) => {
+    db.Productos.findAll().then((product) => {
+      res.json({
+        meta: {
+          url: 'api/v1/products',
         },
-}
-
+        data: product,
+      });
+    });
+  },
+  detail: (req, res) => {
+    db.Productos.findByPk(req.params.id).then((product) => {
+      res.json({
+        meta: {
+          url: 'api/v1/products/:id',
+        },
+        data: product,
+      });
+    });
+  },
+};
 
 module.exports = productcontroller;

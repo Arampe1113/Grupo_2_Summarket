@@ -11,21 +11,19 @@ const uRoutes = require('./routers/userRouter');
 const userLogged = require('./middlewares/userLoggedMiddleware');
 const apiuserroute = require('./routers/api/userroute');
 const apicontrollerroute = require('./routers/api/productroute');
-const cors=require("cors");
+const cors = require('cors');
 
 app.use(cors());
 
-
-
 app.use(express.static(__dirname + '/public'));
-app.use(bp.json());
+app.use(express.json());
 app.use(bp.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(
   session({
     secret: "Shhh, it's a secret",
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
   })
 );
 
@@ -52,5 +50,3 @@ app.use('/user', uRoutes);
 app.use('/api/v1', apiuserroute);
 
 app.use('/api/v1', apicontrollerroute);
-
-

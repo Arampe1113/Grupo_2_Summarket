@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
-const User = require('../models/Users.js');
+// const User = require('../models/Users.js');
 let db = require('../database/models');
 
 const controller = {
@@ -146,7 +146,10 @@ const controller = {
   },
 
   logout: (req, res) => {
-    res.clearCookie('userEmail');
+    if (req.cookies.userEmail) {
+      res.clearCookie('userEmail');
+    }
+
     req.session.destroy();
     return res.redirect('/');
   },
@@ -161,6 +164,7 @@ const controller = {
       return res.render('users/admin', { Usuario: Usuario });
     });
   },
+
   updateRol: (req, res) => {
     const newRol = {
       rol: req.body.rol,

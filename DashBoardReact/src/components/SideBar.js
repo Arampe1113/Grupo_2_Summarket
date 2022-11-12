@@ -6,6 +6,7 @@ import Products from './Products';
 import ContentRowTop from './ContentRowTop';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
+import Lastproduct from './UltimoElemento';
 
 
 function SideBar(){
@@ -53,6 +54,14 @@ function SideBar(){
                         <span>Productos y detalles </span></Link>
                 </li>
 
+                
+                {/*<!-- Nav Item - Tables -->*/}
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/UltimoElemento">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>ultimo producto agregado </span></Link>
+                </li> 
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
@@ -64,7 +73,9 @@ function SideBar(){
                 <Route exact path="/Usuarios">
                     <Usuarios />
                 </Route>
-
+                <Route exact path="/UltimoElemento">
+                    <Lastproduct />
+                </Route>
 
                 {/* 
                 <Route path="/Usuarios/:id">
