@@ -7,6 +7,7 @@ import ContentRowTop from './ContentRowTop';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 import Lastproduct from './UltimoElemento';
+import Marcas from './Categorias';
 
 
 function SideBar(){
@@ -62,6 +63,14 @@ function SideBar(){
                         <span>ultimo producto agregado </span></Link>
                 </li> 
 
+  {/*<!-- Nav Item - Tables -->*/}
+  <li className="nav-item nav-link">
+                <Link className="nav-link" to="/Categorias">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Categorias </span></Link>
+                </li> 
+
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
@@ -75,6 +84,9 @@ function SideBar(){
                 </Route>
                 <Route exact path="/UltimoElemento">
                     <Lastproduct />
+                </Route>
+                <Route exact path="/Categorias">
+                    <Marcas />
                 </Route>
 
                 {/* 

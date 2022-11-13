@@ -7,7 +7,7 @@ function MarcasList({brand}){
         <React.Fragment>
             <tr>
             <tr>
-                <td>{Marcas}</td>
+                <td>{brand}</td>
 
             </tr>
          
