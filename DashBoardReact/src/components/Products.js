@@ -50,16 +50,7 @@ class Products extends Component{
 									
 									</tr>
 								</thead>
-								<tfoot>
-									<tr>
-									<th>Id</th>
-										<th>Nombre</th>
-										<th>Description</th>
-										<th>Color</th>
-										<th>Price</th>
-										
-									</tr>
-								</tfoot>
+							
 
 								<tbody>					
 									{

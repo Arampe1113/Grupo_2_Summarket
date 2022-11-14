@@ -11,6 +11,7 @@ const uRoutes = require('./routers/userRouter');
 const userLogged = require('./middlewares/userLoggedMiddleware');
 const apiuserroute = require('./routers/api/userroute');
 const apicontrollerroute = require('./routers/api/productroute');
+const apimarcasroute =require('./routers/api/marcasroute');
 const cors = require('cors');
 
 app.use(cors());
@@ -50,3 +51,5 @@ app.use('/user', uRoutes);
 app.use('/api/v1', apiuserroute);
 
 app.use('/api/v1', apicontrollerroute);
+
+app.use('/api/v1', apimarcasroute);

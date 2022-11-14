@@ -1,17 +1,20 @@
 import React from 'react';
+import Marcas from './Categorias';
+// import Marcas from './Categorias';
 
-function CategoryList({id, category }){
+function MarcasList({brand}){
     return(
         <React.Fragment>
-            <div className="col-lg-6 mb-4">
-                <div className="card text-white bg-dark  shadow">
-                    <div className="card-body">
-                        {category}
-                    </div>
-                </div>
-            </div>	        
+            <tr>
+            <tr>
+                <td>{brand}</td>
+
+            </tr>
+         
+
+            </tr>    				        
         </React.Fragment>
     )
 }
 
-export default CategoryList
+export default MarcasList
