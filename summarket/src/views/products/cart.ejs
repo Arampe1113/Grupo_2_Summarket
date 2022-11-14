@@ -64,7 +64,7 @@
           <form class="card-body" id="checkoutCart">
             <div class="row">
               <div class="col-md-6 mb-4">
-                <label for="country">Tipo Envio</label>
+                <label for="shippingMethod">Tipo Envio</label>
                 <select
                   class="custom-select d-block w-100"
                   id="shippingMethod"
@@ -75,12 +75,11 @@
                   <option value="Servientrega">Servientrega</option>
                   <option value="Interrapidisimo">Interrapidisimo</option>
                   <option value="Recoger">Quiero recoger mi producto</option>
-                  <option value="DHL">DHL</option>
                 </select>
                 <div class="invalid-feedback">Elija un tipo de envio.</div>
               </div>
               <div class="col-md-6 mb-4">
-                <label for="country">Pago</label>
+                <label for="paymentMethod">Pago</label>
                 <select
                   class="custom-select d-block w-100"
                   id="paymentMethod"
@@ -88,11 +87,19 @@
                   required=""
                 >
                   <option value="">Elegir...</option>
-                  <option value="Efectivo">Efectivo</option>
-                  <option value="Débito">Tarjeta Débito</option>
+                  <option value="Efectivo">Efectivo - Contra Entrega</option>
+                  <option value="Débito">PSE</option>
                   <option value="Crédito">Tarjeta Crédito</option>
                 </select>
                 <div class="invalid-feedback">Elija un tipo de envio.</div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <label for="shipping_address">Dirección de envio</label>
+                <input
+                  type="text"
+                  id="shipping_address"
+                  name="shipping_address"
+                />
               </div>
             </div>
             <button
